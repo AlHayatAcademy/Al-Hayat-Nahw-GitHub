@@ -40,3 +40,9 @@ body,input,button,summary,td,th,p,h1,h2,h3,h4,.arabic{letter-spacing:normal;word
 body.large .meaning-urdu p,body.large .meaning-note,body.large .meaning-example-ur{font-size:26px}body.large .meaning-english p{font-size:19px}
 @media print{.meaning-card{break-inside:avoid;box-shadow:none}.meaning-example>div{display:block!important}.meaning-example>summary>span{display:none}.vocab-search{display:none}}
 .search-group-title{font-size:24px;font-weight:400;color:var(--maroon-800);margin:20px 0 13px;line-height:2}.search-word{display:flex;align-items:center;gap:17px}.search-word-icon{color:var(--vocab-color);background:var(--vocab-soft);display:flex;align-items:center;justify-content:center;border-radius:14px;width:55px;height:55px;flex-shrink:0}.search-word-ar{font:27px/2 var(--arabic);display:block;color:var(--maroon-900)}.search-word-ur{font-size:20px;line-height:2.2;display:block}.search-word-en{font:15px/1.8 var(--sans);color:#365b91;display:block;text-align:left;unicode-bidi:isolate}.meaning-card.highlight{outline:3px solid var(--gold-500);outline-offset:3px}
+
+/* Stable header: --hdr is the TOTAL height, including the 2px gold rule.
+   Keep this independent of measured content and font-loading events. */
+.topbar{height:var(--hdr);min-height:var(--hdr);box-sizing:border-box;flex-shrink:0}
+.topbar-inner{height:calc(var(--hdr) - 2px);min-height:0;box-sizing:border-box}
+.topbar::after{height:2px}
