@@ -23,3 +23,7 @@ The reference homepage, its version-3 stylesheet, and its first lesson page were
 The local font files are unmodified copies from the reference site’s font paths and the Jameel Noori CDN font used by its stylesheet. Their authors retain all font rights. The content is still an educational adaptation of Ilm al-Nahw, with the same source attribution as the preceding release.
 
 Validation: data checks, all-chapter interaction checks, new home/catalogue navigation checks, asset checks and JavaScript syntax checks pass. Visual browser QA was unavailable, so rendering has not been independently screenshot-verified.
+
+## Study-companion identity revision
+
+The homepage and about panel now present the resource as **علم النحو: فہم و مشق**, prepared by Dr. Imran Hayat. The former lengthy publication disclaimer has been replaced by a positive description of the teaching contribution and a concise source acknowledgement. The book metadata, page mappings and question bank are retained.

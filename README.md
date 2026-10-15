@@ -1,4 +1,4 @@
-# Al-Hayat · Ilm al-Nahw
+# Al-Hayat · Ilm al-Nahw: Understanding & Practice
 
 A buildless, Urdu-first Arabic grammar learning website prepared for GitHub Pages.
 
@@ -63,6 +63,10 @@ The generated `.js` copies let the site load without `fetch`, including from a l
 6. Retry mistakes and use the comparison tables for revision.
 
 The displayed MCQ accuracy is based on the **latest recorded answer for each attempted question**, rather than all historical clicks. A practice-session score counts only that session. Remembered short answers are self-assessed separately.
+
+## Teaching contribution and source
+
+The public identity is **علم النحو: فہم و مشق**, an interactive study companion prepared by Dr. Imran Hayat. The homepage, sidebar and about panel foreground the educational compilation, question design, explanatory approach and interactive presentation. The about panel retains a brief acknowledgement of the book used for the sequence and core topics. This credit describes the pedagogical contribution; it does not claim authorship of the source book or permission from its publisher.
 
 ## Source and editorial approach
 

@@ -45,7 +45,7 @@ function syncChrome(){
  $('#layout').classList.toggle('wide',landing);document.body.classList.toggle('home',landing);
  $('#home-hero').hidden=view!=='home';$('#course-overview').hidden=!landing;$('#learning').hidden=landing;
  $('#learning').className='learning acc-'+((chapter.number-1)%6);
- document.title=(landing?(view==='home'?'ہوم':'اسباق'):chapter.title)+' | علم النحو — الحیات';
+ document.title=(landing?(view==='home'?'ہوم':'اسباق'):chapter.title)+' | علم النحو: فہم و مشق — ڈاکٹر عمران حیات';
  const navView=landing?view:mode==='quiz'?'mcq':mode==='review'?'review':'qa';
  document.querySelectorAll('[data-view]').forEach(a=>{const active=a.dataset.view===navView;a.classList.toggle('current',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
 }
