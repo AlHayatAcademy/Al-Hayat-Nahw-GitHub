@@ -1,40 +1,45 @@
 <!doctype html>
-<html lang="ur" dir="rtl">
-<head>
+<html lang="ur" dir="rtl"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#113f3b"><meta name="description" content="علم النحو کے ۲۳ ابواب: مختصر سوال جواب، تشریحی MCQs، حوالہ جاتی جدولیں اور غلطیوں کی دہرائی۔">
-<title>Al-Hayat · علم النحو</title><link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+<meta name="theme-color" content="#4a1220"><meta name="description" content="الحیات مرکز علوم اسلامیہ — علم النحو کے ۲۳ ابواب، مختصر سوالات، تشریحی کثیرالانتخابی مشق اور قواعد کی جدولیں۔">
+<title>ہوم | علم النحو — الحیات</title>
+<link rel="preload" href="./fonts/NafeesNastaleeq.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/Amiri-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./reference-theme.css"><link rel="stylesheet" href="./styles.css">
+</head><body class="home">
 <a class="skip" href="#main">مواد پر جائیں</a>
-<div class="app">
- <aside id="sidebar" class="sidebar" aria-label="ابواب">
-  <a href="#" class="brand" aria-label="علم النحو ابتدا"><span class="brand-mark" lang="ar">ن</span><span><b>الحیات</b><small lang="en" dir="ltr">ARABIC LEARNING STUDIO</small></span></a>
-  <div class="sidebar-title"><span>سیکھنے کا سفر</span><span class="tiny">۲۳ ابواب</span></div>
-  <nav id="chapter-list" aria-label="کتاب کی ترتیب"></nav>
-  <div class="source-note"><b>ماخذ: علم النحو</b><p>مولانا مشتاق احمد چرتھاولی<br>مکتبۃ البشریٰ، کراچی</p><button id="about" class="text-button">اس تدریسی نسخے کے بارے میں</button></div>
- </aside>
- <div class="workspace">
-  <header class="topbar"><button id="menu" class="icon-button menu" aria-label="ابواب کھولیں" aria-expanded="false">☰</button><div class="breadcrumb" id="breadcrumb">علم النحو</div><div class="top-actions"><button id="font" class="icon-button" aria-label="بڑا متن" aria-pressed="false">ا+</button><button id="progress-export" class="quiet">پیش رفت محفوظ کریں</button></div></header>
-  <main id="main" tabindex="-1">
-   <section class="hero">
-    <div class="hero-copy"><div class="eyebrow" lang="en" dir="ltr">UNDERSTAND. RECALL. APPLY.</div><h1>نحو کو سمجھیں۔<br><em>اعتماد سے استعمال کریں۔</em></h1><p>مختصر جواب سے اصول سمجھیں، مثال پر پہچانیں، پھر مشق سے اپنی سمجھ پرکھیں۔</p><div class="hero-actions"><button id="resume" class="primary">پڑھنا شروع کریں <span aria-hidden="true">←</span></button><button id="mixed" class="secondary">جامع مشق · ۳۰ سوال</button></div></div>
-    <div class="hero-art" aria-hidden="true"><span class="art-tag">علم سے فہم تک</span><div class="arabic-sentence" lang="ar">الْعِلْمُ <span>نُورٌ</span></div><div class="analysis-labels"><span>مبتدا · مرفوع</span><span>خبر · مرفوع</span></div><div class="art-rule"></div><p>ایک مثال، ایک واضح اصول۔</p></div>
-   </section>
-   <section id="stats" class="stats" aria-label="آپ کی پیش رفت"></section>
-   <div id="storage-warning" class="notice" hidden>اس براؤزر میں پیش رفت محفوظ نہیں ہو رہی۔ مواد اور مشق بدستور دستیاب ہیں؛ پیش رفت کی نقل ڈاؤن لوڈ کر سکتے ہیں۔</div>
-   <section class="learning" id="learning">
-    <div class="section-top"><div><div class="eyebrow" id="chapter-eyebrow">باب ۱</div><h2 id="chapter-title"></h2><p id="chapter-meta" class="muted"></p></div><label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">پوری کتاب میں تلاش کریں</span><input id="search" type="search" placeholder="لفظ، قاعدہ یا سوال تلاش کریں…" autocomplete="off"></label></div>
-    <div class="tabs" role="tablist" aria-label="سیکھنے کے طریقے"><button id="tab-learn" role="tab" data-mode="learn" aria-selected="true" class="active">سوال و جواب</button><button id="tab-quiz" role="tab" data-mode="quiz" aria-selected="false">MCQs کی مشق</button><button id="tab-review" role="tab" data-mode="review" aria-selected="false">دہرائی کے کارڈ</button><button id="tab-reference" role="tab" data-mode="reference" aria-selected="false">قاعدے ایک نظر میں</button></div>
-    <div id="mode-tools" class="mode-tools"></div><div id="content" role="tabpanel" aria-labelledby="tab-learn"></div>
-    <div class="chapter-nav"><button id="prev" class="secondary">→ پچھلا باب</button><button id="next" class="primary">اگلا باب ←</button></div>
-   </section>
-   <footer><span>الحیات · علم النحو</span><span>مطالعہ → یادداشت → اطلاق</span><span>پیش رفت اسی براؤزر میں محفوظ ہوتی ہے۔</span></footer>
-  </main>
- </div>
+<div class="site-wrap">
+<div class="read-progress" id="read-progress"></div>
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="#home" aria-label="علم النحو ہوم"><span class="brand-mark" lang="ar">ن</span><span class="brand-text"><strong>الحیات مرکز علوم اسلامیہ <span class="brand-course">(علم النحو)</span></strong><small>عربی قواعد · سوال، فہم، مشق</small></span></a>
+<nav class="main-nav" aria-label="مرکزی مینیو"><a href="#home" data-view="home" class="current" aria-current="page"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20H15v-6H9v6H3z"/></svg><span class="l-long">ہوم</span><span class="l-short">ہوم</span></a><a href="#topics" data-view="topics"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5 8 4.5 4 4.5v14c4 0 6.5.5 8 2 1.5-1.5 4-2 8-2v-14c-4 0-6.5.5-8 2zM12 6.5v14"/></svg><span class="l-long">اسباق</span><span class="l-short">اسباق</span></a><a href="#qa" data-view="qa"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12zM10 10a2 2 0 1 1 2.8 1.8c-.5.3-.8.7-.8 1.2M12 16h.01"/></svg><span class="l-long">مختصر سوالات</span><span class="l-short">سوالات</span></a><a href="#mcq" data-view="mcq"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10m-16.5-12 1.3 1.3 2.7-2.7M3.5 12l1.3 1.3 2.7-2.7M3.5 18l1.3 1.3 2.7-2.7"/></svg><span class="l-long">کثیرالانتخابی</span><span class="l-short">انتخابی</span></a><a href="#review" data-view="review"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h13v14H4zM8 3h13v14M8 12h5M8 16h4"/></svg><span class="l-long">دہرائی</span><span class="l-short">دہرائی</span></a></nav>
+<button id="menu" class="drawer-open" aria-label="اسباق کی فہرست" aria-controls="sidebar" aria-expanded="false"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg><span>اسباق</span></button>
+</div></header>
+<div class="layout wide" id="layout">
+<aside id="sidebar" class="sidebar" aria-label="اسباق کی فہرست">
+<div class="sidebar-head"><div class="sidebar-title"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5 8 4.5 4 4.5v14c4 0 6.5.5 8 2 1.5-1.5 4-2 8-2v-14c-4 0-6.5.5-8 2zM12 6.5v14"/></svg><span>علم النحو کے ابواب</span><small>۲۳</small></div><button id="drawer-close" class="drawer-close" aria-label="بند کریں">×</button></div>
+<label class="lesson-search"><span aria-hidden="true">⌕</span><span class="sr-only">سبق تلاش کریں</span><input id="chapter-search" type="search" placeholder="سبق تلاش کریں…" autocomplete="off"></label>
+<nav class="topic-list" id="chapter-list" aria-label="کتاب کی اصل ترتیب"></nav>
+<div class="source-note"><b>ماخذ: علم النحو</b><p>مولانا مشتاق احمد چرتھاولی<br>مکتبۃ البشریٰ، کراچی</p><button id="about" class="text-button">اس تدریسی نسخے کے بارے میں</button></div>
+</aside>
+<div class="shade" id="shade" hidden></div>
+<main class="content" id="main" tabindex="-1">
+<div class="utility-row"><span class="breadcrumb" id="breadcrumb">علم النحو</span><div class="top-actions"><button id="font" class="icon-button" aria-label="بڑا متن" aria-pressed="false">ا+</button><button id="progress-export" class="quiet">پیش رفت محفوظ کریں</button></div></div>
+<section class="hero" id="home-hero"><div class="hero-inner"><span class="hero-eyebrow">عربی قواعد — مکمل مطالعہ و مشق</span><h1 class="hero-title">علم النحو<span class="hero-title-ar" lang="ar">عِلْمُ النَّحْوِ</span></h1><p class="hero-desc">کتاب کی اصل ترتیب میں تمام تئیس ابواب — کلمہ و کلام سے لے کر اعراب، ضمائر، مرفوعات، منصوبات، توابع اور عوامل تک۔ مختصر سوالات سے اصول سمجھیں، عربی مثالوں میں پہچانیں، اور تشریحی کثیرالانتخابی مشق سے اپنی سمجھ پرکھیں۔</p><div class="hero-cta"><button id="resume" class="btn btn-gold">مطالعہ شروع کریں</button><button id="all-topics" class="btn btn-outline">تمام اسباق دیکھیں</button><button id="mixed" class="btn btn-outline">جامع مشق · ۳۰ سوال</button></div><section class="hero-stats stats" id="stats" aria-label="مواد اور آپ کی پیش رفت"></section></div></section>
+<div class="notice" id="storage-warning" hidden>اس براؤزر میں پیش رفت محفوظ نہیں ہو رہی۔ پیش رفت کی نقل ڈاؤن لوڈ کر سکتے ہیں۔</div>
+<section id="course-overview"><div class="section-heading"><h2>اسباقِ علم النحو</h2><span class="overview-count">کتاب کی اصل ترتیب · ۲۳ ابواب</span></div><label class="overview-search"><span aria-hidden="true">⌕</span><span class="sr-only">اسباق کی فہرست میں تلاش</span><input id="overview-search" type="search" placeholder="عنوان یا اہم لفظ سے سبق تلاش کریں…" autocomplete="off"></label><div class="topics-grid" id="topic-grid"></div><div class="features"><article class="feature acc-0"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12zM10 10a2 2 0 1 1 2.8 1.8c-.5.3-.8.7-.8 1.2M12 16h.01"/></svg><h4>مختصر، واضح سوالات</h4><p>پہلے خود جواب سوچیں، پھر قاعدہ اور مثال کے ساتھ اپنی سمجھ کا مقابلہ کریں۔</p></article><article class="feature acc-2"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h10M10 12h10M10 18h10m-16.5-12 1.3 1.3 2.7-2.7M3.5 12l1.3 1.3 2.7-2.7M3.5 18l1.3 1.3 2.7-2.7"/></svg><h4>تشریح کے ساتھ مشق</h4><p>جواب منتخب کرتے ہی وضاحت پڑھیں اور غلط سوالات کی الگ دہرائی کریں۔</p></article><article class="feature acc-4"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h13v14H4zM8 3h13v14M8 12h5M8 16h4"/></svg><h4>یادداشت اور پیش رفت</h4><p>مشکل اصول نشان زد کریں، کارڈز سے یاد کریں اور اپنی پیش رفت محفوظ رکھیں۔</p></article></div></section>
+<section id="learning" class="learning acc-0" hidden>
+<div class="section-top topic-header"><div><span class="tag" id="chapter-eyebrow">باب ۱</span><h1 id="chapter-title"></h1><p class="lead" id="chapter-meta"></p></div><label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">پوری کتاب میں تلاش کریں</span><input id="search" type="search" placeholder="پوری کتاب میں تلاش کریں…" autocomplete="off"></label></div>
+<div class="tabs" role="tablist" aria-label="سیکھنے کے طریقے"><button class="tab-btn active" id="tab-learn" role="tab" data-mode="learn" aria-selected="true">مختصر سوالات و جوابات</button><button class="tab-btn" id="tab-quiz" role="tab" data-mode="quiz" aria-selected="false">کثیرالانتخابی سوالات</button><button class="tab-btn" id="tab-review" role="tab" data-mode="review" aria-selected="false">دہرائی کے کارڈ</button><button class="tab-btn" id="tab-reference" role="tab" data-mode="reference" aria-selected="false">قواعد ایک نظر میں</button></div>
+<div class="mode-tools" id="mode-tools"></div><div id="content" role="tabpanel" aria-labelledby="tab-learn"></div>
+<div class="chapter-nav"><button class="secondary" id="prev">→ پچھلا باب</button><button class="primary" id="next">اگلا باب ←</button></div>
+</section>
+</main></div>
+<footer class="site-footer"><div class="footer-inner"><p><strong>علم النحو — الحیات مرکز علوم اسلامیہ</strong> · عربی قواعد کی تفہیم، یادداشت اور مشق کا تعلیمی وسیلہ۔</p><p>Prepared by <a href="https://drimranhayat.com/" target="_blank" rel="noopener">Dr. Imran Hayat (drimranhayat.com)</a></p><p class="footer-note">کتاب کی ترتیب میں نئی تدریسی تدوین · پیش رفت اسی براؤزر میں محفوظ ہوتی ہے۔</p></div></footer>
 </div>
-<div id="shade" class="shade" hidden></div>
 <dialog id="about-dialog"><button id="close-about" class="icon-button dialog-close" aria-label="بند کریں">×</button><h2>اس تدریسی نسخے کے بارے میں</h2><p>موضوعات اور ابواب کی ترتیب کتاب <b>علم النحو</b>، مولانا مشتاق احمد چرتھاولی، مکتبۃ البشریٰ، کراچی سے رہنمائی لیتی ہے۔ سوالات، تشریحات اور متعدد مشقی مثالیں نئے تدریسی انداز میں مرتب ہیں۔</p><p>یہ اصل کتاب کا لفظ بہ لفظ متن نہیں۔ فرنٹ میٹر، ناشر کے اشتہارات اور خالی یادداشت کے صفحات سوال بینک میں شامل نہیں۔ جدولیں اصل قواعد کا مختصر مطالعہ جاتی نقشہ ہیں۔</p><p>اختلافی یا سیاق پر منحصر قواعد میں مختصر وضاحت دی گئی ہے۔ حتمی علمی تدریس میں استاد کی رہنمائی اور ماخذ سے مقابلہ مفید ہے۔ محض الفاظ بدلنے سے حقِ اشاعت کی اجازت حاصل نہیں ہوتی؛ اصل ماخذ کی نسبت برقرار رکھی گئی ہے۔</p><p class="muted">مواد کی تدوین: ۱۵ اکتوبر ۲۰۲۶ · ورژن 1</p></dialog>
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<button class="to-top" id="to-top" aria-label="اوپر جائیں"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="./data/nahw-bank.js"></script><script src="./data/references.js"></script><script src="./core.js"></script><script src="./app.js"></script>
 </body></html>

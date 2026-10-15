@@ -2,6 +2,8 @@
 
 A buildless, Urdu-first Arabic grammar learning website prepared for GitHub Pages.
 
+The revised presentation follows the user-owned reference course at https://bsarabic.insha.drimranhayat.com/: burgundy and gold branding, six rotating lesson colours, a full-width course homepage, white lesson sidebar, sticky segmented lesson tabs, and mobile bottom navigation. See `DESIGN_NOTES.md`.
+
 - **23 sections**, in the uploaded book's topic sequence.
 - **354 short questions and answers**.
 - **354 four-option MCQs**, each with a correct answer and explanatory feedback.
@@ -76,7 +78,9 @@ Changing wording alone does not establish permission to reproduce a protected wo
 
 ## Typography and access
 
-The interface is right-to-left. Arabic examples use an Arabic font stack and `lang="ar"` spans; Urdu uses a Nastaliq-first font stack. The site requests no remote fonts. Install Jameel Noori Nastaleeq for the intended Urdu style and Amiri for Arabic on your device; devices without these use available serif fonts, so appearance will vary.
+The interface is right-to-left. Arabic examples use bundled Amiri with `lang="ar"` spans. Urdu uses bundled Jameel Noori Nastaleeq with Nafees Nastaleeq as a local fallback. No font installation or remote font request is needed. The supplied font files are unmodified; font authors retain their rights.
+
+The home page shows all 23 lesson tiles in the original order. The navigation opens the lesson catalogue, short answers, MCQs, and recall cards. Lesson pages use a sticky desktop sidebar and a mobile drawer; primary navigation becomes a fixed bottom bar on phones. Chapter URLs such as `#ch05/reference` can be bookmarked.
 
 The layout includes mobile navigation, responsive cards, horizontally scrollable tables, keyboard tabs, visible focus styles, reduced-motion support, a skip link, and answer feedback with text indicators. Automated checks do not establish full accessibility conformance.
 
@@ -89,6 +93,7 @@ The layout includes mobile navigation, responsive cards, horizontally scrollable
 - Four unique options per MCQ, valid answer positions, explanations, and valid Q&A links.
 - Reference-table column consistency and all required asset paths.
 - Arabic/Urdu-normalized search and scoring functions.
+- Home/catalogue/lesson navigation, the 23 topic tiles, topic filtering, and reusable chapter URLs.
 - App state transitions using a minimal DOM harness: all chapters, reference views, locked answers, mixed-session scoring, mistake retry, revision cards, progress updates, and search.
 
 JavaScript syntax and these data/interaction checks passed for the delivered version. **Visual browser QA was not available in this environment.** The DOM harness does not test actual browser rendering or layout. Inspect the published page on your phone and desktop, and obtain an Arabic-grammar teacher's review before treating the material as a final examination bank.
@@ -97,7 +102,9 @@ JavaScript syntax and these data/interaction checks passed for the delivered ver
 
 ```text
 index.html
+reference-theme.css
 styles.css
+fonts/
 core.js
 app.js
 data/nahw-bank.json
@@ -108,6 +115,7 @@ scripts/sync-data.py
 verify.cjs
 learning-bank.md
 CONTENT_MAP.md
+DESIGN_NOTES.md
 README.md
 .nojekyll
 ```
