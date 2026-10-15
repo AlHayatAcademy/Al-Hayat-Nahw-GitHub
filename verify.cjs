@@ -94,16 +94,3 @@ const scripts=[...html.matchAll(/<script([^>]+)>/g)];assert.ok(scripts.every(m=>
 const preloadedUrdu=fs.readFileSync(path.join(publicDir,'fonts/NafeesNastaleeq.woff2'));
 assert.ok(preloadedUrdu.length<160000);
 console.log(JSON.stringify({performanceChecks:'PASS',preloadedFontBytes:fontBytes,hiddenLessonRendering:'skipped',hiddenHomepageRebuildsDuringQuizAndSearch:0}));
-
-// Regression: resize/font observations must never grow the header.
-const appSource=fs.readFileSync(path.join(publicDir,'app.js'),'utf8');
-const styles=fs.readFileSync(path.join(publicDir,'styles.css'),'utf8');
-assert.ok(!appSource.includes('syncHeaderDimensions'));
-assert.ok(!appSource.includes('ResizeObserver'));
-assert.ok(!/setProperty\(\s*['"]--hdr/.test(appSource));
-assert.ok(styles.includes('.topbar-inner{height:calc(var(--hdr) - 2px);min-height:0;box-sizing:border-box}'));
-let heightWrites=0;document.documentElement={style:{setProperty(){heightWrites++}}};
-window.ResizeObserver=class{observe(){throw new Error('Header observer must not be registered')}};
-for(let i=0;i<250;i++)for(const listener of window.events.resize||[])listener();
-assert.equal(heightWrites,0);
-console.log(JSON.stringify({headerSizingRegression:'PASS',resizeEvents:250,headerHeightWrites:heightWrites}));

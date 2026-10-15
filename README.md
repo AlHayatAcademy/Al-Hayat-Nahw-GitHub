@@ -168,8 +168,3 @@ The 9.8 MB Jameel font download has been replaced with the bundled 148 KB Nafees
 The homepage no longer builds hidden lesson panels. Lesson navigation and search no longer regenerate the hidden homepage, and repeated searches reuse normalized indexes. Initial deep links render once. All lesson data, progress storage keys and existing chapter URLs are retained.
 
 Replace the repository files with this release, including the updated HTML/CSS/scripts. Remove the old unused `fonts/JameelNooriNastaleeq.woff2` if it remains in your repository. Asset URLs have a new version so returning visitors receive the fixes. This is a source ZIP; upload it to GitHub Pages to update the live site.
-
-
-### Stable header fix
-
-Removed the ResizeObserver/font-ready/resize measurement feedback loop. It measured the outer header including its 2px decorative rule, then wrote that measurement into the inner header minimum height. Each observation therefore grew the header again. CSS now owns the complete header height (80px desktop, 78px mobile), with the inner row reserving 2px for the decorative rule. Sticky tabs and sidebar offsets continue to share the same CSS variable. No header height is written by JavaScript.

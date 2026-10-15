@@ -129,8 +129,14 @@ function readRoute(){
 if(window.addEventListener){window.addEventListener('popstate',readRoute);window.addEventListener('hashchange',readRoute)}
 
 
-// Header sizing belongs to CSS: never feed its measured outer height back
-// into the minimum height of its child (the 2px decoration creates a loop).
+function syncHeaderDimensions(){
+ const height=$('.topbar').getBoundingClientRect?.().height;
+ if(height&&document.documentElement?.style)document.documentElement.style.setProperty('--hdr',Math.ceil(height)+'px');
+}
+if(window.ResizeObserver){const observer=new window.ResizeObserver(syncHeaderDimensions);observer.observe($('.topbar'))}
+if(document.fonts?.ready)document.fonts.ready.then(syncHeaderDimensions);
+if(window.addEventListener)window.addEventListener('resize',syncHeaderDimensions,{passive:true});
+syncHeaderDimensions();
 
 save();if(!readRoute())render();
 })();
