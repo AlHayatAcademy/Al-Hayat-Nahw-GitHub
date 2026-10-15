@@ -1,0 +1,3198 @@
+{
+  "schemaVersion": 1,
+  "titleUr": "الفاظ و اصطلاحات",
+  "titleEn": "Words & Grammar Terms",
+  "entries": [
+    {
+      "id": "nahw",
+      "kind": "term",
+      "arabic": "النَّحْوُ",
+      "meaningUr": "عربی جملے کی ساخت و اعراب کا علم",
+      "meaningEn": "Arabic syntax and grammatical inflection",
+      "explanationUr": "یہ علم بتاتا ہے کہ لفظ جملے میں کیا کام کرتا ہے اور اس کا آخری اعراب کیا ہوگا۔",
+      "example": {
+        "arabic": "الْعِلْمُ نُورٌ.",
+        "urdu": "علم روشنی ہے۔"
+      },
+      "icon": "book"
+    },
+    {
+      "id": "word",
+      "kind": "term",
+      "arabic": "الْكَلِمَةُ",
+      "meaningUr": "بامعنی مفرد لفظ",
+      "meaningEn": "Word",
+      "explanationUr": "اسم، فعل اور حرف کلمے کی بنیادی نحوی قسمیں ہیں۔",
+      "example": {
+        "arabic": "قَلَمٌ، كَتَبَ، فِي.",
+        "urdu": "قلم، اس نے لکھا، میں۔"
+      },
+      "icon": "letters"
+    },
+    {
+      "id": "noun",
+      "kind": "term",
+      "arabic": "الِاسْمُ",
+      "meaningUr": "اسم؛ زمانے کے بغیر معنی بتانے والا کلمہ",
+      "meaningEn": "Noun",
+      "explanationUr": "نام، چیز، صفت یا معنی کا لفظ جو اپنی وضع میں فعل کی طرح زمانہ شامل نہ کرے۔",
+      "example": {
+        "arabic": "هٰذَا قَلَمٌ.",
+        "urdu": "یہ قلم ہے۔"
+      },
+      "icon": "tag"
+    },
+    {
+      "id": "verb",
+      "kind": "term",
+      "arabic": "الْفِعْلُ",
+      "meaningUr": "کام یا حالت اور زمانہ بتانے والا کلمہ",
+      "meaningEn": "Verb",
+      "explanationUr": "ماضی، مضارع اور امر کی صورتوں میں فعل پہچانا جاتا ہے۔",
+      "example": {
+        "arabic": "كَتَبَ الطَّالِبُ.",
+        "urdu": "طالب علم نے لکھا۔"
+      },
+      "icon": "bolt"
+    },
+    {
+      "id": "particle",
+      "kind": "term",
+      "arabic": "الْحَرْفُ",
+      "meaningUr": "دوسرے لفظ سے معنوی تعلق قائم کرنے والا کلمہ",
+      "meaningEn": "Particle",
+      "explanationUr": "یہاں حرف سے نحوی کلمہ مراد ہے، حروفِ تہجی کا الگ مفہوم نہیں۔",
+      "example": {
+        "arabic": "الْكِتَابُ فِي الْحَقِيبَةِ.",
+        "urdu": "کتاب بستے میں ہے۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "sentence",
+      "kind": "term",
+      "arabic": "الْجُمْلَةُ",
+      "meaningUr": "جملہ؛ اسنادی ترکیب",
+      "meaningEn": "Clause or sentence",
+      "explanationUr": "فعل و فاعل یا مبتدا و خبر کے تعلق سے جملہ بنتا ہے۔",
+      "example": {
+        "arabic": "حَضَرَ الْمُعَلِّمُ.",
+        "urdu": "استاد حاضر ہوا۔"
+      },
+      "icon": "chat"
+    },
+    {
+      "id": "speech",
+      "kind": "term",
+      "arabic": "الْكَلَامُ",
+      "meaningUr": "مکمل مفید بات",
+      "meaningEn": "Complete meaningful speech",
+      "explanationUr": "سننے والے کو مکمل بات سمجھ آئے تو اسے کلام کہتے ہیں۔",
+      "example": {
+        "arabic": "الْجَوُّ جَمِيلٌ.",
+        "urdu": "موسم خوش گوار ہے۔"
+      },
+      "icon": "chat"
+    },
+    {
+      "id": "compound",
+      "kind": "term",
+      "arabic": "الْمُرَكَّبُ",
+      "meaningUr": "دو یا زیادہ کلمات کی ترکیب",
+      "meaningEn": "Compound expression",
+      "explanationUr": "مرکب مکمل جملہ بھی ہو سکتا ہے اور ادھوری نسبت بھی۔",
+      "example": {
+        "arabic": "بَابُ الْمَدْرَسَةِ.",
+        "urdu": "مدرسے کا دروازہ۔"
+      },
+      "icon": "blocks"
+    },
+    {
+      "id": "nominal",
+      "kind": "term",
+      "arabic": "الْجُمْلَةُ الِاسْمِيَّةُ",
+      "meaningUr": "اسمی جملہ",
+      "meaningEn": "Nominal sentence",
+      "explanationUr": "اس کی بنیادی نسبت مبتدا اور خبر سے قائم ہوتی ہے۔",
+      "example": {
+        "arabic": "الطَّالِبُ مُجْتَهِدٌ.",
+        "urdu": "طالب علم محنتی ہے۔"
+      },
+      "icon": "chat"
+    },
+    {
+      "id": "verbal",
+      "kind": "term",
+      "arabic": "الْجُمْلَةُ الْفِعْلِيَّةُ",
+      "meaningUr": "فعلی جملہ",
+      "meaningEn": "Verbal sentence",
+      "explanationUr": "اس کی بنیادی نسبت فعل اور فاعل یا نائب فاعل سے قائم ہوتی ہے۔",
+      "example": {
+        "arabic": "قَرَأَ الطَّالِبُ.",
+        "urdu": "طالب علم نے پڑھا۔"
+      },
+      "icon": "bolt"
+    },
+    {
+      "id": "topic",
+      "kind": "term",
+      "arabic": "الْمُبْتَدَأُ",
+      "meaningUr": "اسمی جملے کا موضوع",
+      "meaningEn": "Subject or topic of a nominal sentence",
+      "explanationUr": "جس کے بارے میں خبر دی جائے؛ اصل حالت میں مرفوع ہوتا ہے۔",
+      "example": {
+        "arabic": "الطَّالِبُ حَاضِرٌ.",
+        "urdu": "طالب علم حاضر ہے؛ الطالب مبتدا ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "predicate",
+      "kind": "term",
+      "arabic": "الْخَبَرُ",
+      "meaningUr": "مبتدا کے بارے میں خبر",
+      "meaningEn": "Predicate",
+      "explanationUr": "خبر مفرد، جملہ یا شبہ جملہ کی صورت میں آ سکتی ہے۔",
+      "example": {
+        "arabic": "الْعِلْمُ نَافِعٌ.",
+        "urdu": "علم فائدہ مند ہے؛ نافع خبر ہے۔"
+      },
+      "icon": "chat"
+    },
+    {
+      "id": "predicand",
+      "kind": "term",
+      "arabic": "الْمُسْنَدُ إِلَيْهِ",
+      "meaningUr": "جس کی طرف بات منسوب ہو",
+      "meaningEn": "Subject of predication",
+      "explanationUr": "اسمی جملے میں مبتدا، اور بنیادی فعلی جملے میں فاعل اس کی مثال ہے۔",
+      "example": {
+        "arabic": "وَصَلَ الضَّيْفُ.",
+        "urdu": "مہمان پہنچا؛ مہمان مسند الیہ ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "predication",
+      "kind": "term",
+      "arabic": "الْمُسْنَدُ",
+      "meaningUr": "منسوب کی جانے والی بات",
+      "meaningEn": "Predicate in predication",
+      "explanationUr": "اسمی جملے میں خبر اور فعلی جملے میں فعل مسند ہوتا ہے۔",
+      "example": {
+        "arabic": "وَصَلَ الضَّيْفُ.",
+        "urdu": "مہمان پہنچا؛ پہنچنے کا فعل مسند ہے۔"
+      },
+      "icon": "chat"
+    },
+    {
+      "id": "declarative",
+      "kind": "term",
+      "arabic": "الْخَبَرِيَّةُ",
+      "meaningUr": "خبر دینے والی ساخت",
+      "meaningEn": "Declarative construction",
+      "explanationUr": "جس میں کسی واقعے یا نسبت کی خبر ہو۔",
+      "example": {
+        "arabic": "حَضَرَ خَالِدٌ.",
+        "urdu": "خالد حاضر ہوا۔"
+      },
+      "icon": "chat"
+    },
+    {
+      "id": "performative",
+      "kind": "term",
+      "arabic": "الْإِنْشَاءُ",
+      "meaningUr": "طلب یا کسی معنی کا انشاء",
+      "meaningEn": "Non-declarative or performative expression",
+      "explanationUr": "امر، نہی، سوال، ندا اور تعجب اس کے معروف اسالیب ہیں۔",
+      "example": {
+        "arabic": "اِقْرَأْ.",
+        "urdu": "پڑھو۔"
+      },
+      "icon": "spark"
+    },
+    {
+      "id": "question",
+      "kind": "term",
+      "arabic": "الِاسْتِفْهَامُ",
+      "meaningUr": "پوچھنا؛ سوال کرنا",
+      "meaningEn": "Interrogation",
+      "explanationUr": "ہمزہ، هل اور استفہامی اسماء سے سوال بنایا جاتا ہے۔",
+      "example": {
+        "arabic": "هَلْ فَهِمْتَ؟",
+        "urdu": "کیا تم سمجھ گئے؟"
+      },
+      "icon": "question"
+    },
+    {
+      "id": "prohibition",
+      "kind": "term",
+      "arabic": "النَّهْيُ",
+      "meaningUr": "کام سے روکنا",
+      "meaningEn": "Prohibition",
+      "explanationUr": "لا ناہیہ کے بعد مضارع مجزوم ہوتا ہے۔",
+      "example": {
+        "arabic": "لَا تَكْذِبْ.",
+        "urdu": "جھوٹ نہ بولو۔"
+      },
+      "icon": "shield"
+    },
+    {
+      "id": "command",
+      "kind": "term",
+      "arabic": "الْأَمْرُ",
+      "meaningUr": "کام کا حکم یا طلب",
+      "meaningEn": "Command or imperative",
+      "explanationUr": "اُكْتُبْ میں لکھنے کا مطالبہ ہے۔",
+      "example": {
+        "arabic": "اُكْتُبْ رِسَالَةً.",
+        "urdu": "ایک خط لکھو۔"
+      },
+      "icon": "bolt"
+    },
+    {
+      "id": "wish",
+      "kind": "term",
+      "arabic": "التَّمَنِّي",
+      "meaningUr": "خواہش ظاہر کرنا",
+      "meaningEn": "Wish",
+      "explanationUr": "لیت کا استعمال خواہش کے اظہار کے لیے معروف ہے۔",
+      "example": {
+        "arabic": "لَيْتَ الْوَقْتَ طَوِيلٌ.",
+        "urdu": "کاش وقت زیادہ ہوتا۔"
+      },
+      "icon": "star"
+    },
+    {
+      "id": "hope",
+      "kind": "term",
+      "arabic": "التَّرَجِّي",
+      "meaningUr": "امید ظاہر کرنا",
+      "meaningEn": "Hope or expectation",
+      "explanationUr": "لعل کے ذریعے کسی بات کی امید ظاہر کی جاتی ہے۔",
+      "example": {
+        "arabic": "لَعَلَّ الْمَرِيضَ قَرِيبٌ مِنَ الشِّفَاءِ.",
+        "urdu": "امید ہے مریض صحت یابی کے قریب ہے۔"
+      },
+      "icon": "sun"
+    },
+    {
+      "id": "vocative",
+      "kind": "term",
+      "arabic": "النِّدَاءُ",
+      "meaningUr": "پکارنا؛ متوجہ کرنا",
+      "meaningEn": "Address or calling",
+      "explanationUr": "یا اور دوسرے حروف ندا سے مخاطب کو متوجہ کیا جاتا ہے۔",
+      "example": {
+        "arabic": "يَا صَدِيقُ!",
+        "urdu": "اے دوست!"
+      },
+      "icon": "speaker"
+    },
+    {
+      "id": "exclamation",
+      "kind": "term",
+      "arabic": "التَّعَجُّبُ",
+      "meaningUr": "حیرت یا غیر معمول کیفیت کا اظہار",
+      "meaningEn": "Exclamation of wonder",
+      "explanationUr": "ما أفعله اور أفعل به اس کے دو معروف قیاسی اسلوب ہیں۔",
+      "example": {
+        "arabic": "مَا أَجْمَلَ الْحَدِيقَةَ!",
+        "urdu": "باغ کتنا خوب صورت ہے!"
+      },
+      "icon": "spark"
+    },
+    {
+      "id": "conditional",
+      "kind": "term",
+      "arabic": "الشَّرْطُ",
+      "meaningUr": "ایک بات کو دوسری پر موقوف کرنا",
+      "meaningEn": "Condition",
+      "explanationUr": "فعل شرط اور جواب شرط کا تعلق سمجھنا ضروری ہے۔",
+      "example": {
+        "arabic": "إِنْ تَجْتَهِدْ تَنْجَحْ.",
+        "urdu": "اگر محنت کرو گے تو کامیاب ہوگے۔"
+      },
+      "icon": "branch"
+    },
+    {
+      "id": "answer-condition",
+      "kind": "term",
+      "arabic": "جَوَابُ الشَّرْطِ",
+      "meaningUr": "شرط کا نتیجہ",
+      "meaningEn": "Result clause of a condition",
+      "explanationUr": "یہ بتاتا ہے کہ شرط پوری ہونے پر کیا ہوگا۔",
+      "example": {
+        "arabic": "إِنْ تَقْرَأْ تَفْهَمْ.",
+        "urdu": "اگر پڑھو گے تو سمجھو گے؛ تفهم جواب ہے۔"
+      },
+      "icon": "branch"
+    },
+    {
+      "id": "cause-clause",
+      "kind": "term",
+      "arabic": "الْمُعَلِّلَةُ",
+      "meaningUr": "علت بیان کرنے والا جملہ",
+      "meaningEn": "Causal explanatory clause",
+      "explanationUr": "پچھلی بات کی وجہ واضح کرتا ہے۔",
+      "example": {
+        "arabic": "لَا تُهْمِلْ؛ فَإِنَّ الْعِلْمَ نَافِعٌ.",
+        "urdu": "غفلت نہ کرو، کیونکہ علم فائدہ مند ہے۔"
+      },
+      "icon": "lamp"
+    },
+    {
+      "id": "parenthesis",
+      "kind": "term",
+      "arabic": "الْمُعْتَرِضَةُ",
+      "meaningUr": "درمیان آنے والا ضمنی جملہ",
+      "meaningEn": "Parenthetical clause",
+      "explanationUr": "اسے الگ کرنے پر اصل کلام کی بنیادی ساخت قائم رہتی ہے۔",
+      "example": {
+        "arabic": "جَاءَ خَالِدٌ، حَفِظَهُ اللّٰهُ، مُبْتَسِمًا.",
+        "urdu": "خالد، اللہ اسے محفوظ رکھے، مسکراتا ہوا آیا۔"
+      },
+      "icon": "brackets"
+    },
+    {
+      "id": "case",
+      "kind": "term",
+      "arabic": "الْإِعْرَابُ",
+      "meaningUr": "عامل کے لحاظ سے آخری کیفیت",
+      "meaningEn": "Grammatical inflection",
+      "explanationUr": "لفظ کے کردار کے مطابق اعراب اور اس کی علامت پہچانی جاتی ہے۔",
+      "example": {
+        "arabic": "جَاءَ زَيْدٌ؛ رَأَيْتُ زَيْدًا.",
+        "urdu": "زید آیا؛ میں نے زید کو دیکھا۔"
+      },
+      "icon": "scales"
+    },
+    {
+      "id": "inflectable",
+      "kind": "term",
+      "arabic": "الْمُعْرَبُ",
+      "meaningUr": "اعراب قبول کرنے والا لفظ",
+      "meaningEn": "Inflectable word",
+      "explanationUr": "عامل بدلنے سے اس کے آخری اعراب میں تبدیلی آ سکتی ہے۔",
+      "example": {
+        "arabic": "الطَّالِبُ، الطَّالِبَ، الطَّالِبِ.",
+        "urdu": "طالب کا رفع، نصب اور جر میں استعمال۔"
+      },
+      "icon": "scales"
+    },
+    {
+      "id": "indeclinable",
+      "kind": "term",
+      "arabic": "الْمَبْنِيُّ",
+      "meaningUr": "مقرر بنا رکھنے والا لفظ",
+      "meaningEn": "Indeclinable word",
+      "explanationUr": "عامل بدلنے پر بھی آخری بنا قائم رہتی ہے؛ محل بدل سکتا ہے۔",
+      "example": {
+        "arabic": "جَاءَ هٰذَا؛ رَأَيْتُ هٰذَا.",
+        "urdu": "یہ آیا؛ میں نے اسے دیکھا۔"
+      },
+      "icon": "lock"
+    },
+    {
+      "id": "agent",
+      "kind": "term",
+      "arabic": "الْعَامِلُ",
+      "meaningUr": "اعراب کا سبب بننے والا عنصر",
+      "meaningEn": "Grammatical governor",
+      "explanationUr": "حرف، فعل، اسم یا معنوی سبب عامل ہو سکتا ہے۔",
+      "example": {
+        "arabic": "فِي الْفَصْلِ.",
+        "urdu": "کلاس میں؛ في حرف جر عامل ہے۔"
+      },
+      "icon": "gear"
+    },
+    {
+      "id": "governed",
+      "kind": "term",
+      "arabic": "الْمَعْمُولُ",
+      "meaningUr": "عامل کا اثر قبول کرنے والا لفظ",
+      "meaningEn": "Governed word",
+      "explanationUr": "اعرابی اثر جس لفظ پر آئے وہ معمول ہے۔",
+      "example": {
+        "arabic": "فِي الْفَصْلِ.",
+        "urdu": "کلاس میں؛ الفصل مجرور معمول ہے۔"
+      },
+      "icon": "target"
+    },
+    {
+      "id": "position",
+      "kind": "term",
+      "arabic": "الْمَحَلُّ الْإِعْرَابِيُّ",
+      "meaningUr": "جملے میں اعرابی مقام",
+      "meaningEn": "Syntactic case position",
+      "explanationUr": "مبنی لفظ کی بنا وہی رہتے ہوئے محل رفع یا نصب وغیرہ ہو سکتا ہے۔",
+      "example": {
+        "arabic": "رَأَيْتُ هٰذَا.",
+        "urdu": "میں نے اسے دیکھا؛ هذا محل نصب میں ہے۔"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "pronoun",
+      "kind": "term",
+      "arabic": "الضَّمِيرُ",
+      "meaningUr": "متکلم، مخاطب یا غائب کا اسم",
+      "meaningEn": "Pronoun",
+      "explanationUr": "ضمیر کس کی طرف لوٹ رہی ہے، یہ اس کے مرجع سے واضح ہوتا ہے۔",
+      "example": {
+        "arabic": "هُوَ مُعَلِّمٌ.",
+        "urdu": "وہ استاد ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "attached",
+      "kind": "term",
+      "arabic": "الْمُتَّصِلُ",
+      "meaningUr": "دوسرے لفظ سے جڑا ہوا",
+      "meaningEn": "Attached form",
+      "explanationUr": "ضمیر متصل الگ نہیں لکھی جاتی، جیسے کتابه کی ہاء۔",
+      "example": {
+        "arabic": "كِتَابُهُ جَدِيدٌ.",
+        "urdu": "اس کی کتاب نئی ہے۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "detached",
+      "kind": "term",
+      "arabic": "الْمُنْفَصِلُ",
+      "meaningUr": "الگ آنے والا",
+      "meaningEn": "Independent form",
+      "explanationUr": "ضمیر منفصل الگ لفظ کے طور پر آتی ہے۔",
+      "example": {
+        "arabic": "أَنَا طَالِبٌ.",
+        "urdu": "میں طالب علم ہوں۔"
+      },
+      "icon": "blocks"
+    },
+    {
+      "id": "implicit",
+      "kind": "term",
+      "arabic": "الْمُسْتَتِرُ",
+      "meaningUr": "لفظاً ظاہر نہ ہونے والا",
+      "meaningEn": "Implicit or concealed",
+      "explanationUr": "مستتر ضمیر صیغے اور سیاق سے سمجھی جاتی ہے۔",
+      "example": {
+        "arabic": "اُكْتُبْ.",
+        "urdu": "لکھو؛ فاعل أنت مستتر ہے۔"
+      },
+      "icon": "eye"
+    },
+    {
+      "id": "demonstrative",
+      "kind": "term",
+      "arabic": "اسْمُ الْإِشَارَةِ",
+      "meaningUr": "اشارہ کرنے والا اسم",
+      "meaningEn": "Demonstrative",
+      "explanationUr": "قریب، بعید، جنس اور عدد کے مطابق صورتیں الگ ہوتی ہیں۔",
+      "example": {
+        "arabic": "هٰذَا كِتَابٌ.",
+        "urdu": "یہ کتاب ہے۔"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "relative",
+      "kind": "term",
+      "arabic": "الِاسْمُ الْمَوْصُولُ",
+      "meaningUr": "صلے سے معنی مکمل کرنے والا اسم",
+      "meaningEn": "Relative pronoun",
+      "explanationUr": "الذي اور التي کے بعد وضاحتی صلہ آتا ہے۔",
+      "example": {
+        "arabic": "جَاءَ الَّذِي سَاعَدَنِي.",
+        "urdu": "وہ آیا جس نے میری مدد کی۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "relative-clause",
+      "kind": "term",
+      "arabic": "الصِّلَةُ",
+      "meaningUr": "موصول کے بعد وضاحتی جملہ",
+      "meaningEn": "Relative clause",
+      "explanationUr": "اسم موصول کا مفہوم مکمل کرتا ہے۔",
+      "example": {
+        "arabic": "جَاءَ الَّذِي سَاعَدَنِي.",
+        "urdu": "اس نے میری مدد کی: موصول کا صلہ۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "antecedent",
+      "kind": "term",
+      "arabic": "الْمَرْجِعُ",
+      "meaningUr": "ضمیر سے مراد شخص یا چیز",
+      "meaningEn": "Antecedent or referent",
+      "explanationUr": "ضمیر کا صحیح معنی اس کے مرجع سے متعین ہوتا ہے۔",
+      "example": {
+        "arabic": "جَاءَ خَالِدٌ وَمَعَهُ كِتَابٌ.",
+        "urdu": "خالد آیا اور اس کے ساتھ کتاب تھی؛ ہاء خالد کی طرف ہے۔"
+      },
+      "icon": "target"
+    },
+    {
+      "id": "verb-noun",
+      "kind": "term",
+      "arabic": "اسْمُ الْفِعْلِ",
+      "meaningUr": "فعل کے معنی و عمل والا اسم",
+      "meaningEn": "Verb-like noun",
+      "explanationUr": "یہ ظاہری فعل نہیں مگر کسی فعل کے معنی اور عمل پر آتا ہے۔",
+      "example": {
+        "arabic": "صَهْ!",
+        "urdu": "خاموش ہو جاؤ!"
+      },
+      "icon": "speaker"
+    },
+    {
+      "id": "sound-noun",
+      "kind": "term",
+      "arabic": "اسْمُ الصَّوْتِ",
+      "meaningUr": "آواز کی نقل یا صوتی خطاب",
+      "meaningEn": "Sound word or sound-name",
+      "explanationUr": "آواز کی نقل کو فعل کے حکم یا خبر سے الگ سمجھیں۔",
+      "example": {
+        "arabic": "غَاقِ.",
+        "urdu": "کوّے کی آواز کی نقل۔"
+      },
+      "icon": "speaker"
+    },
+    {
+      "id": "nisba",
+      "kind": "term",
+      "arabic": "الِاسْمُ الْمَنْسُوبُ",
+      "meaningUr": "تعلق ظاہر کرنے والا اسم",
+      "meaningEn": "Relational adjective or nisba",
+      "explanationUr": "یائے نسبت کسی جگہ، فن یا گروہ سے تعلق ظاہر کرتی ہے۔",
+      "example": {
+        "arabic": "عَالِمٌ مَكِّيٌّ.",
+        "urdu": "مکہ سے نسبت رکھنے والا عالم۔"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "diminutive",
+      "kind": "term",
+      "arabic": "التَّصْغِيرُ",
+      "meaningUr": "چھوٹا پن یا قربت بتانے والی ساخت",
+      "meaningEn": "Diminution",
+      "explanationUr": "چھوٹا پن، محبت یا تحقیر کا صحیح پہلو سیاق بتاتا ہے۔",
+      "example": {
+        "arabic": "كُتَيِّبٌ.",
+        "urdu": "چھوٹی کتاب یا کتابچہ۔"
+      },
+      "icon": "zoom"
+    },
+    {
+      "id": "definite",
+      "kind": "term",
+      "arabic": "الْمَعْرِفَةُ",
+      "meaningUr": "متعین اسم",
+      "meaningEn": "Definite noun",
+      "explanationUr": "کسی مخصوص یا معلوم فرد یا چیز کی طرف اشارہ کرتا ہے۔",
+      "example": {
+        "arabic": "الْكِتَابُ جَدِيدٌ.",
+        "urdu": "کتاب نئی ہے؛ الکتاب متعین ہے۔"
+      },
+      "icon": "target"
+    },
+    {
+      "id": "indefinite",
+      "kind": "term",
+      "arabic": "النَّكِرَةُ",
+      "meaningUr": "غیر متعین اسم",
+      "meaningEn": "Indefinite noun",
+      "explanationUr": "کسی ایک غیر متعین فرد یا جنس کا معنی دیتا ہے۔",
+      "example": {
+        "arabic": "عِنْدِي قَلَمٌ.",
+        "urdu": "میرے پاس ایک قلم ہے۔"
+      },
+      "icon": "question"
+    },
+    {
+      "id": "proper",
+      "kind": "term",
+      "arabic": "الْعَلَمُ",
+      "meaningUr": "مخصوص نام",
+      "meaningEn": "Proper name",
+      "explanationUr": "کسی مخصوص شخص یا جگہ کا مقرر نام ہے۔",
+      "example": {
+        "arabic": "حَضَرَ خَالِدٌ.",
+        "urdu": "خالد حاضر ہوا۔"
+      },
+      "icon": "tag"
+    },
+    {
+      "id": "masculine",
+      "kind": "term",
+      "arabic": "الْمُذَكَّرُ",
+      "meaningUr": "مذکر",
+      "meaningEn": "Masculine",
+      "explanationUr": "نحوی جنس کی ایک قسم؛ ظاہری معنی کے ساتھ لغوی استعمال بھی دیکھیں۔",
+      "example": {
+        "arabic": "طَالِبٌ مُجْتَهِدٌ.",
+        "urdu": "محنتی طالب علم۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "feminine",
+      "kind": "term",
+      "arabic": "الْمُؤَنَّثُ",
+      "meaningUr": "مؤنث",
+      "meaningEn": "Feminine",
+      "explanationUr": "ظاہری علامت یا سماعی استعمال سے تانیث معلوم ہوتی ہے۔",
+      "example": {
+        "arabic": "طَالِبَةٌ مُجْتَهِدَةٌ.",
+        "urdu": "محنتی طالبہ۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "singular",
+      "kind": "term",
+      "arabic": "الْمُفْرَدُ",
+      "meaningUr": "واحد؛ ایک فرد کی صورت",
+      "meaningEn": "Singular",
+      "explanationUr": "عدد کے باب میں ایک فرد مراد ہے؛ بعض دوسرے ابواب میں مفرد کی اصطلاح مختلف ہے۔",
+      "example": {
+        "arabic": "كِتَابٌ.",
+        "urdu": "ایک کتاب۔"
+      },
+      "icon": "one"
+    },
+    {
+      "id": "dual",
+      "kind": "term",
+      "arabic": "الْمُثَنَّى",
+      "meaningUr": "تثنیہ؛ دو کی صورت",
+      "meaningEn": "Dual",
+      "explanationUr": "رفع میں الف اور نصب و جر میں یاء اس کی نمایاں علامتیں ہیں۔",
+      "example": {
+        "arabic": "كِتَابَانِ.",
+        "urdu": "دو کتابیں۔"
+      },
+      "icon": "two"
+    },
+    {
+      "id": "plural",
+      "kind": "term",
+      "arabic": "الْجَمْعُ",
+      "meaningUr": "جمع؛ تین یا زیادہ کی صورت",
+      "meaningEn": "Plural",
+      "explanationUr": "سالم اور مکسر کی صورتیں الگ پہچانی جاتی ہیں۔",
+      "example": {
+        "arabic": "كُتُبٌ.",
+        "urdu": "کتابیں۔"
+      },
+      "icon": "group"
+    },
+    {
+      "id": "sound-plural",
+      "kind": "term",
+      "arabic": "الْجَمْعُ السَّالِمُ",
+      "meaningUr": "اصل ساخت محفوظ رکھنے والی جمع",
+      "meaningEn": "Sound plural",
+      "explanationUr": "جمع بنانے میں آخر کی علامت بڑھتی ہے اور بنیادی ساخت عموماً محفوظ رہتی ہے۔",
+      "example": {
+        "arabic": "مُعَلِّمُونَ؛ مُعَلِّمَاتٌ.",
+        "urdu": "استاد؛ معلمات۔"
+      },
+      "icon": "group"
+    },
+    {
+      "id": "broken-plural",
+      "kind": "term",
+      "arabic": "جَمْعُ التَّكْسِيرِ",
+      "meaningUr": "اندرونی وزن بدلنے والی جمع",
+      "meaningEn": "Broken plural",
+      "explanationUr": "واحد کی ساخت بدلتی ہے، جیسے کتاب سے کتب۔",
+      "example": {
+        "arabic": "كِتَابٌ؛ كُتُبٌ.",
+        "urdu": "کتاب؛ کتابیں۔"
+      },
+      "icon": "blocks"
+    },
+    {
+      "id": "pattern",
+      "kind": "term",
+      "arabic": "الْوَزْنُ",
+      "meaningUr": "لفظ کی ساخت کا پیمانہ",
+      "meaningEn": "Morphological pattern",
+      "explanationUr": "ف، ع اور ل کے ذریعے حروف کی ساخت کا تقابل کیا جاتا ہے۔",
+      "example": {
+        "arabic": "كَاتِبٌ عَلَى وَزْنِ فَاعِلٍ.",
+        "urdu": "کاتب کا وزن فاعل ہے۔"
+      },
+      "icon": "scales"
+    },
+    {
+      "id": "triptote",
+      "kind": "term",
+      "arabic": "الْمُنْصَرِفُ",
+      "meaningUr": "تنوین اور عام حرکی اعراب لینے والا اسم",
+      "meaningEn": "Triptote",
+      "explanationUr": "عام حالت میں رفع ضمہ، نصب فتحہ اور جر کسرہ سے ہوتا ہے۔",
+      "example": {
+        "arabic": "زَيْدٌ، زَيْدًا، زَيْدٍ.",
+        "urdu": "زید کے تین اعرابی استعمال۔"
+      },
+      "icon": "scales"
+    },
+    {
+      "id": "diptote",
+      "kind": "term",
+      "arabic": "غَيْرُ الْمُنْصَرِفِ",
+      "meaningUr": "عام حالت میں تنوین نہ لینے والا اسم",
+      "meaningEn": "Diptote",
+      "explanationUr": "ال اور اضافت نہ ہوں تو جر میں بھی فتحہ آتا ہے؛ یہ مبنی نہیں۔",
+      "example": {
+        "arabic": "مَرَرْتُ بِأَحْمَدَ.",
+        "urdu": "میں احمد کے پاس سے گزرا۔"
+      },
+      "icon": "lock"
+    },
+    {
+      "id": "nominative",
+      "kind": "term",
+      "arabic": "الرَّفْعُ",
+      "meaningUr": "حالت رفع",
+      "meaningEn": "Nominative case",
+      "explanationUr": "فاعل، مبتدا اور خبر جیسے کرداروں کا بنیادی اعراب ہے؛ علامت اسم کے مطابق بدلتی ہے۔",
+      "example": {
+        "arabic": "جَاءَ الطَّالِبُ.",
+        "urdu": "طالب علم آیا۔"
+      },
+      "icon": "up"
+    },
+    {
+      "id": "accusative",
+      "kind": "term",
+      "arabic": "النَّصْبُ",
+      "meaningUr": "حالت نصب",
+      "meaningEn": "Accusative case",
+      "explanationUr": "مفعول بہ، حال اور تمییز جیسے کرداروں میں آتی ہے۔",
+      "example": {
+        "arabic": "رَأَيْتُ الطَّالِبَ.",
+        "urdu": "میں نے طالب علم کو دیکھا۔"
+      },
+      "icon": "target"
+    },
+    {
+      "id": "genitive",
+      "kind": "term",
+      "arabic": "الْجَرُّ",
+      "meaningUr": "حالت جر",
+      "meaningEn": "Genitive case",
+      "explanationUr": "اسم پر حرف جر یا اضافت کا تعلق ہو تو جر آتا ہے۔",
+      "example": {
+        "arabic": "مَرَرْتُ بِالطَّالِبِ.",
+        "urdu": "میں طالب علم کے پاس سے گزرا۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "jussive",
+      "kind": "term",
+      "arabic": "الْجَزْمُ",
+      "meaningUr": "مضارع کی حالت جزم",
+      "meaningEn": "Jussive mood",
+      "explanationUr": "جازم کے بعد معرب مضارع کا حکم؛ فعل کی نوع کے مطابق علامت بدلتی ہے۔",
+      "example": {
+        "arabic": "لَمْ يَكْتُبْ.",
+        "urdu": "اس نے نہیں لکھا۔"
+      },
+      "icon": "shield"
+    },
+    {
+      "id": "damma",
+      "kind": "term",
+      "arabic": "الضَّمَّةُ",
+      "meaningUr": "پیش",
+      "meaningEn": "Damma vowel mark",
+      "explanationUr": "عام مفرد منصرف میں رفع کی علامت ہے؛ ہر ضمہ کو بلا سیاق رفع نہ کہیں۔",
+      "example": {
+        "arabic": "الطَّالِبُ.",
+        "urdu": "طالب کے آخر پر ضمہ۔"
+      },
+      "icon": "marks"
+    },
+    {
+      "id": "fatha",
+      "kind": "term",
+      "arabic": "الْفَتْحَةُ",
+      "meaningUr": "زبر",
+      "meaningEn": "Fatha vowel mark",
+      "explanationUr": "عام مفرد منصرف میں نصب کی علامت ہے؛ دوسرے استعمال بھی ہوتے ہیں۔",
+      "example": {
+        "arabic": "الطَّالِبَ.",
+        "urdu": "طالب کے آخر پر فتحہ۔"
+      },
+      "icon": "marks"
+    },
+    {
+      "id": "kasra",
+      "kind": "term",
+      "arabic": "الْكَسْرَةُ",
+      "meaningUr": "زیر",
+      "meaningEn": "Kasra vowel mark",
+      "explanationUr": "عام مفرد منصرف میں جر، مگر جمع مؤنث سالم میں نصب کی بھی علامت ہے۔",
+      "example": {
+        "arabic": "بِالطَّالِبِ.",
+        "urdu": "طالب کے آخر پر کسرہ۔"
+      },
+      "icon": "marks"
+    },
+    {
+      "id": "sukun",
+      "kind": "term",
+      "arabic": "السُّكُونُ",
+      "meaningUr": "سکون؛ حرکت کا نہ ہونا",
+      "meaningEn": "Sukun mark",
+      "explanationUr": "صحیح الآخر مضارع کے جزم میں سکون ظاہر ہو سکتا ہے۔",
+      "example": {
+        "arabic": "لَمْ يَكْتُبْ.",
+        "urdu": "یکتب کے آخر پر سکون۔"
+      },
+      "icon": "marks"
+    },
+    {
+      "id": "tanwin",
+      "kind": "term",
+      "arabic": "التَّنْوِينُ",
+      "meaningUr": "لفظ کے آخر کی نون ساکن کی آواز",
+      "meaningEn": "Nunation",
+      "explanationUr": "عموماً دو حرکات سے لکھی جاتی ہے؛ اس کی نحوی قسمیں الگ ہیں۔",
+      "example": {
+        "arabic": "كِتَابٌ.",
+        "urdu": "آخر میں تنوین کے ساتھ کتاب۔"
+      },
+      "icon": "marks"
+    },
+    {
+      "id": "subject",
+      "kind": "term",
+      "arabic": "الْفَاعِلُ",
+      "meaningUr": "فعل کی نسبت والا اسم یا ضمیر",
+      "meaningEn": "Subject of an active verb",
+      "explanationUr": "فعل کے ساتھ مرفوع کردار؛ صرف جملے کا پہلا اسم دیکھ کر فیصلہ نہ کریں۔",
+      "example": {
+        "arabic": "قَرَأَ الطَّالِبُ.",
+        "urdu": "طالب علم نے پڑھا؛ الطالب فاعل ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "passive-subject",
+      "kind": "term",
+      "arabic": "نَائِبُ الْفَاعِلِ",
+      "meaningUr": "مجہول فعل کا مرفوع قائم مقام",
+      "meaningEn": "Subject of a passive verb",
+      "explanationUr": "اصل فاعل مذکور نہ ہو تو مفعول اس جگہ مرفوع آ سکتا ہے۔",
+      "example": {
+        "arabic": "فُتِحَ الْبَابُ.",
+        "urdu": "دروازہ کھولا گیا۔"
+      },
+      "icon": "swap"
+    },
+    {
+      "id": "active",
+      "kind": "term",
+      "arabic": "الْمَعْرُوفُ",
+      "meaningUr": "فاعل کی نسبت ظاہر کرنے والی فعلی ساخت",
+      "meaningEn": "Active voice",
+      "explanationUr": "فعل کے ساتھ فاعل مذکور یا صیغے سے معلوم ہوتا ہے۔",
+      "example": {
+        "arabic": "فَتَحَ خَالِدٌ الْبَابَ.",
+        "urdu": "خالد نے دروازہ کھولا۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "passive",
+      "kind": "term",
+      "arabic": "الْمَجْهُولُ",
+      "meaningUr": "فاعل کو ذکر کیے بغیر کام کی ساخت",
+      "meaningEn": "Passive voice",
+      "explanationUr": "مجہول کا مطلب یہ نہیں کہ اصل کرنے والا حقیقت میں کسی کو معلوم ہی نہیں۔",
+      "example": {
+        "arabic": "فُتِحَ الْبَابُ.",
+        "urdu": "دروازہ کھولا گیا۔"
+      },
+      "icon": "swap"
+    },
+    {
+      "id": "object",
+      "kind": "term",
+      "arabic": "الْمَفْعُولُ بِهِ",
+      "meaningUr": "جس پر فعل کا اثر واقع ہو",
+      "meaningEn": "Direct object",
+      "explanationUr": "متعدی فعل کے اثر کو قبول کرنے والا اسم یا ضمیر ہے۔",
+      "example": {
+        "arabic": "قَرَأْتُ الْكِتَابَ.",
+        "urdu": "میں نے کتاب پڑھی۔"
+      },
+      "icon": "book"
+    },
+    {
+      "id": "absolute",
+      "kind": "term",
+      "arabic": "الْمَفْعُولُ الْمُطْلَقُ",
+      "meaningUr": "فعل کی تاکید، نوع یا تعداد بتانے والا مصدر",
+      "meaningEn": "Cognate accusative",
+      "explanationUr": "فعل کے معنی کا مصدر آتا ہے؛ اسے ہر منصوب سے الگ پہچانیں۔",
+      "example": {
+        "arabic": "قَرَأْتُ قِرَاءَةً جَيِّدَةً.",
+        "urdu": "میں نے اچھی طرح پڑھا۔"
+      },
+      "icon": "bolt"
+    },
+    {
+      "id": "purpose",
+      "kind": "term",
+      "arabic": "الْمَفْعُولُ لَهُ",
+      "meaningUr": "کام کی غرض یا علت بتانے والا مصدر",
+      "meaningEn": "Accusative of purpose or cause",
+      "explanationUr": "متعلقہ شرائط کے ساتھ مصدر بتاتا ہے کہ کام کیوں ہوا۔",
+      "example": {
+        "arabic": "قُمْتُ احْتِرَامًا لِلْمُعَلِّمِ.",
+        "urdu": "میں استاد کے احترام میں کھڑا ہوا۔"
+      },
+      "icon": "lamp"
+    },
+    {
+      "id": "accompaniment",
+      "kind": "term",
+      "arabic": "الْمَفْعُولُ مَعَهُ",
+      "meaningUr": "واو معیت کے بعد ساتھ کا منصوب اسم",
+      "meaningEn": "Accusative of accompaniment",
+      "explanationUr": "واو کے معنی مع یعنی ساتھ ہوں؛ ہر واو کے بعد یہ حکم نہیں۔",
+      "example": {
+        "arabic": "سِرْتُ وَالنَّهْرَ.",
+        "urdu": "میں دریا کے ساتھ ساتھ چلا۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "adverbial",
+      "kind": "term",
+      "arabic": "الْمَفْعُولُ فِيهِ",
+      "meaningUr": "وقوع فعل کا وقت یا مقام",
+      "meaningEn": "Adverbial accusative",
+      "explanationUr": "اسم ظرف میں في کا مفہوم پایا جاتا ہے۔",
+      "example": {
+        "arabic": "سَافَرْتُ لَيْلًا.",
+        "urdu": "میں نے رات کو سفر کیا۔"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "time-adverb",
+      "kind": "term",
+      "arabic": "ظَرْفُ الزَّمَانِ",
+      "meaningUr": "وقت بتانے والا ظرف",
+      "meaningEn": "Adverbial of time",
+      "explanationUr": "بتاتا ہے کہ کام کب ہوا۔",
+      "example": {
+        "arabic": "وَصَلْتُ صَبَاحًا.",
+        "urdu": "میں صبح پہنچا۔"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "place-adverb",
+      "kind": "term",
+      "arabic": "ظَرْفُ الْمَكَانِ",
+      "meaningUr": "جگہ بتانے والا ظرف",
+      "meaningEn": "Adverbial of place",
+      "explanationUr": "بتاتا ہے کہ کام کہاں ہوا، متعلقہ ظرفی قواعد کے ساتھ۔",
+      "example": {
+        "arabic": "جَلَسْتُ أَمَامَ الْبَيْتِ.",
+        "urdu": "میں گھر کے سامنے بیٹھا۔"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "circumstance",
+      "kind": "term",
+      "arabic": "الْحَالُ",
+      "meaningUr": "وقوع فعل کے وقت کی کیفیت",
+      "meaningEn": "Circumstantial qualifier",
+      "explanationUr": "عموماً نکرہ منصوب؛ اس کا تعلق ذوالحال سے ہوتا ہے۔",
+      "example": {
+        "arabic": "رَجَعَ خَالِدٌ مُسْرِعًا.",
+        "urdu": "خالد تیزی سے واپس آیا۔"
+      },
+      "icon": "spark"
+    },
+    {
+      "id": "state-owner",
+      "kind": "term",
+      "arabic": "ذُو الْحَالِ",
+      "meaningUr": "جس کی کیفیت بیان ہو",
+      "meaningEn": "Referent of the circumstantial qualifier",
+      "explanationUr": "حال کس کی حالت بتاتی ہے، وہ ذوالحال ہے۔",
+      "example": {
+        "arabic": "رَجَعَ خَالِدٌ مُسْرِعًا.",
+        "urdu": "مسرعًا خالد کی کیفیت بتاتا ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "specification",
+      "kind": "term",
+      "arabic": "التَّمْيِيزُ",
+      "meaningUr": "مبہم عدد، مقدار یا نسبت کی وضاحت",
+      "meaningEn": "Specification or distinguishing accusative",
+      "explanationUr": "حال کی طرح کیفیت بتانا اس کا عمومی مقصد نہیں۔",
+      "example": {
+        "arabic": "عِنْدِي عِشْرُونَ كِتَابًا.",
+        "urdu": "میرے پاس بیس کتابیں ہیں۔"
+      },
+      "icon": "target"
+    },
+    {
+      "id": "called",
+      "kind": "term",
+      "arabic": "الْمُنَادَى",
+      "meaningUr": "جسے پکارا جائے",
+      "meaningEn": "Vocative expression",
+      "explanationUr": "منادی کی قسم کے مطابق اس کا اعراب یا بنا متعین ہوتی ہے۔",
+      "example": {
+        "arabic": "يَا طَالِبَ الْعِلْمِ!",
+        "urdu": "اے علم کے طالب!"
+      },
+      "icon": "speaker"
+    },
+    {
+      "id": "exception",
+      "kind": "term",
+      "arabic": "الِاسْتِثْنَاءُ",
+      "meaningUr": "عام حکم سے الگ کرنا",
+      "meaningEn": "Exception",
+      "explanationUr": "مستثنیٰ، مستثنیٰ منہ اور ادات استثناء کو الگ پہچانیں۔",
+      "example": {
+        "arabic": "حَضَرَ الطُّلَّابُ إِلَّا خَالِدًا.",
+        "urdu": "خالد کے سوا طالب علم حاضر ہوئے۔"
+      },
+      "icon": "filter"
+    },
+    {
+      "id": "excepted",
+      "kind": "term",
+      "arabic": "الْمُسْتَثْنَى",
+      "meaningUr": "حکم سے الگ کیا جانے والا اسم",
+      "meaningEn": "Excepted element",
+      "explanationUr": "اس کا اعراب استثناء کی ساخت سے متعین ہوتا ہے۔",
+      "example": {
+        "arabic": "حَضَرَ الطُّلَّابُ إِلَّا خَالِدًا.",
+        "urdu": "خالد مستثنیٰ ہے۔"
+      },
+      "icon": "filter"
+    },
+    {
+      "id": "exception-base",
+      "kind": "term",
+      "arabic": "الْمُسْتَثْنَى مِنْهُ",
+      "meaningUr": "جس جماعت سے استثناء ہو",
+      "meaningEn": "Set from which an exception is made",
+      "explanationUr": "تام استثناء میں یہ مذکور ہوتا ہے؛ مفرغ میں مذکور نہیں ہوتا۔",
+      "example": {
+        "arabic": "حَضَرَ الطُّلَّابُ إِلَّا خَالِدًا.",
+        "urdu": "الطلاب مستثنیٰ منہ ہے۔"
+      },
+      "icon": "group"
+    },
+    {
+      "id": "connected-exception",
+      "kind": "term",
+      "arabic": "الْمُتَّصِلُ فِي الِاسْتِثْنَاءِ",
+      "meaningUr": "اسی جنس سے استثناء",
+      "meaningEn": "Connected exception",
+      "explanationUr": "مستثنیٰ سابق جماعت کی جنس میں شامل ہو۔",
+      "example": {
+        "arabic": "حَضَرَ الطُّلَّابُ إِلَّا خَالِدًا.",
+        "urdu": "خالد اسی طالب علم جماعت کا فرد ہے۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "disconnected-exception",
+      "kind": "term",
+      "arabic": "الْمُنْقَطِعُ",
+      "meaningUr": "دوسری جنس سے استثناء",
+      "meaningEn": "Disconnected exception",
+      "explanationUr": "مستثنیٰ سابق جماعت کی جنس کا فرد نہ ہو۔",
+      "example": {
+        "arabic": "حَضَرَ الْقَوْمُ إِلَّا حِمَارًا.",
+        "urdu": "لوگ حاضر ہوئے، مگر گدھا نہیں آیا۔"
+      },
+      "icon": "filter"
+    },
+    {
+      "id": "construct",
+      "kind": "term",
+      "arabic": "الْإِضَافَةُ",
+      "meaningUr": "دو اسموں کا نسبتی تعلق",
+      "meaningEn": "Genitive construction or idafa",
+      "explanationUr": "پہلے اسم کو مضاف، دوسرے کو مضاف الیہ کہتے ہیں۔",
+      "example": {
+        "arabic": "بَابُ الْمَدْرَسَةِ.",
+        "urdu": "مدرسے کا دروازہ۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "construct-head",
+      "kind": "term",
+      "arabic": "الْمُضَافُ",
+      "meaningUr": "اضافت کا پہلا اسم",
+      "meaningEn": "Head of a genitive construction",
+      "explanationUr": "اس کا اپنا اعراب جملے کے کردار سے طے ہوتا ہے۔",
+      "example": {
+        "arabic": "قَلَمُ الطَّالِبِ جَدِيدٌ.",
+        "urdu": "طالب کا قلم نیا ہے؛ قلم مضاف ہے۔"
+      },
+      "icon": "book"
+    },
+    {
+      "id": "genitive-complement",
+      "kind": "term",
+      "arabic": "الْمُضَافُ إِلَيْهِ",
+      "meaningUr": "اضافت کا دوسرا مجرور اسم",
+      "meaningEn": "Genitive complement",
+      "explanationUr": "یہ تعلق ہمیشہ ملکیت ہی نہیں؛ مادہ، وقت یا دوسری نسبت بھی ہو سکتی ہے۔",
+      "example": {
+        "arabic": "صَلَاةُ اللَّيْلِ.",
+        "urdu": "رات کی نماز؛ الليل مضاف الیہ ہے۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "estimated",
+      "kind": "term",
+      "arabic": "الْإِعْرَابُ التَّقْدِيرِيُّ",
+      "meaningUr": "اعراب جس کی حرکت ظاہر نہ ہو",
+      "meaningEn": "Estimated inflection",
+      "explanationUr": "اعرابی حکم موجود ہوتا ہے مگر تلفظ میں اس کی علامت ظاہر نہیں ہوتی۔",
+      "example": {
+        "arabic": "رَأَيْتُ مُوسَى.",
+        "urdu": "میں نے موسیٰ کو دیکھا؛ فتحہ مقدر ہے۔"
+      },
+      "icon": "eye"
+    },
+    {
+      "id": "maqsuur",
+      "kind": "term",
+      "arabic": "الِاسْمُ الْمَقْصُورُ",
+      "meaningUr": "آخر میں الف لازم والا معرب اسم",
+      "meaningEn": "Alif-final inflectable noun",
+      "explanationUr": "اس کی تینوں اعرابی حرکات الف پر مقدر ہوتی ہیں۔",
+      "example": {
+        "arabic": "جَاءَ الْفَتَى.",
+        "urdu": "نوجوان آیا۔"
+      },
+      "icon": "letters"
+    },
+    {
+      "id": "manquus",
+      "kind": "term",
+      "arabic": "الِاسْمُ الْمَنْقُوصُ",
+      "meaningUr": "آخر میں یاء لازم، ماقبل مکسور اسم",
+      "meaningEn": "Ya-final inflectable noun",
+      "explanationUr": "رفع و جر میں اعراب مقدر اور نصب ظاہر ہو سکتا ہے۔",
+      "example": {
+        "arabic": "رَأَيْتُ الْقَاضِيَ.",
+        "urdu": "میں نے قاضی کو دیکھا۔"
+      },
+      "icon": "letters"
+    },
+    {
+      "id": "follower",
+      "kind": "term",
+      "arabic": "التَّابِعُ",
+      "meaningUr": "اعراب میں دوسرے اسم کا پیرو",
+      "meaningEn": "Dependent following expression",
+      "explanationUr": "صفت، تاکید، بدل اور عطف اس کے معروف ابواب ہیں۔",
+      "example": {
+        "arabic": "طَالِبٌ مُجْتَهِدٌ.",
+        "urdu": "محنتی طالب علم؛ مجتهد تابع ہے۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "followed",
+      "kind": "term",
+      "arabic": "الْمَتْبُوعُ",
+      "meaningUr": "جس کے اعراب کی پیروی ہو",
+      "meaningEn": "Head followed by a dependent",
+      "explanationUr": "تابع کا اعراب اس کے تعلق سے سمجھا جاتا ہے۔",
+      "example": {
+        "arabic": "طَالِبٌ مُجْتَهِدٌ.",
+        "urdu": "طالب متبوع ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "adjective",
+      "kind": "term",
+      "arabic": "الصِّفَةُ",
+      "meaningUr": "موصوف کا وصف یا حالت",
+      "meaningEn": "Adjective or attributive modifier",
+      "explanationUr": "حقیقی اور سببی صفت کے قواعد الگ سمجھیں۔",
+      "example": {
+        "arabic": "قَلَمٌ جَدِيدٌ.",
+        "urdu": "نیا قلم۔"
+      },
+      "icon": "palette"
+    },
+    {
+      "id": "described",
+      "kind": "term",
+      "arabic": "الْمَوْصُوفُ",
+      "meaningUr": "جس اسم کی صفت بیان ہو",
+      "meaningEn": "Noun being modified",
+      "explanationUr": "حقیقی صفت اپنے موصوف کی اہم نحوی خصوصیات کے مطابق ہوتی ہے۔",
+      "example": {
+        "arabic": "قَلَمٌ جَدِيدٌ.",
+        "urdu": "قلم موصوف ہے۔"
+      },
+      "icon": "tag"
+    },
+    {
+      "id": "emphasis",
+      "kind": "term",
+      "arabic": "التَّوْكِيدُ",
+      "meaningUr": "بات یا نسبت مضبوط کرنا",
+      "meaningEn": "Emphasis",
+      "explanationUr": "لفظی تکرار اور معنوی تاکید کی صورتیں الگ ہیں۔",
+      "example": {
+        "arabic": "جَاءَ خَالِدٌ نَفْسُهُ.",
+        "urdu": "خالد خود آیا۔"
+      },
+      "icon": "shield"
+    },
+    {
+      "id": "substitute",
+      "kind": "term",
+      "arabic": "الْبَدَلُ",
+      "meaningUr": "اصل مقصود کو دوسرے اسم سے بیان کرنا",
+      "meaningEn": "Apposition or substitution",
+      "explanationUr": "کل، بعض، اشتمال اور غلط اس کی بنیادی تعلیمی قسمیں ہیں۔",
+      "example": {
+        "arabic": "قَرَأْتُ الْكِتَابَ نِصْفَهُ.",
+        "urdu": "میں نے کتاب کا نصف پڑھا۔"
+      },
+      "icon": "swap"
+    },
+    {
+      "id": "conjunction",
+      "kind": "term",
+      "arabic": "الْعَطْفُ",
+      "meaningUr": "حرف کے ذریعے شرکت یا ربط",
+      "meaningEn": "Coordination",
+      "explanationUr": "معطوف اعراب میں اپنے معطوف علیہ کی پیروی کرتا ہے۔",
+      "example": {
+        "arabic": "جَاءَ خَالِدٌ وَسَعِيدٌ.",
+        "urdu": "خالد اور سعید آئے۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "conjunct",
+      "kind": "term",
+      "arabic": "الْمَعْطُوفُ",
+      "meaningUr": "حرف عطف کے بعد آنے والا تابع",
+      "meaningEn": "Conjunct",
+      "explanationUr": "اعراب پہلے متعلقہ اسم کے مطابق ہوتا ہے۔",
+      "example": {
+        "arabic": "رَأَيْتُ خَالِدًا وَسَعِيدًا.",
+        "urdu": "سعیدًا منصوب معطوف ہے۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "past",
+      "kind": "term",
+      "arabic": "الْمَاضِي",
+      "meaningUr": "گزرا ہوا زمانہ بتانے والا فعل",
+      "meaningEn": "Past-tense verb",
+      "explanationUr": "صیغہ ماضی شرط کے سیاق میں مستقبل کا مفہوم بھی دے سکتا ہے۔",
+      "example": {
+        "arabic": "كَتَبَ خَالِدٌ.",
+        "urdu": "خالد نے لکھا۔"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "imperfect",
+      "kind": "term",
+      "arabic": "الْمُضَارِعُ",
+      "meaningUr": "حال یا مستقبل سے متعلق فعل",
+      "meaningEn": "Imperfect or present-future verb",
+      "explanationUr": "ناصب و جازم سے اس کا اعراب بدل سکتا ہے۔",
+      "example": {
+        "arabic": "يَكْتُبُ خَالِدٌ.",
+        "urdu": "خالد لکھتا ہے یا لکھ رہا ہے۔"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "subjunctive-marker",
+      "kind": "term",
+      "arabic": "النَّاصِبُ",
+      "meaningUr": "مضارع کو نصب دینے والا",
+      "meaningEn": "Subjunctive marker",
+      "explanationUr": "لن اور أن کے متعلقہ استعمال اس کی مثالیں ہیں۔",
+      "example": {
+        "arabic": "لَنْ أَتَأَخَّرَ.",
+        "urdu": "میں دیر نہیں کروں گا۔"
+      },
+      "icon": "gear"
+    },
+    {
+      "id": "jussive-marker",
+      "kind": "term",
+      "arabic": "الْجَازِمُ",
+      "meaningUr": "مضارع کو جزم دینے والا",
+      "meaningEn": "Jussive marker",
+      "explanationUr": "لم، لا ناہیہ اور شرطی جوازم کی نوع الگ پہچانیں۔",
+      "example": {
+        "arabic": "لَمْ يَحْضُرْ.",
+        "urdu": "وہ حاضر نہیں ہوا۔"
+      },
+      "icon": "gear"
+    },
+    {
+      "id": "intransitive",
+      "kind": "term",
+      "arabic": "اللَّازِمُ",
+      "meaningUr": "براہ راست مفعول بہ کے بغیر مکمل ہونے والا فعل",
+      "meaningEn": "Intransitive verb",
+      "explanationUr": "لازم بھی ظرف، حال یا مصدر جیسے دوسرے منصوبات لے سکتا ہے۔",
+      "example": {
+        "arabic": "جَلَسَ الطِّفْلُ صَبَاحًا.",
+        "urdu": "بچہ صبح بیٹھا۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "transitive",
+      "kind": "term",
+      "arabic": "الْمُتَعَدِّي",
+      "meaningUr": "مفعول بہ تک اثر پہنچانے والا فعل",
+      "meaningEn": "Transitive verb",
+      "explanationUr": "ایک، دو یا تین مفعول لینے والے افعال کے الگ ابواب ہیں۔",
+      "example": {
+        "arabic": "فَتَحَ خَالِدٌ الْبَابَ.",
+        "urdu": "خالد نے دروازہ کھولا۔"
+      },
+      "icon": "arrow"
+    },
+    {
+      "id": "defective-verb",
+      "kind": "term",
+      "arabic": "الْفِعْلُ النَّاقِصُ",
+      "meaningUr": "اسم کے ساتھ خبر بھی طلب کرنے والا فعل",
+      "meaningEn": "Copular or incomplete verb",
+      "explanationUr": "کان و اخوات کے متعلقہ استعمال میں اسم رفع اور خبر نصب ہوتی ہے۔",
+      "example": {
+        "arabic": "كَانَ الْجَوُّ بَارِدًا.",
+        "urdu": "موسم ٹھنڈا تھا۔"
+      },
+      "icon": "blocks"
+    },
+    {
+      "id": "praise",
+      "kind": "term",
+      "arabic": "الْمَدْحُ",
+      "meaningUr": "تعریف کرنا",
+      "meaningEn": "Praise",
+      "explanationUr": "نعم اور حبذا مدح کے معروف اسالیب ہیں۔",
+      "example": {
+        "arabic": "نِعْمَ الرَّجُلُ خَالِدٌ.",
+        "urdu": "خالد کیا خوب آدمی ہے۔"
+      },
+      "icon": "star"
+    },
+    {
+      "id": "blame",
+      "kind": "term",
+      "arabic": "الذَّمُّ",
+      "meaningUr": "مذمت کرنا",
+      "meaningEn": "Blame",
+      "explanationUr": "بئس اور ساء ذم کے معروف اسالیب ہیں۔",
+      "example": {
+        "arabic": "بِئْسَ الْخُلُقُ الْكَذِبُ.",
+        "urdu": "جھوٹ کیا بری عادت ہے۔"
+      },
+      "icon": "shield"
+    },
+    {
+      "id": "active-participle",
+      "kind": "term",
+      "arabic": "اسْمُ الْفَاعِلِ",
+      "meaningUr": "کام کرنے والے کا مشتق اسم",
+      "meaningEn": "Active participle",
+      "explanationUr": "مناسب شرائط کے ساتھ اپنے معروف فعل جیسا عمل کر سکتا ہے۔",
+      "example": {
+        "arabic": "كَاتِبٌ.",
+        "urdu": "لکھنے والا۔"
+      },
+      "icon": "pen"
+    },
+    {
+      "id": "passive-participle",
+      "kind": "term",
+      "arabic": "اسْمُ الْمَفْعُولِ",
+      "meaningUr": "جس پر کام ہوا اس کا مشتق اسم",
+      "meaningEn": "Passive participle",
+      "explanationUr": "مناسب شرائط کے ساتھ مجہول فعل جیسا عمل کر سکتا ہے۔",
+      "example": {
+        "arabic": "مَكْتُوبٌ.",
+        "urdu": "لکھا ہوا۔"
+      },
+      "icon": "paper"
+    },
+    {
+      "id": "verbal-noun",
+      "kind": "term",
+      "arabic": "الْمَصْدَرُ",
+      "meaningUr": "زمانے کے بغیر حدث یا عمل کا نام",
+      "meaningEn": "Verbal noun",
+      "explanationUr": "فعل کے معنی کا عمل بتاتا ہے مگر فعل کی طرح زمانہ اس میں شامل نہیں۔",
+      "example": {
+        "arabic": "كِتَابَةٌ.",
+        "urdu": "لکھنا؛ تحریر کا عمل۔"
+      },
+      "icon": "pen"
+    },
+    {
+      "id": "derived",
+      "kind": "term",
+      "arabic": "الْمُشْتَقُّ",
+      "meaningUr": "اصل سے بنا ہوا اسم",
+      "meaningEn": "Derived noun or adjective",
+      "explanationUr": "کاتب اور مکتوب جیسے الفاظ اصل معنی سے مشتق ہیں۔",
+      "example": {
+        "arabic": "كَاتِبٌ؛ مَكْتُوبٌ.",
+        "urdu": "لکھنے والا؛ لکھا ہوا۔"
+      },
+      "icon": "branch"
+    },
+    {
+      "id": "underived",
+      "kind": "term",
+      "arabic": "الْجَامِدُ",
+      "meaningUr": "غیر مشتق اسم",
+      "meaningEn": "Underived noun",
+      "explanationUr": "اس کتاب کی ابتدائی تقسیم میں حجر جیسے اصل اسماء کی مثال دی جاتی ہے۔",
+      "example": {
+        "arabic": "حَجَرٌ.",
+        "urdu": "پتھر۔"
+      },
+      "icon": "blocks"
+    },
+    {
+      "id": "elative",
+      "kind": "term",
+      "arabic": "اسْمُ التَّفْضِيلِ",
+      "meaningUr": "دو میں زیادہ وصف بتانے والا اسم",
+      "meaningEn": "Comparative or superlative form",
+      "explanationUr": "من، ال اور اضافت کے ساتھ اس کی الگ ساختیں آتی ہیں۔",
+      "example": {
+        "arabic": "خَالِدٌ أَطْوَلُ مِنْ سَعِيدٍ.",
+        "urdu": "خالد سعید سے زیادہ لمبا ہے۔"
+      },
+      "icon": "up"
+    },
+    {
+      "id": "stable-adjective",
+      "kind": "term",
+      "arabic": "الصِّفَةُ الْمُشَبَّهَةُ",
+      "meaningUr": "ثابت وصف کا مشتق اسم",
+      "meaningEn": "Adjectival form expressing a stable quality",
+      "explanationUr": "لازم فعل سے وصف بیان کرتی ہے اور اپنے متعلق میں عمل کر سکتی ہے۔",
+      "example": {
+        "arabic": "رَجُلٌ حَسَنٌ خُلُقُهُ.",
+        "urdu": "ایسا آدمی جس کا اخلاق اچھا ہے۔"
+      },
+      "icon": "palette"
+    },
+    {
+      "id": "lexical-governor",
+      "kind": "term",
+      "arabic": "الْعَامِلُ اللَّفْظِيُّ",
+      "meaningUr": "لفظ میں موجود اعرابی عامل",
+      "meaningEn": "Expressed grammatical governor",
+      "explanationUr": "حرف، اسم یا فعل کی ظاہر صورت عامل ہوتی ہے۔",
+      "example": {
+        "arabic": "مِنَ الْبَيْتِ.",
+        "urdu": "گھر سے؛ من عامل لفظی ہے۔"
+      },
+      "icon": "gear"
+    },
+    {
+      "id": "abstract-governor",
+      "kind": "term",
+      "arabic": "الْعَامِلُ الْمَعْنَوِيُّ",
+      "meaningUr": "نحوی حالت سے سمجھا جانے والا عامل",
+      "meaningEn": "Abstract grammatical governor",
+      "explanationUr": "روایتی توضیح میں ابتدا اس کی مثال ہے۔",
+      "example": {
+        "arabic": "الْعِلْمُ نُورٌ.",
+        "urdu": "علم روشنی ہے۔"
+      },
+      "icon": "lamp"
+    },
+    {
+      "id": "beginning",
+      "kind": "term",
+      "arabic": "الِابْتِدَاءُ",
+      "meaningUr": "عامل لفظی سے خالی اسمی آغاز",
+      "meaningEn": "Initial nominal predication",
+      "explanationUr": "مبتدا کے رفع کی روایتی نحوی توضیح میں یہ معنوی عامل ہے۔",
+      "example": {
+        "arabic": "الطَّالِبُ حَاضِرٌ.",
+        "urdu": "طالب علم حاضر ہے۔"
+      },
+      "icon": "sun"
+    },
+    {
+      "id": "negation",
+      "kind": "term",
+      "arabic": "النَّفْيُ",
+      "meaningUr": "کسی بات کی نفی",
+      "meaningEn": "Negation",
+      "explanationUr": "نفی کرنے والے لفظ کا عمل اور زمانی معنی سیاق سے متعین ہوتا ہے۔",
+      "example": {
+        "arabic": "لَمْ يَحْضُرْ.",
+        "urdu": "وہ حاضر نہیں ہوا۔"
+      },
+      "icon": "shield"
+    },
+    {
+      "id": "confirmation",
+      "kind": "term",
+      "arabic": "التَّصْدِيقُ",
+      "meaningUr": "سابق بات کی تصدیق",
+      "meaningEn": "Confirmation",
+      "explanationUr": "نعم اور بلى کا فرق خصوصاً منفی سوال میں سمجھیں۔",
+      "example": {
+        "arabic": "هَلْ حَضَرَ؟ نَعَمْ.",
+        "urdu": "کیا وہ حاضر ہوا؟ ہاں۔"
+      },
+      "icon": "check"
+    },
+    {
+      "id": "explanation",
+      "kind": "term",
+      "arabic": "التَّفْسِيرُ",
+      "meaningUr": "پہلے کلام کو واضح کرنا",
+      "meaningEn": "Explanation",
+      "explanationUr": "أي اور أن کے تفسیری استعمال الگ پہچانے جاتے ہیں۔",
+      "example": {
+        "arabic": "جَاءَ زَيْدٌ أَيْ أَخُوكَ.",
+        "urdu": "زید، یعنی تمہارا بھائی، آیا۔"
+      },
+      "icon": "lamp"
+    },
+    {
+      "id": "attention",
+      "kind": "term",
+      "arabic": "التَّنْبِيهُ",
+      "meaningUr": "سامع کی توجہ دلانا",
+      "meaningEn": "Calling attention",
+      "explanationUr": "ألا اور ها کے متعلقہ استعمال توجہ دلاتے ہیں۔",
+      "example": {
+        "arabic": "أَلَا إِنَّ الْعِلْمَ نَافِعٌ.",
+        "urdu": "سن لو، بے شک علم فائدہ مند ہے۔"
+      },
+      "icon": "speaker"
+    },
+    {
+      "id": "encouragement",
+      "kind": "term",
+      "arabic": "التَّحْضِيضُ",
+      "meaningUr": "کسی کام پر ابھارنا",
+      "meaningEn": "Urging or exhortation",
+      "explanationUr": "هلا جیسے حروف سے طلب یا سیاقی ملامت کا پہلو پیدا ہوتا ہے۔",
+      "example": {
+        "arabic": "هَلَّا تَقْرَأُ؟",
+        "urdu": "تم پڑھتے کیوں نہیں؟"
+      },
+      "icon": "bolt"
+    },
+    {
+      "id": "retraction",
+      "kind": "term",
+      "arabic": "الْإِضْرَابُ",
+      "meaningUr": "پہلی بات سے دوسری کی طرف انتقال",
+      "meaningEn": "Correction or transition with bal",
+      "explanationUr": "بل کے متعلقہ استعمال میں پہلے سے توجہ ہٹا کر بعد کی بات مقصود ہوتی ہے۔",
+      "example": {
+        "arabic": "مَا جَاءَ خَالِدٌ بَلْ سَعِيدٌ.",
+        "urdu": "خالد نہیں، بلکہ سعید آیا۔"
+      },
+      "icon": "swap"
+    },
+    {
+      "id": "contrast",
+      "kind": "term",
+      "arabic": "الِاسْتِدْرَاكُ",
+      "meaningUr": "پچھلی بات کے ممکن تاثر کی اصلاح",
+      "meaningEn": "Adversative qualification",
+      "explanationUr": "لكن کے مناسب استعمال میں مخالف پہلو واضح کیا جاتا ہے۔",
+      "example": {
+        "arabic": "خَالِدٌ غَائِبٌ لَكِنَّ سَعِيدًا حَاضِرٌ.",
+        "urdu": "خالد غائب ہے لیکن سعید حاضر ہے۔"
+      },
+      "icon": "scales"
+    },
+    {
+      "id": "respite",
+      "kind": "term",
+      "arabic": "التَّرَاخِي",
+      "meaningUr": "ترتیب کے ساتھ زمانی وقفہ",
+      "meaningEn": "Sequence with an interval",
+      "explanationUr": "ثم کی نمایاں دلالت میں ترتیب اور وقفہ دونوں آتے ہیں۔",
+      "example": {
+        "arabic": "جَاءَ خَالِدٌ ثُمَّ سَعِيدٌ.",
+        "urdu": "خالد آیا، پھر کچھ وقفے کے بعد سعید آیا۔"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "preposition",
+      "kind": "term",
+      "arabic": "حَرْفُ الْجَرِّ",
+      "meaningUr": "اسم کو جر دینے والا حرف",
+      "meaningEn": "Preposition or genitive-governing particle",
+      "explanationUr": "في، من اور إلى کے متعلقہ استعمال اس کی مثالیں ہیں۔",
+      "example": {
+        "arabic": "فِي الْبَيْتِ.",
+        "urdu": "گھر میں۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "book-word",
+      "kind": "word",
+      "arabic": "كِتَابٌ",
+      "meaningUr": "کتاب",
+      "meaningEn": "Book",
+      "explanationUr": "عام لفظ؛ كُتُبٌ اس کی جمع مکسر ہے۔",
+      "example": {
+        "arabic": "الْكِتَابُ جَدِيدٌ.",
+        "urdu": "کتاب نئی ہے۔"
+      },
+      "icon": "book"
+    },
+    {
+      "id": "pen-word",
+      "kind": "word",
+      "arabic": "قَلَمٌ",
+      "meaningUr": "قلم",
+      "meaningEn": "Pen",
+      "explanationUr": "اسم واحد؛ أَقْلَامٌ اس کی معروف جمع ہے۔",
+      "example": {
+        "arabic": "هٰذَا قَلَمٌ.",
+        "urdu": "یہ قلم ہے۔"
+      },
+      "icon": "pen"
+    },
+    {
+      "id": "student-word",
+      "kind": "word",
+      "arabic": "طَالِبٌ",
+      "meaningUr": "طالب علم",
+      "meaningEn": "Student",
+      "explanationUr": "مذکر واحد؛ مؤنث طَالِبَةٌ ہے۔",
+      "example": {
+        "arabic": "الطَّالِبُ حَاضِرٌ.",
+        "urdu": "طالب علم حاضر ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "student-f-word",
+      "kind": "word",
+      "arabic": "طَالِبَةٌ",
+      "meaningUr": "طالبہ",
+      "meaningEn": "Female student",
+      "explanationUr": "تاء مربوطہ کے ساتھ مؤنث اسم۔",
+      "example": {
+        "arabic": "الطَّالِبَةُ مُجْتَهِدَةٌ.",
+        "urdu": "طالبہ محنتی ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "teacher-word",
+      "kind": "word",
+      "arabic": "مُعَلِّمٌ",
+      "meaningUr": "استاد",
+      "meaningEn": "Teacher",
+      "explanationUr": "جمع سالم مُعَلِّمُونَ ہے۔",
+      "example": {
+        "arabic": "حَضَرَ الْمُعَلِّمُ.",
+        "urdu": "استاد حاضر ہوا۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "door-word",
+      "kind": "word",
+      "arabic": "بَابٌ",
+      "meaningUr": "دروازہ",
+      "meaningEn": "Door",
+      "explanationUr": "اضافت میں بَابُ الْبَيْتِ: گھر کا دروازہ۔",
+      "example": {
+        "arabic": "الْبَابُ مَفْتُوحٌ.",
+        "urdu": "دروازہ کھلا ہے۔"
+      },
+      "icon": "door"
+    },
+    {
+      "id": "school-word",
+      "kind": "word",
+      "arabic": "مَدْرَسَةٌ",
+      "meaningUr": "مدرسہ؛ اسکول",
+      "meaningEn": "School",
+      "explanationUr": "مؤنث اسم؛ جمع مَدَارِسُ ہے۔",
+      "example": {
+        "arabic": "هٰذِهِ مَدْرَسَةٌ.",
+        "urdu": "یہ مدرسہ ہے۔"
+      },
+      "icon": "school"
+    },
+    {
+      "id": "house-word",
+      "kind": "word",
+      "arabic": "بَيْتٌ",
+      "meaningUr": "گھر",
+      "meaningEn": "House",
+      "explanationUr": "جمع بُيُوتٌ ہے۔",
+      "example": {
+        "arabic": "الْبَيْتُ كَبِيرٌ.",
+        "urdu": "گھر بڑا ہے۔"
+      },
+      "icon": "home"
+    },
+    {
+      "id": "class-word",
+      "kind": "word",
+      "arabic": "فَصْلٌ",
+      "meaningUr": "کلاس؛ درسی کمرہ",
+      "meaningEn": "Classroom",
+      "explanationUr": "یہاں تعلیمی جگہ کا معنی ہے؛ فصل کے دوسرے معنی سیاق سے آتے ہیں۔",
+      "example": {
+        "arabic": "الطَّالِبُ فِي الْفَصْلِ.",
+        "urdu": "طالب علم کلاس میں ہے۔"
+      },
+      "icon": "school"
+    },
+    {
+      "id": "bag-word",
+      "kind": "word",
+      "arabic": "حَقِيبَةٌ",
+      "meaningUr": "بستہ؛ بیگ",
+      "meaningEn": "Bag",
+      "explanationUr": "مؤنث اسم، جس میں کتاب یا سامان رکھا جاتا ہے۔",
+      "example": {
+        "arabic": "الْكِتَابُ فِي الْحَقِيبَةِ.",
+        "urdu": "کتاب بستے میں ہے۔"
+      },
+      "icon": "bag"
+    },
+    {
+      "id": "desk-word",
+      "kind": "word",
+      "arabic": "مَكْتَبٌ",
+      "meaningUr": "میز؛ لکھنے کی میز",
+      "meaningEn": "Desk",
+      "explanationUr": "یہاں جگہ رکھنے والی میز مراد ہے؛ دفتر کا معنی بھی سیاق میں آ سکتا ہے۔",
+      "example": {
+        "arabic": "الْقَلَمُ عَلَى الْمَكْتَبِ.",
+        "urdu": "قلم میز پر ہے۔"
+      },
+      "icon": "desk"
+    },
+    {
+      "id": "lesson-word",
+      "kind": "word",
+      "arabic": "دَرْسٌ",
+      "meaningUr": "سبق",
+      "meaningEn": "Lesson",
+      "explanationUr": "دُرُوسٌ اس کی جمع ہے۔",
+      "example": {
+        "arabic": "فَهِمْتُ الدَّرْسَ.",
+        "urdu": "میں نے سبق سمجھ لیا۔"
+      },
+      "icon": "book"
+    },
+    {
+      "id": "knowledge-word",
+      "kind": "word",
+      "arabic": "عِلْمٌ",
+      "meaningUr": "علم؛ جاننا",
+      "meaningEn": "Knowledge",
+      "explanationUr": "یہاں علم و معلومات کا معنی، لفظ عَلم یعنی جھنڈا سے الگ ہے۔",
+      "example": {
+        "arabic": "الْعِلْمُ نَافِعٌ.",
+        "urdu": "علم فائدہ مند ہے۔"
+      },
+      "icon": "lamp"
+    },
+    {
+      "id": "light-word",
+      "kind": "word",
+      "arabic": "نُورٌ",
+      "meaningUr": "روشنی",
+      "meaningEn": "Light",
+      "explanationUr": "حسی روشنی اور مجازی ہدایت کے لیے سیاق کے مطابق آتا ہے۔",
+      "example": {
+        "arabic": "الْعِلْمُ نُورٌ.",
+        "urdu": "علم روشنی ہے۔"
+      },
+      "icon": "sun"
+    },
+    {
+      "id": "guest-word",
+      "kind": "word",
+      "arabic": "ضَيْفٌ",
+      "meaningUr": "مہمان",
+      "meaningEn": "Guest",
+      "explanationUr": "جملے میں فاعل یا مفعول ہونے سے اعراب بدل سکتا ہے۔",
+      "example": {
+        "arabic": "وَصَلَ الضَّيْفُ.",
+        "urdu": "مہمان پہنچ گیا۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "friend-word",
+      "kind": "word",
+      "arabic": "صَدِيقٌ",
+      "meaningUr": "دوست",
+      "meaningEn": "Friend",
+      "explanationUr": "ندا میں معین مخاطب ہو تو يَا صَدِيقُ کہا جا سکتا ہے۔",
+      "example": {
+        "arabic": "يَا صَدِيقُ!",
+        "urdu": "اے دوست!"
+      },
+      "icon": "group"
+    },
+    {
+      "id": "child-word",
+      "kind": "word",
+      "arabic": "طِفْلٌ",
+      "meaningUr": "بچہ",
+      "meaningEn": "Child",
+      "explanationUr": "جمع أَطْفَالٌ ہے۔",
+      "example": {
+        "arabic": "جَلَسَ الطِّفْلُ.",
+        "urdu": "بچہ بیٹھا۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "man-word",
+      "kind": "word",
+      "arabic": "رَجُلٌ",
+      "meaningUr": "آدمی؛ مرد",
+      "meaningEn": "Man",
+      "explanationUr": "جمع رِجَالٌ ہے۔",
+      "example": {
+        "arabic": "حَضَرَ رَجُلٌ.",
+        "urdu": "ایک آدمی حاضر ہوا۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "woman-word",
+      "kind": "word",
+      "arabic": "اِمْرَأَةٌ",
+      "meaningUr": "عورت",
+      "meaningEn": "Woman",
+      "explanationUr": "مؤنث حقیقی؛ نِسَاءٌ اس کی جمع کا کام کرتا ہے۔",
+      "example": {
+        "arabic": "حَضَرَتِ امْرَأَةٌ.",
+        "urdu": "ایک عورت حاضر ہوئی۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "father-word",
+      "kind": "word",
+      "arabic": "أَبٌ",
+      "meaningUr": "والد؛ باپ",
+      "meaningEn": "Father",
+      "explanationUr": "اسماء ستہ میں مخصوص شرائط کے ساتھ حرفی اعراب لیتا ہے۔",
+      "example": {
+        "arabic": "حَضَرَ أَبُوكَ.",
+        "urdu": "تمہارے والد حاضر ہوئے۔"
+      },
+      "icon": "group"
+    },
+    {
+      "id": "brother-word",
+      "kind": "word",
+      "arabic": "أَخٌ",
+      "meaningUr": "بھائی",
+      "meaningEn": "Brother",
+      "explanationUr": "اسماء ستہ میں متعلقہ شرطوں کے ساتھ أَخُوكَ وغیرہ آتا ہے۔",
+      "example": {
+        "arabic": "أَخُوكَ حَاضِرٌ.",
+        "urdu": "تمہارا بھائی حاضر ہے۔"
+      },
+      "icon": "group"
+    },
+    {
+      "id": "sun-word",
+      "kind": "word",
+      "arabic": "شَمْسٌ",
+      "meaningUr": "سورج",
+      "meaningEn": "Sun",
+      "explanationUr": "عربی میں سماعی مؤنث ہے، اگرچہ ظاہری تاء نہیں۔",
+      "example": {
+        "arabic": "طَلَعَتِ الشَّمْسُ.",
+        "urdu": "سورج نکلا۔"
+      },
+      "icon": "sun"
+    },
+    {
+      "id": "moon-word",
+      "kind": "word",
+      "arabic": "قَمَرٌ",
+      "meaningUr": "چاند",
+      "meaningEn": "Moon",
+      "explanationUr": "مذکر اسم۔",
+      "example": {
+        "arabic": "الْقَمَرُ جَمِيلٌ.",
+        "urdu": "چاند خوب صورت ہے۔"
+      },
+      "icon": "moon"
+    },
+    {
+      "id": "earth-word",
+      "kind": "word",
+      "arabic": "أَرْضٌ",
+      "meaningUr": "زمین",
+      "meaningEn": "Earth or land",
+      "explanationUr": "عربی میں مؤنث اسم؛ تصغیر میں أُرَيْضَةٌ آتا ہے۔",
+      "example": {
+        "arabic": "هٰذِهِ أَرْضٌ وَاسِعَةٌ.",
+        "urdu": "یہ کشادہ زمین ہے۔"
+      },
+      "icon": "globe"
+    },
+    {
+      "id": "garden-word",
+      "kind": "word",
+      "arabic": "حَدِيقَةٌ",
+      "meaningUr": "باغ",
+      "meaningEn": "Garden",
+      "explanationUr": "مؤنث اسم؛ جمع حَدَائِقُ ہے۔",
+      "example": {
+        "arabic": "الْحَدِيقَةُ جَمِيلَةٌ.",
+        "urdu": "باغ خوب صورت ہے۔"
+      },
+      "icon": "leaf"
+    },
+    {
+      "id": "tree-word",
+      "kind": "word",
+      "arabic": "شَجَرَةٌ",
+      "meaningUr": "درخت",
+      "meaningEn": "Tree",
+      "explanationUr": "تاء مربوطہ کے ساتھ مؤنث اسم۔",
+      "example": {
+        "arabic": "هٰذِهِ شَجَرَةٌ.",
+        "urdu": "یہ درخت ہے۔"
+      },
+      "icon": "leaf"
+    },
+    {
+      "id": "water-word",
+      "kind": "word",
+      "arabic": "مَاءٌ",
+      "meaningUr": "پانی",
+      "meaningEn": "Water",
+      "explanationUr": "مِيَاهٌ اس کی معروف جمع ہے۔",
+      "example": {
+        "arabic": "الْمَاءُ بَارِدٌ.",
+        "urdu": "پانی ٹھنڈا ہے۔"
+      },
+      "icon": "drop"
+    },
+    {
+      "id": "river-word",
+      "kind": "word",
+      "arabic": "نَهْرٌ",
+      "meaningUr": "دریا",
+      "meaningEn": "River",
+      "explanationUr": "مفعول معہ کی مثال میں ساتھ چلنے کی نسبت آتی ہے۔",
+      "example": {
+        "arabic": "سِرْتُ وَالنَّهْرَ.",
+        "urdu": "میں دریا کے ساتھ ساتھ چلا۔"
+      },
+      "icon": "drop"
+    },
+    {
+      "id": "morning-word",
+      "kind": "word",
+      "arabic": "صَبَاحٌ",
+      "meaningUr": "صبح",
+      "meaningEn": "Morning",
+      "explanationUr": "ظرفی استعمال میں صَبَاحًا منصوب آ سکتا ہے۔",
+      "example": {
+        "arabic": "وَصَلْتُ صَبَاحًا.",
+        "urdu": "میں صبح پہنچا۔"
+      },
+      "icon": "sun"
+    },
+    {
+      "id": "night-word",
+      "kind": "word",
+      "arabic": "لَيْلٌ",
+      "meaningUr": "رات",
+      "meaningEn": "Night",
+      "explanationUr": "ظرفی استعمال لَيْلًا: رات کو۔",
+      "example": {
+        "arabic": "سَافَرْتُ لَيْلًا.",
+        "urdu": "میں نے رات کو سفر کیا۔"
+      },
+      "icon": "moon"
+    },
+    {
+      "id": "day-word",
+      "kind": "word",
+      "arabic": "يَوْمٌ",
+      "meaningUr": "دن",
+      "meaningEn": "Day",
+      "explanationUr": "وقت کی مقدار یا خاص دن سیاق سے متعین ہوتا ہے۔",
+      "example": {
+        "arabic": "هٰذَا يَوْمٌ جَمِيلٌ.",
+        "urdu": "یہ خوب صورت دن ہے۔"
+      },
+      "icon": "calendar"
+    },
+    {
+      "id": "time-word",
+      "kind": "word",
+      "arabic": "وَقْتٌ",
+      "meaningUr": "وقت",
+      "meaningEn": "Time",
+      "explanationUr": "مذکر اسم؛ أَوْقَاتٌ اس کی جمع ہے۔",
+      "example": {
+        "arabic": "الْوَقْتُ قَصِيرٌ.",
+        "urdu": "وقت کم ہے۔"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "letter-word",
+      "kind": "word",
+      "arabic": "رِسَالَةٌ",
+      "meaningUr": "خط؛ پیغام",
+      "meaningEn": "Letter or message",
+      "explanationUr": "فعل كتب کے بعد مفعول کی مثال میں آتا ہے۔",
+      "example": {
+        "arabic": "كَتَبْتُ رِسَالَةً.",
+        "urdu": "میں نے خط لکھا۔"
+      },
+      "icon": "paper"
+    },
+    {
+      "id": "news-word",
+      "kind": "word",
+      "arabic": "خَبَرٌ",
+      "meaningUr": "اطلاع؛ خبر",
+      "meaningEn": "News or information",
+      "explanationUr": "عام لفظ کا معنی خبر ہے؛ نحوی الخبر کی اصطلاح الگ کارڈ میں ہے۔",
+      "example": {
+        "arabic": "الْخَبَرُ صَحِيحٌ.",
+        "urdu": "خبر درست ہے۔"
+      },
+      "icon": "paper"
+    },
+    {
+      "id": "judge-word",
+      "kind": "word",
+      "arabic": "قَاضٍ",
+      "meaningUr": "قاضی؛ فیصلہ کرنے والا",
+      "meaningEn": "Judge",
+      "explanationUr": "اسم منقوص کی نکرہ رفع و جر کی مثال؛ معرفہ الْقَاضِي ہے۔",
+      "example": {
+        "arabic": "جَاءَ قَاضٍ.",
+        "urdu": "ایک قاضی آیا۔"
+      },
+      "icon": "scales"
+    },
+    {
+      "id": "stone-word",
+      "kind": "word",
+      "arabic": "حَجَرٌ",
+      "meaningUr": "پتھر",
+      "meaningEn": "Stone",
+      "explanationUr": "جامد اسم کی ایک سادہ مثال۔",
+      "example": {
+        "arabic": "هٰذَا حَجَرٌ.",
+        "urdu": "یہ پتھر ہے۔"
+      },
+      "icon": "blocks"
+    },
+    {
+      "id": "new-word",
+      "kind": "word",
+      "arabic": "جَدِيدٌ",
+      "meaningUr": "نیا",
+      "meaningEn": "New",
+      "explanationUr": "مؤنث جَدِيدَةٌ ہے؛ صفت یا خبر ہو سکتا ہے۔",
+      "example": {
+        "arabic": "كِتَابٌ جَدِيدٌ.",
+        "urdu": "نئی کتاب۔"
+      },
+      "icon": "spark"
+    },
+    {
+      "id": "beautiful-word",
+      "kind": "word",
+      "arabic": "جَمِيلٌ",
+      "meaningUr": "خوب صورت",
+      "meaningEn": "Beautiful",
+      "explanationUr": "مؤنث جَمِيلَةٌ ہے۔",
+      "example": {
+        "arabic": "الْجَوُّ جَمِيلٌ.",
+        "urdu": "موسم خوش گوار ہے۔"
+      },
+      "icon": "palette"
+    },
+    {
+      "id": "useful-word",
+      "kind": "word",
+      "arabic": "نَافِعٌ",
+      "meaningUr": "فائدہ مند",
+      "meaningEn": "Useful or beneficial",
+      "explanationUr": "خبر یا صفت کے طور پر آ سکتا ہے۔",
+      "example": {
+        "arabic": "الْعِلْمُ نَافِعٌ.",
+        "urdu": "علم فائدہ مند ہے۔"
+      },
+      "icon": "lamp"
+    },
+    {
+      "id": "diligent-word",
+      "kind": "word",
+      "arabic": "مُجْتَهِدٌ",
+      "meaningUr": "محنتی",
+      "meaningEn": "Diligent",
+      "explanationUr": "مؤنث مُجْتَهِدَةٌ ہے؛ صفت و خبر کی مثالوں میں مفید لفظ ہے۔",
+      "example": {
+        "arabic": "الطَّالِبُ مُجْتَهِدٌ.",
+        "urdu": "طالب علم محنتی ہے۔"
+      },
+      "icon": "star"
+    },
+    {
+      "id": "present-word",
+      "kind": "word",
+      "arabic": "حَاضِرٌ",
+      "meaningUr": "حاضر؛ موجود",
+      "meaningEn": "Present",
+      "explanationUr": "غَائِبٌ اس کا متعلقہ متضاد ہے۔",
+      "example": {
+        "arabic": "الْمُعَلِّمُ حَاضِرٌ.",
+        "urdu": "استاد حاضر ہے۔"
+      },
+      "icon": "check"
+    },
+    {
+      "id": "absent-word",
+      "kind": "word",
+      "arabic": "غَائِبٌ",
+      "meaningUr": "غیر حاضر",
+      "meaningEn": "Absent",
+      "explanationUr": "حاضر کے مقابل غیر موجود شخص کے لیے۔",
+      "example": {
+        "arabic": "الطَّالِبُ غَائِبٌ.",
+        "urdu": "طالب علم غیر حاضر ہے۔"
+      },
+      "icon": "person"
+    },
+    {
+      "id": "cold-word",
+      "kind": "word",
+      "arabic": "بَارِدٌ",
+      "meaningUr": "ٹھنڈا",
+      "meaningEn": "Cold",
+      "explanationUr": "پانی یا موسم کی کیفیت بتا سکتا ہے۔",
+      "example": {
+        "arabic": "الْمَاءُ بَارِدٌ.",
+        "urdu": "پانی ٹھنڈا ہے۔"
+      },
+      "icon": "drop"
+    },
+    {
+      "id": "open-word",
+      "kind": "word",
+      "arabic": "مَفْتُوحٌ",
+      "meaningUr": "کھلا ہوا",
+      "meaningEn": "Open",
+      "explanationUr": "فعل فتح سے اسم مفعول کی مثال۔",
+      "example": {
+        "arabic": "الْبَابُ مَفْتُوحٌ.",
+        "urdu": "دروازہ کھلا ہے۔"
+      },
+      "icon": "door"
+    },
+    {
+      "id": "written-word",
+      "kind": "word",
+      "arabic": "مَكْتُوبٌ",
+      "meaningUr": "لکھا ہوا",
+      "meaningEn": "Written",
+      "explanationUr": "كتب سے اسم مفعول؛ مصدر كتابة سے الگ صورت ہے۔",
+      "example": {
+        "arabic": "الدَّرْسُ مَكْتُوبٌ.",
+        "urdu": "سبق لکھا ہوا ہے۔"
+      },
+      "icon": "paper"
+    },
+    {
+      "id": "smiling-word",
+      "kind": "word",
+      "arabic": "مُبْتَسِمٌ",
+      "meaningUr": "مسکراتا ہوا",
+      "meaningEn": "Smiling",
+      "explanationUr": "حال میں مُبْتَسِمًا کی صورت آ سکتی ہے۔",
+      "example": {
+        "arabic": "دَخَلَ مُبْتَسِمًا.",
+        "urdu": "وہ مسکراتا ہوا داخل ہوا۔"
+      },
+      "icon": "smile"
+    },
+    {
+      "id": "hurried-word",
+      "kind": "word",
+      "arabic": "مُسْرِعٌ",
+      "meaningUr": "جلدی کرنے والا؛ تیزی سے چلنے والا",
+      "meaningEn": "Hurrying or moving quickly",
+      "explanationUr": "حال کی مثال میں مُسْرِعًا منصوب آتا ہے۔",
+      "example": {
+        "arabic": "رَجَعَ خَالِدٌ مُسْرِعًا.",
+        "urdu": "خالد تیزی سے واپس آیا۔"
+      },
+      "icon": "bolt"
+    },
+    {
+      "id": "read-word",
+      "kind": "word",
+      "arabic": "قَرَأَ",
+      "meaningUr": "اس نے پڑھا",
+      "meaningEn": "He read",
+      "explanationUr": "فعل ماضی؛ مضارع يَقْرَأُ ہے۔",
+      "example": {
+        "arabic": "قَرَأَ الطَّالِبُ الْكِتَابَ.",
+        "urdu": "طالب علم نے کتاب پڑھی۔"
+      },
+      "icon": "book"
+    },
+    {
+      "id": "write-word",
+      "kind": "word",
+      "arabic": "كَتَبَ",
+      "meaningUr": "اس نے لکھا",
+      "meaningEn": "He wrote",
+      "explanationUr": "فعل ماضی؛ مضارع يَكْتُبُ ہے۔",
+      "example": {
+        "arabic": "كَتَبَ خَالِدٌ رِسَالَةً.",
+        "urdu": "خالد نے خط لکھا۔"
+      },
+      "icon": "pen"
+    },
+    {
+      "id": "understand-word",
+      "kind": "word",
+      "arabic": "فَهِمَ",
+      "meaningUr": "وہ سمجھا",
+      "meaningEn": "He understood",
+      "explanationUr": "فعل ماضی؛ مضارع يَفْهَمُ ہے۔",
+      "example": {
+        "arabic": "فَهِمْتُ الدَّرْسَ.",
+        "urdu": "میں نے سبق سمجھ لیا۔"
+      },
+      "icon": "lamp"
+    },
+    {
+      "id": "arrive-word",
+      "kind": "word",
+      "arabic": "وَصَلَ",
+      "meaningUr": "وہ پہنچا",
+      "meaningEn": "He arrived",
+      "explanationUr": "لازم فعل کی سادہ مثال۔",
+      "example": {
+        "arabic": "وَصَلَ الضَّيْفُ.",
+        "urdu": "مہمان پہنچا۔"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "attend-word",
+      "kind": "word",
+      "arabic": "حَضَرَ",
+      "meaningUr": "وہ حاضر ہوا",
+      "meaningEn": "He attended or was present",
+      "explanationUr": "فعل ماضی؛ مضارع يَحْضُرُ ہے۔",
+      "example": {
+        "arabic": "حَضَرَ الْمُعَلِّمُ.",
+        "urdu": "استاد حاضر ہوا۔"
+      },
+      "icon": "check"
+    },
+    {
+      "id": "sit-word",
+      "kind": "word",
+      "arabic": "جَلَسَ",
+      "meaningUr": "وہ بیٹھا",
+      "meaningEn": "He sat",
+      "explanationUr": "لازم فعل؛ وقت یا جگہ کا متعلق بھی لے سکتا ہے۔",
+      "example": {
+        "arabic": "جَلَسَ الطِّفْلُ.",
+        "urdu": "بچہ بیٹھا۔"
+      },
+      "icon": "desk"
+    },
+    {
+      "id": "enter-word",
+      "kind": "word",
+      "arabic": "دَخَلَ",
+      "meaningUr": "وہ داخل ہوا",
+      "meaningEn": "He entered",
+      "explanationUr": "فعل ماضی؛ مضارع يَدْخُلُ ہے۔",
+      "example": {
+        "arabic": "دَخَلَ الْمُعَلِّمُ.",
+        "urdu": "استاد داخل ہوا۔"
+      },
+      "icon": "door"
+    },
+    {
+      "id": "return-word",
+      "kind": "word",
+      "arabic": "رَجَعَ",
+      "meaningUr": "وہ واپس آیا",
+      "meaningEn": "He returned",
+      "explanationUr": "لازم فعل کے ساتھ حال کی مثال بن سکتی ہے۔",
+      "example": {
+        "arabic": "رَجَعَ مُسْرِعًا.",
+        "urdu": "وہ تیزی سے واپس آیا۔"
+      },
+      "icon": "arrow"
+    },
+    {
+      "id": "travel-word",
+      "kind": "word",
+      "arabic": "سَافَرَ",
+      "meaningUr": "اس نے سفر کیا",
+      "meaningEn": "He travelled",
+      "explanationUr": "فعل ماضی؛ ظرف زمان کے ساتھ آ سکتا ہے۔",
+      "example": {
+        "arabic": "سَافَرَ خَالِدٌ لَيْلًا.",
+        "urdu": "خالد نے رات کو سفر کیا۔"
+      },
+      "icon": "globe"
+    },
+    {
+      "id": "open-verb-word",
+      "kind": "word",
+      "arabic": "فَتَحَ",
+      "meaningUr": "اس نے کھولا",
+      "meaningEn": "He opened",
+      "explanationUr": "متعدی فعل؛ دروازہ مفعول کی مثال ہے۔",
+      "example": {
+        "arabic": "فَتَحَ خَالِدٌ الْبَابَ.",
+        "urdu": "خالد نے دروازہ کھولا۔"
+      },
+      "icon": "door"
+    },
+    {
+      "id": "see-word",
+      "kind": "word",
+      "arabic": "رَأَى",
+      "meaningUr": "اس نے دیکھا",
+      "meaningEn": "He saw",
+      "explanationUr": "یہاں بصری دیکھنا مراد ہے؛ قلبی معنی میں عمل مختلف ہو سکتا ہے۔",
+      "example": {
+        "arabic": "رَأَيْتُ الْقَمَرَ.",
+        "urdu": "میں نے چاند دیکھا۔"
+      },
+      "icon": "eye"
+    },
+    {
+      "id": "give-word",
+      "kind": "word",
+      "arabic": "أَعْطَى",
+      "meaningUr": "اس نے دیا",
+      "meaningEn": "He gave",
+      "explanationUr": "دو مفعول کی معروف مثال؛ لینے والا اور دی ہوئی چیز۔",
+      "example": {
+        "arabic": "أَعْطَيْتُ الطِّفْلَ كِتَابًا.",
+        "urdu": "میں نے بچے کو کتاب دی۔"
+      },
+      "icon": "gift"
+    },
+    {
+      "id": "think-word",
+      "kind": "word",
+      "arabic": "ظَنَّ",
+      "meaningUr": "اس نے گمان کیا؛ سمجھا",
+      "meaningEn": "He thought or supposed",
+      "explanationUr": "قلبی معنی میں اصل مبتدا و خبر کو دو مفعول بنا سکتا ہے۔",
+      "example": {
+        "arabic": "ظَنَنْتُ الطَّالِبَ غَائِبًا.",
+        "urdu": "میں نے طالب علم کو غیر حاضر سمجھا۔"
+      },
+      "icon": "question"
+    },
+    {
+      "id": "be-word",
+      "kind": "word",
+      "arabic": "كَانَ",
+      "meaningUr": "وہ تھا",
+      "meaningEn": "Was",
+      "explanationUr": "ناقص استعمال میں اسم مرفوع اور خبر منصوب کرتا ہے۔",
+      "example": {
+        "arabic": "كَانَ الْجَوُّ بَارِدًا.",
+        "urdu": "موسم ٹھنڈا تھا۔"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "become-word",
+      "kind": "word",
+      "arabic": "صَارَ",
+      "meaningUr": "وہ ہوگیا",
+      "meaningEn": "Became",
+      "explanationUr": "کان و اخوات میں حالت کی تبدیلی بتاتا ہے۔",
+      "example": {
+        "arabic": "صَارَ الْمَاءُ بَارِدًا.",
+        "urdu": "پانی ٹھنڈا ہوگیا۔"
+      },
+      "icon": "swap"
+    },
+    {
+      "id": "indeed-word",
+      "kind": "word",
+      "arabic": "إِنَّ",
+      "meaningUr": "بے شک؛ یقیناً",
+      "meaningEn": "Indeed or certainly",
+      "explanationUr": "اسم کو نصب اور خبر کو رفع دیتا ہے۔",
+      "example": {
+        "arabic": "إِنَّ الْعِلْمَ نَافِعٌ.",
+        "urdu": "بے شک علم فائدہ مند ہے۔"
+      },
+      "icon": "check"
+    },
+    {
+      "id": "in-word",
+      "kind": "word",
+      "arabic": "فِي",
+      "meaningUr": "میں؛ اندر",
+      "meaningEn": "In",
+      "explanationUr": "حرف جر کے استعمال میں بعد کا اسم مجرور ہوتا ہے۔",
+      "example": {
+        "arabic": "فِي الْبَيْتِ.",
+        "urdu": "گھر میں۔"
+      },
+      "icon": "home"
+    },
+    {
+      "id": "from-word",
+      "kind": "word",
+      "arabic": "مِنْ",
+      "meaningUr": "سے",
+      "meaningEn": "From",
+      "explanationUr": "ابتدا یا دوسرے معنوی تعلق کا فیصلہ سیاق سے ہوتا ہے۔",
+      "example": {
+        "arabic": "خَرَجَ مِنَ الْبَيْتِ.",
+        "urdu": "وہ گھر سے نکلا۔"
+      },
+      "icon": "arrow"
+    },
+    {
+      "id": "to-word",
+      "kind": "word",
+      "arabic": "إِلَى",
+      "meaningUr": "تک؛ کی طرف",
+      "meaningEn": "To or towards",
+      "explanationUr": "حرف جر؛ سمت یا انتہا کا معروف معنی۔",
+      "example": {
+        "arabic": "ذَهَبَ إِلَى الْمَدْرَسَةِ.",
+        "urdu": "وہ مدرسے کی طرف گیا۔"
+      },
+      "icon": "arrow"
+    },
+    {
+      "id": "on-word",
+      "kind": "word",
+      "arabic": "عَلَى",
+      "meaningUr": "پر",
+      "meaningEn": "On or upon",
+      "explanationUr": "حرف جر؛ استعلاء کا معروف معنی۔",
+      "example": {
+        "arabic": "الْقَلَمُ عَلَى الْمَكْتَبِ.",
+        "urdu": "قلم میز پر ہے۔"
+      },
+      "icon": "desk"
+    },
+    {
+      "id": "except-word",
+      "kind": "word",
+      "arabic": "إِلَّا",
+      "meaningUr": "سوائے؛ مگر",
+      "meaningEn": "Except",
+      "explanationUr": "استثناء کی قسم دیکھ کر بعد کے لفظ کا اعراب طے کریں۔",
+      "example": {
+        "arabic": "حَضَرُوا إِلَّا خَالِدًا.",
+        "urdu": "خالد کے سوا وہ حاضر ہوئے۔"
+      },
+      "icon": "filter"
+    },
+    {
+      "id": "and-word",
+      "kind": "word",
+      "arabic": "وَ",
+      "meaningUr": "اور",
+      "meaningEn": "And",
+      "explanationUr": "عطف کے استعمال میں بنیادی شرکت؛ واو کے دوسرے استعمال بھی ہیں۔",
+      "example": {
+        "arabic": "خَالِدٌ وَسَعِيدٌ.",
+        "urdu": "خالد اور سعید۔"
+      },
+      "icon": "link"
+    },
+    {
+      "id": "then-word",
+      "kind": "word",
+      "arabic": "ثُمَّ",
+      "meaningUr": "پھر؛ وقفے کے بعد",
+      "meaningEn": "Then, after an interval",
+      "explanationUr": "عطف میں ترتیب اور تراخی کا معنی دیتا ہے۔",
+      "example": {
+        "arabic": "جَاءَ خَالِدٌ ثُمَّ سَعِيدٌ.",
+        "urdu": "خالد آیا، پھر سعید آیا۔"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "yes-word",
+      "kind": "word",
+      "arabic": "نَعَمْ",
+      "meaningUr": "ہاں؛ سابق بات کی تصدیق",
+      "meaningEn": "Yes; confirmation",
+      "explanationUr": "منفی سوال کے جواب میں بلى سے معنوی فرق ملحوظ رکھیں۔",
+      "example": {
+        "arabic": "هَلْ حَضَرَ؟ نَعَمْ.",
+        "urdu": "کیا وہ حاضر ہوا؟ ہاں۔"
+      },
+      "icon": "check"
+    },
+    {
+      "id": "yes-negative-word",
+      "kind": "word",
+      "arabic": "بَلَى",
+      "meaningUr": "کیوں نہیں؛ نفی کو رد کرنے والا ہاں",
+      "meaningEn": "Yes, contradicting a negative",
+      "explanationUr": "منفی سوال میں مثبت واقعہ ثابت کرتا ہے۔",
+      "example": {
+        "arabic": "أَلَمْ يَحْضُرْ؟ بَلَى.",
+        "urdu": "کیا وہ نہیں آیا؟ کیوں نہیں، آیا تھا۔"
+      },
+      "icon": "check"
+    },
+    {
+      "id": "this-word",
+      "kind": "word",
+      "arabic": "هٰذَا",
+      "meaningUr": "یہ؛ مذکر واحد قریب",
+      "meaningEn": "This, masculine singular",
+      "explanationUr": "اسم اشارہ؛ جملے میں بنا وہی رہتے ہوئے محل بدل سکتا ہے۔",
+      "example": {
+        "arabic": "هٰذَا كِتَابٌ.",
+        "urdu": "یہ کتاب ہے۔"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "that-word",
+      "kind": "word",
+      "arabic": "ذٰلِكَ",
+      "meaningUr": "وہ؛ مذکر واحد بعید",
+      "meaningEn": "That, masculine singular",
+      "explanationUr": "دور کے مذکر واحد کی طرف اشارہ۔",
+      "example": {
+        "arabic": "ذٰلِكَ بَيْتٌ.",
+        "urdu": "وہ گھر ہے۔"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "who-word",
+      "kind": "word",
+      "arabic": "مَنْ",
+      "meaningUr": "کون؛ جو شخص",
+      "meaningEn": "Who or whoever",
+      "explanationUr": "سوال، موصول یا شرط کا صحیح معنی سیاق سے ہوتا ہے۔",
+      "example": {
+        "arabic": "مَنْ حَضَرَ؟",
+        "urdu": "کون حاضر ہوا؟"
+      },
+      "icon": "question"
+    },
+    {
+      "id": "when-word",
+      "kind": "word",
+      "arabic": "مَتَى",
+      "meaningUr": "کب",
+      "meaningEn": "When",
+      "explanationUr": "استفہام یا شرط میں وقت سے تعلق بتاتا ہے۔",
+      "example": {
+        "arabic": "مَتَى تَحْضُرُ؟",
+        "urdu": "تم کب آؤ گے؟"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "where-word",
+      "kind": "word",
+      "arabic": "أَيْنَ",
+      "meaningUr": "کہاں",
+      "meaningEn": "Where",
+      "explanationUr": "مقام پوچھنے کا استفہامی اسم۔",
+      "example": {
+        "arabic": "أَيْنَ الْكِتَابُ؟",
+        "urdu": "کتاب کہاں ہے؟"
+      },
+      "icon": "pin"
+    },
+    {
+      "id": "how-word",
+      "kind": "word",
+      "arabic": "كَيْفَ",
+      "meaningUr": "کیسا؛ کس طرح",
+      "meaningEn": "How",
+      "explanationUr": "کیفیت یا حالت کا سوال۔",
+      "example": {
+        "arabic": "كَيْفَ حَالُكَ؟",
+        "urdu": "تمہارا حال کیسا ہے؟"
+      },
+      "icon": "question"
+    },
+    {
+      "id": "how-many-word",
+      "kind": "word",
+      "arabic": "كَمْ",
+      "meaningUr": "کتنے",
+      "meaningEn": "How many",
+      "explanationUr": "یہاں استفہامیہ مراد ہے؛ خبریہ میں کثرت کا معنی آتا ہے۔",
+      "example": {
+        "arabic": "كَمْ كِتَابًا قَرَأْتَ؟",
+        "urdu": "تم نے کتنی کتابیں پڑھیں؟"
+      },
+      "icon": "group"
+    },
+    {
+      "id": "not-past-word",
+      "kind": "word",
+      "arabic": "لَمْ",
+      "meaningUr": "نہیں؛ ماضی کی نفی کے لیے",
+      "meaningEn": "Did not",
+      "explanationUr": "مضارع کو جزم دیتا ہے اور ماضی کی نفی کا مفہوم پیدا کرتا ہے۔",
+      "example": {
+        "arabic": "لَمْ يَكْتُبْ.",
+        "urdu": "اس نے نہیں لکھا۔"
+      },
+      "icon": "shield"
+    },
+    {
+      "id": "not-future-word",
+      "kind": "word",
+      "arabic": "لَنْ",
+      "meaningUr": "نہیں؛ مستقبل کی نفی کے لیے",
+      "meaningEn": "Will not",
+      "explanationUr": "مضارع کو نصب دیتا ہے۔",
+      "example": {
+        "arabic": "لَنْ أَتَأَخَّرَ.",
+        "urdu": "میں دیر نہیں کروں گا۔"
+      },
+      "icon": "shield"
+    },
+    {
+      "id": "if-word",
+      "kind": "word",
+      "arabic": "إِنْ",
+      "meaningUr": "اگر",
+      "meaningEn": "If",
+      "explanationUr": "شرطیہ استعمال میں دو افعال کو جزم دیتا ہے؛ إنَّ سے مختلف ہے۔",
+      "example": {
+        "arabic": "إِنْ تَقْرَأْ تَفْهَمْ.",
+        "urdu": "اگر پڑھو گے تو سمجھو گے۔"
+      },
+      "icon": "branch"
+    }
+  ],
+  "chapters": {
+    "1": [
+      "nahw",
+      "word",
+      "noun",
+      "verb",
+      "particle",
+      "sentence",
+      "speech",
+      "compound",
+      "nominal",
+      "verbal",
+      "topic",
+      "predicate",
+      "predicand",
+      "predication",
+      "declarative",
+      "performative",
+      "question",
+      "command",
+      "prohibition",
+      "wish",
+      "hope",
+      "vocative",
+      "exclamation",
+      "book-word",
+      "pen-word",
+      "student-word",
+      "read-word",
+      "arrive-word",
+      "guest-word",
+      "letter-word"
+    ],
+    "2": [
+      "sentence",
+      "nominal",
+      "verbal",
+      "conditional",
+      "answer-condition",
+      "cause-clause",
+      "parenthesis",
+      "circumstance",
+      "time-adverb",
+      "place-adverb",
+      "teacher-word",
+      "enter-word",
+      "smiling-word",
+      "in-word",
+      "time-word",
+      "day-word",
+      "morning-word"
+    ],
+    "3": [
+      "noun",
+      "verb",
+      "particle",
+      "tanwin",
+      "derived",
+      "underived",
+      "verbal-noun",
+      "past",
+      "imperfect",
+      "command",
+      "prohibition",
+      "nisba",
+      "diminutive",
+      "singular",
+      "dual",
+      "plural",
+      "pen-word",
+      "write-word",
+      "student-f-word"
+    ],
+    "4": [
+      "case",
+      "inflectable",
+      "indeclinable",
+      "agent",
+      "governed",
+      "position",
+      "lexical-governor",
+      "abstract-governor",
+      "imperfect",
+      "pronoun",
+      "this-word",
+      "student-word",
+      "see-word",
+      "not-past-word",
+      "not-future-word",
+      "house-word",
+      "class-word"
+    ],
+    "5": [
+      "pronoun",
+      "attached",
+      "detached",
+      "implicit",
+      "relative",
+      "relative-clause",
+      "antecedent",
+      "demonstrative",
+      "verb-noun",
+      "sound-noun",
+      "time-adverb",
+      "place-adverb",
+      "this-word",
+      "that-word",
+      "who-word",
+      "when-word",
+      "where-word",
+      "how-word",
+      "book-word",
+      "teacher-word",
+      "bag-word",
+      "desk-word"
+    ],
+    "6": [
+      "nisba",
+      "derived",
+      "pattern",
+      "proper",
+      "masculine",
+      "feminine",
+      "school-word",
+      "teacher-word",
+      "knowledge-word",
+      "book-word"
+    ],
+    "7": [
+      "diminutive",
+      "pattern",
+      "noun",
+      "feminine",
+      "underived",
+      "book-word",
+      "man-word",
+      "sun-word",
+      "earth-word",
+      "stone-word"
+    ],
+    "8": [
+      "definite",
+      "indefinite",
+      "proper",
+      "pronoun",
+      "demonstrative",
+      "relative",
+      "construct",
+      "construct-head",
+      "genitive-complement",
+      "called",
+      "book-word",
+      "pen-word",
+      "teacher-word",
+      "this-word"
+    ],
+    "9": [
+      "masculine",
+      "feminine",
+      "adjective",
+      "described",
+      "noun",
+      "student-word",
+      "student-f-word",
+      "man-word",
+      "woman-word",
+      "sun-word",
+      "earth-word",
+      "tree-word",
+      "garden-word",
+      "beautiful-word",
+      "moon-word"
+    ],
+    "10": [
+      "singular",
+      "dual",
+      "plural",
+      "sound-plural",
+      "broken-plural",
+      "pattern",
+      "nominative",
+      "accusative",
+      "genitive",
+      "book-word",
+      "pen-word",
+      "teacher-word",
+      "man-word",
+      "woman-word",
+      "water-word"
+    ],
+    "11": [
+      "triptote",
+      "diptote",
+      "inflectable",
+      "case",
+      "proper",
+      "adjective",
+      "pattern",
+      "feminine",
+      "tanwin",
+      "genitive",
+      "nominative",
+      "accusative",
+      "judge-word",
+      "school-word"
+    ],
+    "12": [
+      "nominative",
+      "subject",
+      "passive-subject",
+      "topic",
+      "predicate",
+      "pronoun",
+      "implicit",
+      "active",
+      "passive",
+      "defective-verb",
+      "teacher-word",
+      "student-word",
+      "door-word",
+      "attend-word",
+      "open-verb-word",
+      "be-word",
+      "present-word",
+      "absent-word"
+    ],
+    "13": [
+      "accusative",
+      "object",
+      "absolute",
+      "purpose",
+      "accompaniment",
+      "adverbial",
+      "time-adverb",
+      "place-adverb",
+      "circumstance",
+      "state-owner",
+      "specification",
+      "called",
+      "exception",
+      "excepted",
+      "exception-base",
+      "connected-exception",
+      "disconnected-exception",
+      "read-word",
+      "river-word",
+      "night-word",
+      "hurried-word",
+      "friend-word",
+      "except-word",
+      "travel-word",
+      "return-word"
+    ],
+    "14": [
+      "genitive",
+      "preposition",
+      "construct",
+      "construct-head",
+      "genitive-complement",
+      "attached",
+      "pronoun",
+      "dual",
+      "plural",
+      "book-word",
+      "pen-word",
+      "student-word",
+      "school-word",
+      "in-word",
+      "from-word",
+      "to-word",
+      "on-word"
+    ],
+    "15": [
+      "case",
+      "nominative",
+      "accusative",
+      "genitive",
+      "damma",
+      "fatha",
+      "kasra",
+      "estimated",
+      "maqsuur",
+      "manquus",
+      "dual",
+      "sound-plural",
+      "diptote",
+      "construct",
+      "father-word",
+      "brother-word",
+      "judge-word",
+      "teacher-word"
+    ],
+    "16": [
+      "follower",
+      "followed",
+      "adjective",
+      "described",
+      "emphasis",
+      "substitute",
+      "conjunction",
+      "conjunct",
+      "definite",
+      "indefinite",
+      "masculine",
+      "feminine",
+      "singular",
+      "dual",
+      "plural",
+      "new-word",
+      "diligent-word",
+      "and-word",
+      "cold-word",
+      "open-word"
+    ],
+    "17": [
+      "agent",
+      "governed",
+      "lexical-governor",
+      "abstract-governor",
+      "position",
+      "case",
+      "verb",
+      "noun",
+      "particle",
+      "write-word",
+      "student-word",
+      "lesson-word",
+      "in-word"
+    ],
+    "18": [
+      "preposition",
+      "genitive",
+      "accusative",
+      "nominative",
+      "agent",
+      "defective-verb",
+      "called",
+      "vocative",
+      "exception",
+      "accompaniment",
+      "negation",
+      "indeed-word",
+      "in-word",
+      "from-word",
+      "to-word",
+      "on-word",
+      "except-word",
+      "friend-word",
+      "father-word"
+    ],
+    "19": [
+      "imperfect",
+      "past",
+      "subjunctive-marker",
+      "jussive-marker",
+      "jussive",
+      "accusative",
+      "conditional",
+      "answer-condition",
+      "negation",
+      "prohibition",
+      "command",
+      "not-past-word",
+      "not-future-word",
+      "if-word",
+      "when-word",
+      "understand-word",
+      "write-word",
+      "sukun"
+    ],
+    "20": [
+      "verb",
+      "active",
+      "passive",
+      "subject",
+      "passive-subject",
+      "intransitive",
+      "transitive",
+      "object",
+      "defective-verb",
+      "praise",
+      "blame",
+      "exclamation",
+      "open-verb-word",
+      "door-word",
+      "child-word",
+      "give-word",
+      "think-word",
+      "be-word",
+      "become-word",
+      "sit-word",
+      "news-word"
+    ],
+    "21": [
+      "noun",
+      "agent",
+      "conditional",
+      "verb-noun",
+      "active-participle",
+      "passive-participle",
+      "stable-adjective",
+      "elative",
+      "verbal-noun",
+      "construct",
+      "specification",
+      "adjective",
+      "how-many-word",
+      "who-word",
+      "written-word",
+      "knowledge-word"
+    ],
+    "22": [
+      "abstract-governor",
+      "lexical-governor",
+      "beginning",
+      "topic",
+      "predicate",
+      "imperfect",
+      "subjunctive-marker",
+      "jussive-marker",
+      "knowledge-word",
+      "light-word",
+      "useful-word"
+    ],
+    "23": [
+      "particle",
+      "attention",
+      "confirmation",
+      "explanation",
+      "encouragement",
+      "retraction",
+      "contrast",
+      "respite",
+      "negation",
+      "question",
+      "emphasis",
+      "conjunction",
+      "tanwin",
+      "conditional",
+      "yes-word",
+      "yes-negative-word",
+      "and-word",
+      "then-word",
+      "if-word",
+      "who-word",
+      "how-word"
+    ]
+  }
+}

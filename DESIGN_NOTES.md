@@ -27,3 +27,19 @@ Validation: data checks, all-chapter interaction checks, new home/catalogue navi
 ## Study-companion identity revision
 
 The homepage and about panel now present the resource as **علم النحو: فہم و مشق**, prepared by Dr. Imran Hayat. The former lengthy publication disclaimer has been replaced by a positive description of the teaching contribution and a concise source acknowledgement. The book metadata, page mappings and question bank are retained.
+
+## Reading and learning release
+
+The mixed-script formatter now tokenizes complete Unicode words (including combining marks and join controls), applies the Arabic font only to complete marked Arabic tokens, and escapes all source text. Previously, a narrow character range could wrap the first letter of a following Urdu word; that formatter is removed. Search excerpts also stop at word boundaries.
+
+Homepage changes retain the burgundy/gold identity with a split hero, a clearly analysed Arabic example, automatic progress/resume cards, a four-step study path and quieter, readable topic cards. All 23 sections have an original worked-example introduction with an Urdu translation, grammatical roles and a common-confusion note. Selected answers and distractors have been clarified; stable IDs and answer positions are retained.
+
+The manual save button and manual transfer controls are removed. Local progress still saves automatically. Header measurement after font loading helps sticky tabs avoid the variable-height Urdu header. Cache-busted asset URLs ensure deployed browsers request the revised formatter.
+
+Whole-word regression tests check 8,088 content strings. These checks establish safe markup and intact text boundaries, not a claim of pixel-level visual perfection; browser screenshot QA remains unavailable.
+
+## Bilingual glossary
+
+The new **الفاظ و اصطلاحات** tab contains 211 unique entries (129 grammar terms and 82 example words) mapped to all 23 lessons. Its locally rendered semantic SVG icons use six restrained colour families. Urdu and English meanings occupy separate language-tagged bands; examples expand on demand. Local filters distinguish terminology from ordinary example words. Chapter and whole-book search support all three languages, and chapter links such as `#ch05/vocabulary` can be shared or bookmarked.
+
+The glossary is editorially selected for the lessons. Its chapter-link counts include repeated terms where pedagogically relevant, and should not be represented as additional unique vocabulary. New data and icon validation checks cover complete bilingual fields, example translations, valid mappings, semantic icon names, local filtering, search, and vocabulary routes.

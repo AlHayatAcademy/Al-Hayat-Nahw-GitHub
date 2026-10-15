@@ -7,10 +7,11 @@ The revised presentation follows the user-owned reference course at https://bsar
 - **23 sections**, in the uploaded book's topic sequence.
 - **354 short questions and answers**.
 - **354 four-option MCQs**, each with a correct answer and explanatory feedback.
+- **211 unique bilingual entries**: 129 grammar terms and 82 example-vocabulary items, linked to all 23 lessons.
 - **31 reference tables**, including the 14 pronoun forms, noun declension, exceptions, and verb endings.
 - Chapter practice, a random 30-question mixed practice, and retries of mistakes.
 - Active recall cards, remembered and difficult markers, full-book search, and larger text.
-- Browser-local progress with JSON export and restore. No accounts or server required.
+- Progress saves automatically in this browser. No manual save button, accounts or server required.
 - Relative asset paths: compatible with a GitHub project Pages URL.
 - Works by opening `index.html` directly as well as through a web server. No CDN dependency.
 
@@ -33,7 +34,7 @@ Double-click `index.html`. For a local HTTP server, run:
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`. Progress belongs to the browser and origin; progress on a local file URL will not automatically appear on the published Pages URL. Use export/restore to transfer it.
+Then open `http://localhost:8000`. Progress belongs to the browser and origin; progress on a local file URL will not automatically appear on the published Pages URL. Progress does not transfer automatically between devices or origins.
 
 ## Edit the content
 
@@ -49,9 +50,32 @@ After editing JSON, regenerate the offline JavaScript copies and the reading exp
 ```sh
 python scripts/sync-data.py
 node verify.cjs
+node verify-typography.cjs
 ```
 
 The generated `.js` copies let the site load without `fetch`, including from a local file URL. Keep the JSON and JavaScript copies in sync. `learning-bank.md` provides the entire question bank in a readable text format; its MCQ answers are visible for teacher review.
+
+## Bilingual vocabulary tab
+
+**الفاظ و اصطلاحات** is the fifth lesson mode. Each entry has an Arabic heading, a local semantic SVG icon, an Urdu meaning, an English meaning, a brief Urdu clarification, and an expandable Arabic example with Urdu translation. The green Urdu band and blue English band keep the two scripts visually distinct.
+
+Use **نحوی اصطلاحات** for technical grammar terms or **مثالوں کے الفاظ** for ordinary words from the worked examples. Search accepts Arabic, Urdu, and English. The main book search also includes the glossary, and each result opens the relevant lesson card. The same entry may be relevant to several lessons: 211 is the unique-entry count, rather than the sum of chapter links. This is a selected learning glossary, not a claim to list every word in the source book.
+
+`data/vocabulary.json` is the editable glossary; `icons.js` contains the dependency-free SVG icon set. `scripts/build-vocabulary.py` holds the initial authored definitions and lesson mappings. Run it only when changing that source; after normal JSON edits use `scripts/sync-data.py`.
+
+## Latest reading and learning improvements
+
+- Fixed the whole-word formatter: Arabic font spans never split Urdu words.
+- Removed letter-based partial matches and mid-word search excerpts.
+- Matched mixed Urdu/Arabic text sizing and allowed normal whole-word wrapping.
+- Removed clipped topic descriptions; cards now use concise, authored lesson summaries.
+- Added 23 translated worked examples with word roles and common-confusion notes.
+- Refined selected rules and distractors without changing question IDs or correct-answer positions.
+- Added a personal resume card, real progress summary and four-step learning path.
+- Replaced saturated lesson tiles with white cards and restrained colour accents.
+- Measured the header after font loading to keep sticky tabs clear at different zoom levels.
+- Removed the manual save control; progress remains automatic.
+- Versioned CSS/JS URLs to prevent an old cached formatter from surviving deployment.
 
 ## Learning flow
 
@@ -82,7 +106,7 @@ Changing wording alone does not establish permission to reproduce a protected wo
 
 ## Typography and access
 
-The interface is right-to-left. Arabic examples use bundled Amiri with `lang="ar"` spans. Urdu uses bundled Jameel Noori Nastaleeq with Nafees Nastaleeq as a local fallback. No font installation or remote font request is needed. The supplied font files are unmodified; font authors retain their rights.
+The interface is right-to-left. Arabic examples use bundled Amiri with `lang="ar"` spans. Urdu uses bundled Jameel Noori Nastaleeq with Nafees Nastaleeq as a local fallback. No font installation or remote font request is needed. The main Urdu font is preloaded; `font-display: swap` keeps text readable while it loads. The supplied font files are unmodified; font authors retain their rights.
 
 The home page shows all 23 lesson tiles in the original order. The navigation opens the lesson catalogue, short answers, MCQs, and recall cards. Lesson pages use a sticky desktop sidebar and a mobile drawer; primary navigation becomes a fixed bottom bar on phones. Chapter URLs such as `#ch05/reference` can be bookmarked.
 
@@ -100,6 +124,8 @@ The layout includes mobile navigation, responsive cards, horizontally scrollable
 - Home/catalogue/lesson navigation, the 23 topic tiles, topic filtering, and reusable chapter URLs.
 - App state transitions using a minimal DOM harness: all chapters, reference views, locked answers, mixed-session scoring, mistake retry, revision cards, progress updates, and search.
 
+`node verify-typography.cjs` additionally checks 8,088 content strings for preserved text and intact word boundaries, including the sentence from the reported screenshot.
+
 JavaScript syntax and these data/interaction checks passed for the delivered version. **Visual browser QA was not available in this environment.** The DOM harness does not test actual browser rendering or layout. Inspect the published page on your phone and desktop, and obtain an Arabic-grammar teacher's review before treating the material as a final examination bank.
 
 ## Files
@@ -110,13 +136,21 @@ reference-theme.css
 styles.css
 fonts/
 core.js
+icons.js
 app.js
 data/nahw-bank.json
 data/nahw-bank.js
 data/references.json
 data/references.js
+data/lesson-guides.json
+data/lesson-guides.js
+data/vocabulary.json
+data/vocabulary.js
+scripts/build-vocabulary.py
+scripts/build-guides.py
 scripts/sync-data.py
 verify.cjs
+verify-typography.cjs
 learning-bank.md
 CONTENT_MAP.md
 DESIGN_NOTES.md
@@ -124,4 +158,4 @@ README.md
 .nojekyll
 ```
 
-No telemetry, analytics, external services, or uploaded student responses are used. Clearing browser storage removes local progress; export it first if you need a backup.
+No telemetry, analytics, external services, or uploaded student responses are used. Clearing browser storage removes local progress.
