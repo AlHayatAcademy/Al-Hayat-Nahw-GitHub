@@ -106,7 +106,7 @@ Changing wording alone does not establish permission to reproduce a protected wo
 
 ## Typography and access
 
-The interface is right-to-left. Arabic examples use bundled Amiri with `lang="ar"` spans. Urdu uses bundled Jameel Noori Nastaleeq with Nafees Nastaleeq as a local fallback. No font installation or remote font request is needed. The main Urdu font is preloaded; `font-display: swap` keeps text readable while it loads. The supplied font files are unmodified; font authors retain their rights.
+The interface is right-to-left. Arabic examples use bundled Amiri with `lang="ar"` spans. Urdu uses bundled Nafees Nastaleeq (148 KB). No font installation or remote font request is needed. The compact Urdu font is preloaded; `font-display: swap` keeps text readable while it loads. The supplied font files are unmodified; font authors retain their rights.
 
 The home page shows all 23 lesson tiles in the original order. The navigation opens the lesson catalogue, short answers, MCQs, and recall cards. Lesson pages use a sticky desktop sidebar and a mobile drawer; primary navigation becomes a fixed bottom bar on phones. Chapter URLs such as `#ch05/reference` can be bookmarked.
 
@@ -159,3 +159,12 @@ README.md
 ```
 
 No telemetry, analytics, external services, or uploaded student responses are used. Clearing browser storage removes local progress.
+
+
+### Faster loading release
+
+The 9.8 MB Jameel font download has been replaced with the bundled 148 KB Nafees Nastaleeq font. Amiri remains in use for Arabic examples. All fonts use `font-display: swap`; no remote fonts or icon services are required. All scripts defer execution until HTML parsing finishes and retain their dependency order.
+
+The homepage no longer builds hidden lesson panels. Lesson navigation and search no longer regenerate the hidden homepage, and repeated searches reuse normalized indexes. Initial deep links render once. All lesson data, progress storage keys and existing chapter URLs are retained.
+
+Replace the repository files with this release, including the updated HTML/CSS/scripts. Remove the old unused `fonts/JameelNooriNastaleeq.woff2` if it remains in your repository. Asset URLs have a new version so returning visitors receive the fixes. This is a source ZIP; upload it to GitHub Pages to update the live site.

@@ -9,17 +9,20 @@ const chapters=BANK.chapters,chapterMap=new Map(chapters.map(c=>[c.id,c]));
 let chapter=chapterMap.get(progress.lastChapter)||chapters[0],mode='learn',filter='all',quiz=null,flashIndex=0,flashFlipped=false,query='',toastTimer,view='home';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const rich=C.richText;
+let progressRevision=0,sidebarKey='',overviewKey='',statsReady=false;
+const catalogueIndex=new Map(chapters.map(c=>[c.id,C.clean(c.title+' '+c.qa.map(q=>q.question).join(' '))]));
 const num=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
-function save(){try{localStorage.setItem(KEY,JSON.stringify(progress));storageOK=true}catch{storageOK=false}$('#storage-warning').hidden=storageOK}
+function save(){progressRevision++;try{localStorage.setItem(KEY,JSON.stringify(progress));storageOK=true}catch{storageOK=false}$('#storage-warning').hidden=storageOK}
 function toast(msg){$('#toast').textContent=msg;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3000)}
 function menu(open){document.body.classList.toggle('drawer-lock',open);$('#sidebar').classList.toggle('open',open);$('#shade').hidden=!open;$('#menu').setAttribute('aria-expanded',String(open))}
 function stats(){
+ if(view!=='home')return;
  const state=C.summary(chapters,progress),tables=Object.values(REFS).reduce((n,t)=>n+t.length,0);
- $('#stats').innerHTML=[['۲۳','مربوط اسباق'],[num(state.totalQA),'مختصر سوال و جواب'],[num(state.totalMCQ),'تشریحی مشقیں'],[num(tables),'تقابلی جدولیں']].map(([n,label])=>`<div class="stat"><span class="stat-number">${n}</span><span class="stat-label">${label}</span></div>`).join('');
- renderDashboard();
+ if(!statsReady)$('#stats').innerHTML=[['۲۳','مربوط اسباق'],[num(state.totalQA),'مختصر سوال و جواب'],[num(state.totalMCQ),'تشریحی مشقیں'],[num(tables),'تقابلی جدولیں']].map(([n,label])=>`<div class="stat"><span class="stat-number">${n}</span><span class="stat-label">${label}</span></div>`).join('');
+ statsReady=true;renderDashboard(state);
 }
-function renderDashboard(){
- const state=C.summary(chapters,progress),done=chapter.qa.filter(q=>progress.mastered[q.id]).length,started=state.mastered>0||state.attempted>0;
+function renderDashboard(state){
+ const done=chapter.qa.filter(q=>progress.mastered[q.id]).length,started=state.mastered>0||state.attempted>0;
  $('#home-dashboard').innerHTML=`<article class="continue-card"><div><span class="small-kicker">${started?'آپ کا مطالعہ':'اپنا سفر شروع کریں'}</span><h2>${started?'جہاں رکے تھے، وہیں سے آگے بڑھیں':'ایک سبق، ایک واضح مقصد'}</h2><p>باب ${num(chapter.number)} · ${esc(chapter.title)}</p><div class="chapter-mini-track" role="progressbar" aria-label="اس باب میں خود یاد کیے سوال" aria-valuemin="0" aria-valuemax="${chapter.qa.length}" aria-valuenow="${done}"><span style="width:${done/chapter.qa.length*100}%"></span></div><small>${num(done)} از ${num(chapter.qa.length)} سوال خود یاد کیے نشان زد ہیں۔</small></div><div class="continue-actions"><button class="primary" data-chapter="${chapter.id}" data-study="true">${started?'مطالعہ جاری رکھیں':'یہ سبق کھولیں'} ←</button><button class="text-button" data-quiz="wrong">غلطیوں کی دہرائی (${num(state.wrong)})</button></div></article><article class="personal-progress"><span class="small-kicker">آپ کی پیش رفت</span><div class="progress-pairs"><div><strong>${num(state.mastered)}</strong><span>سوال یاد کیے</span></div><div><strong>${num(state.attempted)}</strong><span>مشقیں حل کیں</span></div><div><strong>${state.attempted?num(state.accuracy)+'٪':'—'}</strong><span>آخری جوابات درست</span></div></div><p>یادداشت آپ کے نشان سے، درست جواب مشق کے نتیجے سے شمار ہوتا ہے۔</p></article>`;
  $('#resume').textContent=started?'مطالعہ جاری رکھیں':'پہلے سبق سے آغاز کریں';
 }
@@ -28,7 +31,7 @@ function lessonGuide(){
  return `<details class="lesson-guide" open><summary><span class="guide-icon" aria-hidden="true">◈</span><span><small>اس سبق کا مقصد</small><strong>${esc(g.goal)}</strong></span><span class="guide-toggle" aria-hidden="true">⌄</span></summary><div class="guide-body"><div class="worked-example"><span class="example-kicker">مثال سے سمجھیں</span><p class="example-arabic" lang="ar">${esc(g.example)}</p><p class="example-translation">${esc(g.translation)}</p></div><div class="guide-analysis">${g.analysis.map(x=>`<article><span class="analysis-word" lang="ar">${esc(x.word)}</span><b>${esc(x.role)}</b><p>${rich(x.note)}</p></article>`).join('')}</div><p class="remember-note"><b>فرق یاد رکھیں:</b> ${rich(g.remember)}</p></div></details>`;
 }
 
-function sidebar(){ $('#chapter-list').innerHTML=chapters.filter(c=>C.clean(c.number+' '+c.title).includes(C.clean($('#chapter-search').value||''))).map(c=>{const count=c.qa.filter(q=>progress.mastered[q.id]).length;return `<button class="chapter-link ${c.id===chapter.id?'active':''}" data-chapter="${c.id}" ${c.id===chapter.id?'aria-current="page"':''}><span class="chapter-num">${num(c.number)}</span><span>${esc(c.title)}</span>${count===c.qa.length?'<span class="completion" title="تمام سوال یاد کیے"></span>':''}</button>`}).join('')}
+function sidebar(){ const key=chapter.id+'|'+progressRevision+'|'+($('#chapter-search').value||'');if(key===sidebarKey)return;sidebarKey=key;$('#chapter-list').innerHTML=chapters.filter(c=>C.clean(c.number+' '+c.title).includes(C.clean($('#chapter-search').value||''))).map(c=>{const count=c.qa.filter(q=>progress.mastered[q.id]).length;return `<button class="chapter-link ${c.id===chapter.id?'active':''}" data-chapter="${c.id}" ${c.id===chapter.id?'aria-current="page"':''}><span class="chapter-num">${num(c.number)}</span><span>${esc(c.title)}</span>${count===c.qa.length?'<span class="completion" title="تمام سوال یاد کیے"></span>':''}</button>`}).join('')}
 function setChapter(id,scroll=true){view='lesson';chapter=chapterMap.get(id)||chapters[0];progress.lastChapter=chapter.id;query='';$('#search').value='';quiz=null;flashIndex=0;flashFlipped=false;filter='all';vocabQuery='';vocabFilter='all';save();menu(false);render();writeRoute();if(scroll){$('#learning').scrollIntoView({block:'start'});$('#chapter-title').setAttribute('tabindex','-1');$('#chapter-title').focus({preventScroll:true})}}
 function setMode(next){view='lesson';query='';$('#search').value='';mode=next;flashIndex=0;flashFlipped=false;if(next==='quiz'&&!quiz)startQuiz('chapter',false);render();writeRoute()}
 function base(){syncChrome(); $('#chapter-title').textContent=chapter.title;$('#chapter-eyebrow').textContent=`باب ${num(chapter.number)} / ${num(chapters.length)}`;$('#breadcrumb').textContent=view==='home'?'ہوم / علم النحو':view==='topics'?'اسباق / علم النحو':`علم النحو / ${chapter.title}`;$('#chapter-meta').textContent=`${num(chapter.qa.length)} سوال و جواب · ${num(chapter.mcqs.length)} MCQs · ماخذ کے مطبوعہ صفحات ${num(chapter.sourcePrintedPages[0])}–${num(chapter.sourcePrintedPages[1])}`;document.querySelectorAll('[data-mode]').forEach(b=>{b.classList.toggle('active',b.dataset.mode===mode);b.setAttribute('aria-selected',String(b.dataset.mode===mode));b.tabIndex=b.dataset.mode===mode?0:-1});$('#content').setAttribute('aria-labelledby','tab-'+mode);$('#prev').disabled=chapter.number===1;$('#next').disabled=chapter.number===chapters.length;document.body.classList.toggle('large',progress.fontLarge);$('#font').setAttribute('aria-pressed',String(progress.fontLarge));$('#storage-warning').hidden=storageOK }
@@ -67,11 +70,11 @@ function renderSearch(){
  $('#content').innerHTML=(found.length||words.length)?(found.length?`<h3 class="search-group-title">سوالات و جوابات</h3>${qaMarkup}`:'')+(words.length?`<h3 class="search-group-title">الفاظ و اصطلاحات</h3>${wordMarkup}`:''):empty('کوئی نتیجہ نہیں ملا۔','عربی لفظ، اردو معنی یا انگریزی اصطلاح سے دوبارہ تلاش کریں۔');
 }
 
-function render(){base();sidebar();stats();renderOverview();if(query.trim()){renderSearch();return}if(mode==='learn')renderLearn();else if(mode==='quiz')renderQuiz();else if(mode==='review')renderReview();else if(mode==='vocabulary')renderVocabulary();else renderReference()}
+function render(){base();sidebar();if(view!=='lesson'){stats();renderOverview();return}if(query.trim()){renderSearch();return}if(mode==='learn')renderLearn();else if(mode==='quiz')renderQuiz();else if(mode==='review')renderReview();else if(mode==='vocabulary')renderVocabulary();else renderReference()}
 function openQA(id,chId){mode='learn';setChapter(chId,false);const el=document.getElementById(id);if(el){el.open=true;el.classList.add('highlight');el.scrollIntoView({block:'center'})}}
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.chapter){if(b.dataset.study==='true')mode='learn';return setChapter(b.dataset.chapter);}if(b.dataset.mode)return setMode(b.dataset.mode);if(b.dataset.filter){filter=b.dataset.filter;flashIndex=0;flashFlipped=false;render();return}if(b.dataset.master){const id=b.dataset.master;progress.mastered[id]=!progress.mastered[id];save();stats();sidebar();const detail=document.getElementById(id);const open=detail?.open;renderLearn();if(open&&document.getElementById(id))document.getElementById(id).open=true;return}if(b.dataset.bookmark){const id=b.dataset.bookmark;progress.bookmarks[id]=!progress.bookmarks[id];save();const open=document.getElementById(id)?.open;renderLearn();if(open&&document.getElementById(id))document.getElementById(id).open=true;return}if(b.dataset.practice){view='lesson';const m=chapter.mcqs.find(m=>m.qaId===b.dataset.practice);quiz={type:'single',items:[{ch:chapter,m}],index:0,answers:{},done:false};mode='quiz';render();writeRoute();$('#learning').scrollIntoView({block:'start'});return}if(b.dataset.quiz)return startQuiz(b.dataset.quiz);if(b.dataset.choice!==undefined)return choose(Number(b.dataset.choice));if(b.dataset.openQa)return openQA(b.dataset.openQa,b.dataset.qaChapter);if(b.dataset.flashMark){const id=b.dataset.flashMark;const known=b.dataset.markKind==='known';progress.mastered[id]=known;progress.bookmarks[id]=!known;save();if(filter==='all'&&flashIndex<visibleQA().length-1)flashIndex++;flashFlipped=false;render();return}
 switch(b.dataset.action){case'expand':document.querySelectorAll('.question-card').forEach(d=>d.open=true);break;case'collapse':document.querySelectorAll('.question-card').forEach(d=>d.open=false);break;case'quiz-prev':if(quiz.index>0){quiz.index--;renderQuiz()}break;case'quiz-next':if(!Number.isInteger(quiz.answers[quiz.items[quiz.index].m.id]))break;if(quiz.index<quiz.items.length-1)quiz.index++;else quiz.done=true;renderQuiz();$('#learning').scrollIntoView({block:'start'});break;case'retry-session':{const items=quiz.items.filter(({m})=>quiz.answers[m.id]!==m.correctIndex);quiz={type:'wrong',items:C.shuffle(items),index:0,answers:{},done:false};renderQuiz();break}case'learn-mode':setMode('learn');break;case'flip':flashFlipped=true;renderReview();break;case'flash-prev':flashIndex--;flashFlipped=false;renderReview();break;case'flash-next':flashIndex++;flashFlipped=false;renderReview();break;case'clear-search':query='';$('#search').value='';render();break;}});
-$('#search').addEventListener('input',e=>{query=e.target.value;render()});$('#menu').addEventListener('click',()=>menu(!$('#sidebar').classList.contains('open')));$('#shade').addEventListener('click',()=>menu(false));$('#prev').addEventListener('click',()=>setChapter(chapters[chapter.number-2].id));$('#next').addEventListener('click',()=>setChapter(chapters[chapter.number].id));$('#resume').addEventListener('click',()=>{view='lesson';mode='learn';render();writeRoute();$('#learning').scrollIntoView({block:'start'});$('#chapter-title').setAttribute('tabindex','-1');$('#chapter-title').focus({preventScroll:true})});$('#mixed').addEventListener('click',()=>startQuiz('mixed'));$('#font').addEventListener('click',()=>{progress.fontLarge=!progress.fontLarge;save();base()});$('.brand').addEventListener('click',e=>{e.preventDefault();showView('home')});
+$('#search').addEventListener('input',e=>{query=e.target.value;if(query.trim())renderSearch();else render()});$('#menu').addEventListener('click',()=>menu(!$('#sidebar').classList.contains('open')));$('#shade').addEventListener('click',()=>menu(false));$('#prev').addEventListener('click',()=>setChapter(chapters[chapter.number-2].id));$('#next').addEventListener('click',()=>setChapter(chapters[chapter.number].id));$('#resume').addEventListener('click',()=>{view='lesson';mode='learn';render();writeRoute();$('#learning').scrollIntoView({block:'start'});$('#chapter-title').setAttribute('tabindex','-1');$('#chapter-title').focus({preventScroll:true})});$('#mixed').addEventListener('click',()=>startQuiz('mixed'));$('#font').addEventListener('click',()=>{progress.fontLarge=!progress.fontLarge;save();base()});$('.brand').addEventListener('click',e=>{e.preventDefault();showView('home')});
 const dialog=$('#about-dialog');$('#about').addEventListener('click',()=>dialog.showModal());$('#close-about').addEventListener('click',()=>dialog.close());document.addEventListener('keydown',e=>{if(e.key==='Escape')menu(false)});
 document.querySelector('.tabs').addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(e.key))return;const tabs=[...document.querySelectorAll('[data-mode]')],current=tabs.indexOf(document.activeElement);if(current<0)return;e.preventDefault();const index=e.key==='Home'?0:e.key==='End'?tabs.length-1:(current+(e.key==='ArrowLeft'?1:-1)+tabs.length)%tabs.length;setMode(tabs[index].dataset.mode);tabs[index].focus()});
 
@@ -86,7 +89,8 @@ function syncChrome(){
 }
 function renderOverview(){
  const term=C.clean($('#overview-search').value||'');
- const list=chapters.filter(c=>C.clean(c.title+' '+c.qa.map(q=>q.question).join(' ')).includes(term));
+ const key=term+'|'+progressRevision;if(key===overviewKey)return;overviewKey=key;
+ const list=chapters.filter(c=>catalogueIndex.get(c.id).includes(term));
  $('#catalogue-count').textContent=`${num(list.length)} اسباق دستیاب`;$('#topic-grid').innerHTML=list.length?list.map(c=>{
   const done=c.qa.filter(q=>progress.mastered[q.id]).length;
   const summary=GUIDES[c.number]?.summary||c.qa[0].answer.split('۔')[0]+'۔';
@@ -118,8 +122,8 @@ function readRoute(){
  routing=true;
  try{
   const match=hash.match(/^#(ch(?:0[1-9]|1[0-9]|2[0-3]))\/(learn|vocabulary|quiz|review|reference)$/);
-  if(match){mode=match[2];setChapter(match[1],false)}
-  else if(['#home','#topics','#qa','#mcq','#review'].includes(hash))showView(hash.slice(1));
+  if(match){mode=match[2];setChapter(match[1],false);return true}
+  else if(['#home','#topics','#qa','#mcq','#review'].includes(hash)){showView(hash.slice(1));return true}
  }finally{routing=false}
 }
 if(window.addEventListener){window.addEventListener('popstate',readRoute);window.addEventListener('hashchange',readRoute)}
@@ -134,5 +138,5 @@ if(document.fonts?.ready)document.fonts.ready.then(syncHeaderDimensions);
 if(window.addEventListener)window.addEventListener('resize',syncHeaderDimensions,{passive:true});
 syncHeaderDimensions();
 
-save();render();readRoute();
+save();if(!readRoute())render();
 })();

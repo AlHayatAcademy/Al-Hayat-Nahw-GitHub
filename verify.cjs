@@ -30,7 +30,8 @@ const source=[1,2,3,4];assert.deepEqual([...core.shuffle(source)].sort(),source)
 // A small DOM contract harness checks app state transitions and generated markup.
 // It does not evaluate browser layout, accessibility APIs, or visual rendering.
 class El{
- constructor(){this.listeners={};this.dataset={};this.attrs={};this.style={};this.innerHTML='';this.textContent='';this.value='';this.hidden=false;this.disabled=false;this.children=[];this.classes=new Set();this.classList={add:(...s)=>s.forEach(v=>this.classes.add(v)),remove:(...s)=>s.forEach(v=>this.classes.delete(v)),contains:s=>this.classes.has(s),toggle:(s,v)=>{const set=v===undefined?!this.classes.has(s):v;set?this.classes.add(s):this.classes.delete(s);return set}}}
+ constructor(){this.listeners={};this.dataset={};this.attrs={};this.style={};this.htmlWrites=0;this.innerHTML='';this.textContent='';this.value='';this.hidden=false;this.disabled=false;this.children=[];this.classes=new Set();this.classList={add:(...s)=>s.forEach(v=>this.classes.add(v)),remove:(...s)=>s.forEach(v=>this.classes.delete(v)),contains:s=>this.classes.has(s),toggle:(s,v)=>{const set=v===undefined?!this.classes.has(s):v;set?this.classes.add(s):this.classes.delete(s);return set}}}
+ get innerHTML(){return this._html||''}set innerHTML(value){this._html=value;this.htmlWrites=(this.htmlWrites||0)+1}
  addEventListener(t,f){(this.listeners[t]??=[]).push(f)}setAttribute(k,v){this.attrs[k]=v}removeAttribute(k){delete this.attrs[k]}scrollIntoView(){}focus(){}append(...items){this.children.push(...items)}remove(){}click(){}close(){}showModal(){}
 }
 const els=new Map(),get=s=>{if(!els.has(s))els.set(s,new El());return els.get(s)};
@@ -41,7 +42,7 @@ const context={window,document,localStorage:{getItem:k=>storage.get(k),setItem:(
 vm.runInNewContext(fs.readFileSync(path.join(publicDir,'app.js'),'utf8'),context);
 const click=data=>{const b=new El();b.dataset=data;for(const f of document.listeners.click)f({preventDefault(){},target:{closest:selector=>selector==='button'||selector==='[data-view]'&&b.dataset.view||selector==='[data-vocab-filter]'&&b.dataset.vocabFilter||selector==='[data-open-vocab]'&&b.dataset.openVocab?b:null}})};
 const content=()=>get('#content').innerHTML;
-assert.ok(content().includes('question-card'));assert.ok(content().includes('lesson-guide'));assert.ok(content().includes('example-translation'));assert.equal(get('#learning').hidden,true);assert.equal(get('#home-hero').hidden,false);assert.equal((get('#topic-grid').innerHTML.match(/data-chapter=/g)||[]).length,23);
+assert.equal(content(),'','Homepage must not build hidden lesson content');assert.equal(get('#learning').hidden,true);assert.equal(get('#home-hero').hidden,false);assert.equal((get('#topic-grid').innerHTML.match(/data-chapter=/g)||[]).length,23);
 click({view:'topics'});assert.equal(get('#home-hero').hidden,true);assert.equal(get('#course-overview').hidden,false);
 click({view:'qa'});assert.equal(get('#learning').hidden,false);
 click({view:'home'});assert.equal(get('#learning').hidden,true);
@@ -49,17 +50,20 @@ const ov=get('#overview-search');ov.value='ZZZ-no-topic';for(const f of ov.liste
 window.location.hash='#ch05/reference';for(const f of window.events.popstate)f();assert.ok(content().includes('reference-card'));assert.equal(get('#learning').hidden,false);
 click({chapter:'ch01'});click({mode:'learn'});
 for(const c of bank.chapters){click({chapter:c.id});assert.ok(content().includes(c.qa[0].id));click({mode:'reference'});assert.ok(content().includes('reference-card'));click({mode:'learn'})}
+const homeWritesBeforeQuiz=get('#home-dashboard').htmlWrites,catalogueWritesBeforeQuiz=get('#topic-grid').htmlWrites;
 click({chapter:'ch01'});click({mode:'quiz'});assert.ok(content().includes('data-choice="0"'));
 click({choice:'0'});assert.ok(content().includes('feedback'));const firstSave=storage.get('al-hayat-nahw-progress-v1');click({choice:'1'});assert.equal(storage.get('al-hayat-nahw-progress-v1'),firstSave);
 click({quiz:'mixed'});for(let i=0;i<30;i++){click({choice:String(i%4)});click({action:'quiz-next'})}assert.ok(content().includes('result-hero'));
 click({action:'retry-session'});assert.ok(content().includes('quiz-card')||content().includes('دہرائی کے لیے کوئی'));
+assert.equal(get('#home-dashboard').htmlWrites,homeWritesBeforeQuiz,'Quiz must not rebuild hidden dashboard');assert.equal(get('#topic-grid').htmlWrites,catalogueWritesBeforeQuiz,'Quiz must not rebuild hidden catalogue');
 click({mode:'review'});assert.ok(content().includes('flash-card'));click({action:'flip'});assert.ok(content().includes('flash-answer'));
 click({flashMark:'ch01-q001',markKind:'known'});const saved=JSON.parse(storage.get('al-hayat-nahw-progress-v1'));assert.equal(saved.mastered['ch01-q001'],true);
-const se=get('#search');se.value='مفعول';for(const f of se.listeners.input)f({target:se});assert.ok(content().includes('search-result'));
+const catalogueWritesBeforeSearch=get('#topic-grid').htmlWrites,sidebarWritesBeforeSearch=get('#chapter-list').htmlWrites;
+const se=get('#search');se.value='مفعول';for(const f of se.listeners.input)f({target:se});assert.ok(content().includes('search-result'));assert.equal(get('#topic-grid').htmlWrites,catalogueWritesBeforeSearch);assert.equal(get('#chapter-list').htmlWrites,sidebarWritesBeforeSearch);
 click({action:'clear-search'});click({mode:'learn'});click({bookmark:'ch01-q001'});click({filter:'difficult'});assert.ok(content().includes('ch01-q001'));
 assert.ok(!/undefined|NaN/.test(content()));
 const html=fs.readFileSync(path.join(publicDir,'index.html'),'utf8');for(const match of html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g))assert.ok(fs.existsSync(path.join(publicDir,match[1].split(/[?#]/)[0])),`Missing asset ${match[1]}`);
-for(const name of ['JameelNooriNastaleeq.woff2','NafeesNastaleeq.woff2','Amiri-Regular.woff2','Amiri-Bold.woff2']){const f=fs.readFileSync(path.join(publicDir,'fonts',name));assert.equal(f.toString('ascii',0,4),'wOF2');assert.equal(f.length,f.readUInt32BE(8),'Incomplete font '+name)}
+for(const name of ['NafeesNastaleeq.woff2','Amiri-Regular.woff2','Amiri-Bold.woff2']){const f=fs.readFileSync(path.join(publicDir,'fonts',name));assert.equal(f.toString('ascii',0,4),'wOF2');assert.equal(f.length,f.readUInt32BE(8),'Incomplete font '+name)}
 
 assert.equal(vocabulary.entries.length,211);assert.equal(new Set(vocabulary.entries.map(e=>e.id)).size,211);
 const vocabById=new Map(vocabulary.entries.map(e=>[e.id,e]));
@@ -80,3 +84,13 @@ click({vocabFilter:'all'});click({openVocab:'predicate',vocabChapter:'ch01'});as
 
 assert.ok(!html.includes('progress-export'));assert.ok(!html.includes('پیش رفت محفوظ کریں'));
 console.log(JSON.stringify({chapters:23,shortAnswers:qCount,mcqs:mCount,translatedLessonGuides:Object.keys(guides).length,vocabularyEntries:vocabulary.entries.length,referenceTables:Object.values(refs).reduce((a,b)=>a+b.length,0),dataChecks:'PASS',interactionSmokeChecks:'PASS',referenceThemeChecks:'PASS: home/catalog/lesson navigation, 23 topic tiles, six chapter accents, reusable chapter URLs',visualBrowserQA:'Not performed: browser skill unavailable'}));
+
+// A resource budget catches accidental reintroduction of the large entry font.
+const initialFonts=[...html.matchAll(/rel="preload" href="([^"]+\.woff2)"/g)].map(m=>m[1]);
+const fontBytes=initialFonts.reduce((sum,name)=>sum+fs.statSync(path.join(publicDir,name)).size,0);
+assert.ok(fontBytes<350000,`Initial fonts exceed 350 KB: ${fontBytes}`);
+assert.ok(!html.includes('JameelNooriNastaleeq'));
+const scripts=[...html.matchAll(/<script([^>]+)>/g)];assert.ok(scripts.every(m=>m[1].includes('defer')));
+const preloadedUrdu=fs.readFileSync(path.join(publicDir,'fonts/NafeesNastaleeq.woff2'));
+assert.ok(preloadedUrdu.length<160000);
+console.log(JSON.stringify({performanceChecks:'PASS',preloadedFontBytes:fontBytes,hiddenLessonRendering:'skipped',hiddenHomepageRebuildsDuringQuizAndSearch:0}));

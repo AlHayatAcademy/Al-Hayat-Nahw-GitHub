@@ -20,7 +20,7 @@ The reference homepage, its version-3 stylesheet, and its first lesson page were
 
 `reference-theme.css` preserves the reference design system. `styles.css` adapts it to the existing Nahw learning components. The data JSON files, question IDs, 354 Q&As, 354 MCQs, 31 reference tables, progress storage key and scoring engine are preserved.
 
-The local font files are unmodified copies from the reference site’s font paths and the Jameel Noori CDN font used by its stylesheet. Their authors retain all font rights. The content is still an educational adaptation of Ilm al-Nahw, with the same source attribution as the preceding release.
+The local font files are unmodified copies from the reference site’s font paths (Nafees Nastaleeq and Amiri). Their authors retain all font rights. The content is still an educational adaptation of Ilm al-Nahw, with the same source attribution as the preceding release.
 
 Validation: data checks, all-chapter interaction checks, new home/catalogue navigation checks, asset checks and JavaScript syntax checks pass. Visual browser QA was unavailable, so rendering has not been independently screenshot-verified.
 
