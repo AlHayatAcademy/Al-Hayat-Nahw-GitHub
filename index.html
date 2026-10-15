@@ -2,10 +2,12 @@
 <html lang="ur" dir="rtl"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#4a1220"><meta name="description" content="الحیات مرکز علوم اسلامیہ — علم النحو کے ۲۳ ابواب، مختصر سوالات، تشریحی کثیرالانتخابی مشق اور قواعد کی جدولیں۔">
+<script src="./theme-init.js?v=20261015-color-1"></script>
 <title>علم النحو: فہم و مشق | ڈاکٹر عمران حیات</title>
 <link rel="preload" href="./fonts/NafeesNastaleeq.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./fonts/Amiri-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="./reference-theme.css?v=20261015-fast-1"><link rel="stylesheet" href="./styles.css?v=20261015-fast-1">
+<link rel="stylesheet" href="./reference-theme.css?v=20261015-color-1"><link rel="stylesheet" href="./styles.css?v=20261015-color-1">
+<link rel="stylesheet" href="./experience.css?v=20261015-color-1">
 </head><body class="home">
 <a class="skip" href="#main">مواد پر جائیں</a>
 <div class="site-wrap">
@@ -24,27 +26,23 @@
 </aside>
 <div class="shade" id="shade" hidden></div>
 <main class="content" id="main" tabindex="-1">
-<div class="utility-row"><span class="breadcrumb" id="breadcrumb">علم النحو</span><div class="top-actions"><button id="font" class="icon-button" aria-label="بڑا متن" aria-pressed="false">ا+</button></div></div>
+<div class="utility-row"><span class="breadcrumb" id="breadcrumb">علم النحو</span><div class="top-actions"><button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="رات کا انداز اختیار کریں"><span id="theme-icon" aria-hidden="true">☾</span><span id="theme-label">رات</span></button><button id="font" class="icon-button" aria-label="بڑا متن" aria-pressed="false">ا+</button></div></div>
 <section class="hero" id="home-hero">
 <div class="hero-grid"><div class="hero-inner"><span class="hero-eyebrow">ڈاکٹر عمران حیات کی تدریسی پیشکش</span>
-<h1 class="hero-title">علم النحو: فہم و مشق</h1><p class="hero-promise">ہر قاعدہ سمجھیں۔ مثال میں پہچانیں۔ خود آزما کر سیکھیں۔</p>
-<p class="hero-desc">عربی نحو کے تئیس مربوط اسباق، مختصر سوالات، حل شدہ مثالیں اور تشریحی مشقیں — ایک جگہ، اپنی رفتار سے۔</p>
+<h1 class="hero-title">علم النحو: فہم و مشق</h1><p class="hero-promise">عربی جملہ سمجھنے کا سفر، ایک قاعدے سے شروع کریں۔</p>
+<p class="hero-desc">قاعدہ پڑھیں، لفظ کا کردار پہچانیں، پھر مشق سے اپنی سمجھ پختہ کریں۔</p>
 <div class="hero-cta"><button id="resume" class="btn btn-gold">پہلے سبق سے آغاز کریں</button><button id="all-topics" class="btn btn-outline">تمام اسباق دیکھیں</button></div>
 <p class="hero-byline">الحیات مرکز علوم اسلامیہ · عربی قواعد کا سوالی و تمرینی رہنما</p></div>
 <aside class="hero-demo" aria-label="جملے کی ایک حل شدہ مثال"><span class="demo-label">ایک جملہ، تین واضح کردار</span>
 <div class="demo-sentence" lang="ar" dir="rtl"><span class="demo-word word-verb">قَرَأَ<small lang="ur">فعل</small></span> <span class="demo-word word-subject">الطَّالِبُ<small lang="ur">فاعل</small></span> <span class="demo-word word-object">الْكِتَابَ<small lang="ur">مفعول بہ</small></span></div>
-<p class="demo-translation">طالب علم نے کتاب پڑھی۔</p><p class="demo-prompt">کام کیا ہے؟ کس نے کیا؟ کس چیز کو پڑھا؟</p>
+<p class="demo-translation">طالب علم نے کتاب پڑھی۔</p><p class="demo-prompt" id="demo-question">اس جملے میں فاعل کون ہے؟</p><div class="demo-choices" aria-labelledby="demo-question"><button data-demo-choice="verb" lang="ar">قَرَأَ</button><button data-demo-choice="subject" lang="ar">الطَّالِبُ</button><button data-demo-choice="object" lang="ar">الْكِتَابَ</button></div><p class="demo-feedback" id="demo-feedback" role="status" aria-live="polite">ایک لفظ منتخب کریں اور اس کی وجہ سمجھیں۔</p>
 <button class="demo-link" data-chapter="ch01" data-study="true">مثال کے ساتھ پہلا سبق کھولیں ←</button></aside></div>
 <section class="hero-stats stats" id="stats" aria-label="کورس کا مواد"></section></section>
 <section class="home-dashboard" id="home-dashboard" aria-label="آپ کا مطالعہ"></section>
-<section class="learning-path" id="learning-path" aria-label="سیکھنے کا طریقہ"><div class="section-heading"><h2>ایک آسان طریقہ، پائیدار سمجھ</h2><span class="overview-count">چار قدم</span></div><div class="path-grid">
-<article class="path-step"><span class="step-number">۱</span><h3>قاعدہ سمجھیں</h3><p>مختصر جواب پڑھیں اور اہم فرق پہچانیں۔</p></article>
-<article class="path-step"><span class="step-number">۲</span><h3>مثال کھولیں</h3><p>عربی جملہ، ترجمہ اور ہر لفظ کا کردار دیکھیں۔</p></article>
-<article class="path-step"><span class="step-number">۳</span><h3>خود آزمائیں</h3><p>جواب منتخب کریں، پھر اس کی وجہ سمجھیں۔</p></article>
-<article class="path-step"><span class="step-number">۴</span><h3>دوبارہ یاد کریں</h3><p>کارڈز اور غلطیوں کی دہرائی سے مشق پختہ کریں۔</p></article>
-</div></section>
+<section class="learning-path" id="learning-path" aria-label="سیکھنے کے طریقے"><div class="section-heading"><h2>آج کیسے سیکھنا چاہیں گے؟</h2><span class="overview-count">اپنا طریقہ منتخب کریں</span></div><div class="launch-grid">
+<button class="launch-card launch-learn" data-home-mode="learn"><span class="launch-icon" data-icon="book"></span><strong>سبق سمجھیں</strong><span>مختصر سوال اور واضح جواب</span><b aria-hidden="true">←</b></button><button class="launch-card launch-vocabulary" data-home-mode="vocabulary"><span class="launch-icon" data-icon="letters"></span><strong>الفاظ و اصطلاحات</strong><span>اردو اور انگریزی معنی</span><b aria-hidden="true">←</b></button><button class="launch-card launch-quiz" data-home-mode="quiz"><span class="launch-icon" data-icon="target"></span><strong>خود کو پرکھیں</strong><span>ہر جواب کے ساتھ تشریح</span><b aria-hidden="true">←</b></button><button class="launch-card launch-review" data-home-mode="review"><span class="launch-icon" data-icon="bolt"></span><strong>یادداشت تازہ کریں</strong><span>دہرائی کے متحرک کارڈ</span><b aria-hidden="true">←</b></button><button class="launch-card launch-reference" data-home-mode="reference"><span class="launch-icon" data-icon="blocks"></span><strong>قواعد ایک نظر میں</strong><span>خلاصے اور تقابلی جدول</span><b aria-hidden="true">←</b></button></div></section>
 <div class="notice" id="storage-warning" hidden>اس براؤزر میں پیش رفت محفوظ نہیں ہو رہی۔ سوالات اور مشق بدستور دستیاب ہیں۔</div>
-<section id="course-overview"><div class="section-heading"><h2>اسباقِ علم النحو</h2><span class="overview-count">منظم مطالعہ · ۲۳ ابواب</span></div><label class="overview-search"><span aria-hidden="true">⌕</span><span class="sr-only">اسباق کی فہرست میں تلاش</span><input id="overview-search" type="search" placeholder="عنوان یا اہم لفظ سے سبق تلاش کریں…" autocomplete="off"></label><div class="catalogue-tools"><span id="catalogue-count" role="status"></span><button id="mixed" class="chip">جامع مشق · ۳۰ سوال</button></div><div class="topics-grid" id="topic-grid"></div></section>
+<section id="course-overview"><div class="section-heading"><h2>اسباقِ علم النحو</h2><span class="overview-count">منظم مطالعہ · ۲۳ ابواب</span></div><label class="overview-search"><span aria-hidden="true">⌕</span><span class="sr-only">اسباق کی فہرست میں تلاش</span><input id="overview-search" type="search" placeholder="عنوان یا اہم لفظ سے سبق تلاش کریں…" autocomplete="off"></label><div class="catalogue-tools"><span id="catalogue-count" role="status"></span><button id="mixed" class="chip">جامع مشق · ۳۰ سوال</button></div><div class="topics-grid" id="topic-grid"></div><div class="catalogue-more" id="catalogue-more"><button class="secondary" data-view="topics">تمام ۲۳ اسباق کی فہرست کھولیں ←</button></div></section>
 <section id="learning" class="learning acc-0" hidden>
 <div class="section-top topic-header"><div><span class="tag" id="chapter-eyebrow">باب ۱</span><h1 id="chapter-title"></h1><p class="lead" id="chapter-meta"></p></div><label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">پوری کتاب میں تلاش کریں</span><input id="search" type="search" placeholder="پوری کتاب میں تلاش کریں…" autocomplete="off"></label></div>
 <div class="tabs" role="tablist" aria-label="سیکھنے کے طریقے"><button class="tab-btn active" id="tab-learn" role="tab" data-mode="learn" aria-selected="true">مختصر سوالات و جوابات</button><button class="tab-btn" id="tab-vocabulary" role="tab" data-mode="vocabulary" aria-selected="false"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h8v16H3zM13 4h8v16h-8zM6 8h2M16 8h2M6 12h2M16 12h2"/></svg>الفاظ و اصطلاحات</button><button class="tab-btn" id="tab-quiz" role="tab" data-mode="quiz" aria-selected="false">کثیرالانتخابی سوالات</button><button class="tab-btn" id="tab-review" role="tab" data-mode="review" aria-selected="false">دہرائی کے کارڈ</button><button class="tab-btn" id="tab-reference" role="tab" data-mode="reference" aria-selected="false">قواعد ایک نظر میں</button></div>
@@ -64,5 +62,5 @@
 
 <button class="to-top" id="to-top" aria-label="اوپر جائیں"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="./data/nahw-bank.js?v=20261015-fast-1"></script><script defer src="./data/references.js?v=20261015-fast-1"></script><script defer src="./data/lesson-guides.js?v=20261015-fast-1"></script><script defer src="./data/vocabulary.js?v=20261015-fast-1"></script><script defer src="./icons.js?v=20261015-fast-1"></script><script defer src="./core.js?v=20261015-fast-1"></script><script defer src="./app.js?v=20261015-fast-1"></script>
+<script defer src="./data/nahw-bank.js?v=20261015-color-1"></script><script defer src="./data/references.js?v=20261015-color-1"></script><script defer src="./data/lesson-guides.js?v=20261015-color-1"></script><script defer src="./data/vocabulary.js?v=20261015-color-1"></script><script defer src="./icons.js?v=20261015-color-1"></script><script defer src="./core.js?v=20261015-color-1"></script><script defer src="./app.js?v=20261015-color-1"></script>
 </body></html>

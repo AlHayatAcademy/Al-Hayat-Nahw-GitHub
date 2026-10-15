@@ -32,18 +32,18 @@ const source=[1,2,3,4];assert.deepEqual([...core.shuffle(source)].sort(),source)
 class El{
  constructor(){this.listeners={};this.dataset={};this.attrs={};this.style={};this.htmlWrites=0;this.innerHTML='';this.textContent='';this.value='';this.hidden=false;this.disabled=false;this.children=[];this.classes=new Set();this.classList={add:(...s)=>s.forEach(v=>this.classes.add(v)),remove:(...s)=>s.forEach(v=>this.classes.delete(v)),contains:s=>this.classes.has(s),toggle:(s,v)=>{const set=v===undefined?!this.classes.has(s):v;set?this.classes.add(s):this.classes.delete(s);return set}}}
  get innerHTML(){return this._html||''}set innerHTML(value){this._html=value;this.htmlWrites=(this.htmlWrites||0)+1}
- addEventListener(t,f){(this.listeners[t]??=[]).push(f)}setAttribute(k,v){this.attrs[k]=v}removeAttribute(k){delete this.attrs[k]}scrollIntoView(){}focus(){}append(...items){this.children.push(...items)}remove(){}click(){}close(){}showModal(){}
+ addEventListener(t,f){(this.listeners[t]??=[]).push(f)}setAttribute(k,v){this.attrs[k]=v}getAttribute(k){return this.attrs[k]??null}removeAttribute(k){delete this.attrs[k]}scrollIntoView(){}focus(){}append(...items){this.children.push(...items)}remove(){}click(){}close(){}showModal(){}
 }
 const els=new Map(),get=s=>{if(!els.has(s))els.set(s,new El());return els.get(s)};
 const tabs=['learn','vocabulary','quiz','review','reference'].map(mode=>{const e=new El();e.dataset.mode=mode;return e});
-const document={querySelector:get,querySelectorAll:s=>s==='[data-mode]'?tabs:[],getElementById:id=>get('#'+id),createElement:()=>new El(),body:new El(),listeners:{},addEventListener(t,f){(this.listeners[t]??=[]).push(f)}};
+const document={querySelector:get,querySelectorAll:s=>s==='[data-mode]'?tabs:[],getElementById:id=>get('#'+id),createElement:()=>new El(),body:new El(),documentElement:new El(),listeners:{},addEventListener(t,f){(this.listeners[t]??=[]).push(f)}};
 const storage=new Map(),window={NAHW_BANK:bank,NAHW_REFERENCES:refs,NAHW_GUIDES:guides,NAHW_VOCABULARY:vocabulary,NahwIcons:icons,NahwCore:core,scrollTo(){},location:{hash:''},events:{},addEventListener(t,f){(this.events[t]??=[]).push(f)},history:{pushState(a,b,hash){window.location.hash=hash}}};
 const context={window,document,localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},setTimeout:()=>0,clearTimeout(){},URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob:class{}};
 vm.runInNewContext(fs.readFileSync(path.join(publicDir,'app.js'),'utf8'),context);
 const click=data=>{const b=new El();b.dataset=data;for(const f of document.listeners.click)f({preventDefault(){},target:{closest:selector=>selector==='button'||selector==='[data-view]'&&b.dataset.view||selector==='[data-vocab-filter]'&&b.dataset.vocabFilter||selector==='[data-open-vocab]'&&b.dataset.openVocab?b:null}})};
 const content=()=>get('#content').innerHTML;
-assert.equal(content(),'','Homepage must not build hidden lesson content');assert.equal(get('#learning').hidden,true);assert.equal(get('#home-hero').hidden,false);assert.equal((get('#topic-grid').innerHTML.match(/data-chapter=/g)||[]).length,23);
-click({view:'topics'});assert.equal(get('#home-hero').hidden,true);assert.equal(get('#course-overview').hidden,false);
+assert.equal(content(),'','Homepage must not build hidden lesson content');assert.equal(get('#learning').hidden,true);assert.equal(get('#home-hero').hidden,false);assert.equal((get('#topic-grid').innerHTML.match(/data-chapter=/g)||[]).length,6);
+click({view:'topics'});assert.equal((get('#topic-grid').innerHTML.match(/data-chapter=/g)||[]).length,23);assert.equal(get('#home-hero').hidden,true);assert.equal(get('#course-overview').hidden,false);
 click({view:'qa'});assert.equal(get('#learning').hidden,false);
 click({view:'home'});assert.equal(get('#learning').hidden,true);
 const ov=get('#overview-search');ov.value='ZZZ-no-topic';for(const f of ov.listeners.input)f({target:ov});assert.ok(get('#topic-grid').innerHTML.includes('کوئی سبق نہیں'));ov.value='';for(const f of ov.listeners.input)f({target:ov});
@@ -63,7 +63,7 @@ const se=get('#search');se.value='مفعول';for(const f of se.listeners.input)
 click({action:'clear-search'});click({mode:'learn'});click({bookmark:'ch01-q001'});click({filter:'difficult'});assert.ok(content().includes('ch01-q001'));
 assert.ok(!/undefined|NaN/.test(content()));
 const html=fs.readFileSync(path.join(publicDir,'index.html'),'utf8');for(const match of html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g))assert.ok(fs.existsSync(path.join(publicDir,match[1].split(/[?#]/)[0])),`Missing asset ${match[1]}`);
-for(const name of ['NafeesNastaleeq.woff2','Amiri-Regular.woff2','Amiri-Bold.woff2']){const f=fs.readFileSync(path.join(publicDir,'fonts',name));assert.equal(f.toString('ascii',0,4),'wOF2');assert.equal(f.length,f.readUInt32BE(8),'Incomplete font '+name)}
+for(const name of ['JameelNooriNastaleeq.woff2','NafeesNastaleeq.woff2','Amiri-Regular.woff2','Amiri-Bold.woff2']){const f=fs.readFileSync(path.join(publicDir,'fonts',name));assert.equal(f.toString('ascii',0,4),'wOF2');assert.equal(f.length,f.readUInt32BE(8),'Incomplete font '+name)}
 
 assert.equal(vocabulary.entries.length,211);assert.equal(new Set(vocabulary.entries.map(e=>e.id)).size,211);
 const vocabById=new Map(vocabulary.entries.map(e=>[e.id,e]));
@@ -90,7 +90,33 @@ const initialFonts=[...html.matchAll(/rel="preload" href="([^"]+\.woff2)"/g)].ma
 const fontBytes=initialFonts.reduce((sum,name)=>sum+fs.statSync(path.join(publicDir,name)).size,0);
 assert.ok(fontBytes<350000,`Initial fonts exceed 350 KB: ${fontBytes}`);
 assert.ok(!html.includes('JameelNooriNastaleeq'));
-const scripts=[...html.matchAll(/<script([^>]+)>/g)];assert.ok(scripts.every(m=>m[1].includes('defer')));
+const scripts=[...html.matchAll(/<script([^>]+)>/g)];assert.ok(scripts.every(m=>m[1].includes('defer')||m[1].includes('theme-init.js')));
 const preloadedUrdu=fs.readFileSync(path.join(publicDir,'fonts/NafeesNastaleeq.woff2'));
 assert.ok(preloadedUrdu.length<160000);
 console.log(JSON.stringify({performanceChecks:'PASS',preloadedFontBytes:fontBytes,hiddenLessonRendering:'skipped',hiddenHomepageRebuildsDuringQuizAndSearch:0}));
+
+// Appearance controls and homepage actions work without changing progress IDs.
+const progressBeforeTheme=storage.get('al-hayat-nahw-progress-v1');
+for(const listener of get('#theme-toggle').listeners.click)listener();
+assert.equal(document.documentElement.getAttribute('data-theme'),'dark');
+assert.equal(storage.get('al-hayat-nahw-theme'),'dark');assert.equal(get('#theme-toggle').attrs['aria-pressed'],'true');
+for(const listener of get('#theme-toggle').listeners.click)listener();
+assert.equal(document.documentElement.getAttribute('data-theme'),'light');
+assert.equal(storage.get('al-hayat-nahw-progress-v1'),progressBeforeTheme);
+click({demoChoice:'verb'});assert.equal(get('#demo-feedback').attrs['data-result'],'retry');
+click({demoChoice:'subject'});assert.equal(get('#demo-feedback').attrs['data-result'],'correct');
+for(const mode of ['learn','vocabulary','quiz','review','reference']){click({view:'home'});click({homeMode:mode});assert.equal(window.location.hash,'#ch01/'+mode);assert.equal(get('#learning').hidden,false)}
+console.log(JSON.stringify({themeToggle:'PASS',homepageExercise:'PASS',learningShortcuts:5}));
+
+// Regression: resize/font observations must never grow the header.
+const appSource=fs.readFileSync(path.join(publicDir,'app.js'),'utf8');
+const styles=fs.readFileSync(path.join(publicDir,'styles.css'),'utf8');
+assert.ok(!appSource.includes('syncHeaderDimensions'));
+assert.ok(!appSource.includes('ResizeObserver'));
+assert.ok(!/setProperty\(\s*['"]--hdr/.test(appSource));
+assert.ok(styles.includes('.topbar-inner{height:calc(var(--hdr) - 2px);min-height:0;box-sizing:border-box}'));
+let heightWrites=0;document.documentElement={style:{setProperty(){heightWrites++}}};
+window.ResizeObserver=class{observe(){throw new Error('Header observer must not be registered')}};
+for(let i=0;i<250;i++)for(const listener of window.events.resize||[])listener();
+assert.equal(heightWrites,0);
+console.log(JSON.stringify({headerSizingRegression:'PASS',resizeEvents:250,headerHeightWrites:heightWrites}));

@@ -20,7 +20,7 @@ The reference homepage, its version-3 stylesheet, and its first lesson page were
 
 `reference-theme.css` preserves the reference design system. `styles.css` adapts it to the existing Nahw learning components. The data JSON files, question IDs, 354 Q&As, 354 MCQs, 31 reference tables, progress storage key and scoring engine are preserved.
 
-The local font files are unmodified copies from the reference site’s font paths (Nafees Nastaleeq and Amiri). Their authors retain all font rights. The content is still an educational adaptation of Ilm al-Nahw, with the same source attribution as the preceding release.
+Nafees and Amiri are unmodified copies from the reference site’s font paths (Nafees Nastaleeq and Amiri). Their authors retain all font rights. The content is still an educational adaptation of Ilm al-Nahw, with the same source attribution as the preceding release.
 
 Validation: data checks, all-chapter interaction checks, new home/catalogue navigation checks, asset checks and JavaScript syntax checks pass. Visual browser QA was unavailable, so rendering has not been independently screenshot-verified.
 
@@ -43,3 +43,5 @@ Whole-word regression tests check 8,088 content strings. These checks establish 
 The new **الفاظ و اصطلاحات** tab contains 211 unique entries (129 grammar terms and 82 example words) mapped to all 23 lessons. Its locally rendered semantic SVG icons use six restrained colour families. Urdu and English meanings occupy separate language-tagged bands; examples expand on demand. Local filters distinguish terminology from ordinary example words. Chapter and whole-book search support all three languages, and chapter links such as `#ch05/vocabulary` can be shared or bookmarked.
 
 The glossary is editorially selected for the lessons. Its chapter-link counts include repeated terms where pedagogically relevant, and should not be represented as additional unique vocabulary. New data and icon validation checks cover complete bilingual fields, example translations, valid mappings, semantic icon names, local filtering, search, and vocabulary routes.
+
+Current Urdu face: Jameel Noori Nastaleeq, optimized with fontTools while retaining every original Unicode mapping and shaping closure. Typeface attribution is retained in the font name table. Final appearance styles live in experience.css.

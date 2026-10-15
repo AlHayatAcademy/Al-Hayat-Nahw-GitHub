@@ -1,7 +1,7 @@
 /* Theme adapted from the user-owned bsarabic.insha.drimranhayat.com reference, inspected 2026-10-15. */
 /* الانشاء العربی — Course Website Styles */
 
-/* Small bundled Nastaleeq font keeps Urdu readable without a multi-megabyte download. */
+@font-face{font-family:"JameelNooriNastaliq";src:local("Jameel Noori Nastaleeq"),url(./fonts/JameelNooriNastaleeq.woff2) format("woff2");font-display:swap;}
 
 @font-face{font-family:"NafeesLocal";src:url(./fonts/NafeesNastaleeq.woff2) format('woff2');font-display:swap;}
 @font-face{font-family:"Amiri";src:url(./fonts/Amiri-Regular.woff2) format('woff2');font-weight:400;font-display:swap;}
@@ -53,7 +53,7 @@ body{
   margin:0;
   background:var(--cream);
   color:var(--ink);
-  font-family:"NafeesLocal","Noto Nastaliq Urdu",serif;
+  font-family:"JameelNooriNastaliq","NafeesLocal",serif;
   font-size:18px;
   line-height:2.1;
   background-image:
@@ -62,7 +62,7 @@ body{
   background-attachment:fixed;
 }
 h1,h2,h3,h4,.brand-text strong,.nav-title,.hero-title{
-  font-family:"NafeesLocal","Noto Nastaliq Urdu",serif;
+  font-family:"JameelNooriNastaliq","NafeesLocal",serif;
   font-weight:700;
   color:var(--maroon-950);
 }
@@ -106,7 +106,7 @@ ul{margin:0;padding:0;}
 .ex-block .ex-tr{
   display:block;
   margin-top:10px;
-  font-family:"NafeesLocal","Noto Nastaliq Urdu",serif;
+  font-family:"JameelNooriNastaliq","NafeesLocal",serif;
   font-size:15.5px;
   color:var(--gold-600);
   font-weight:700;
@@ -195,7 +195,7 @@ ul{margin:0;padding:0;}
 .hero-cta{display:inline-flex; gap:12px; margin-top:8px; flex-wrap:wrap;}
 .btn{
   display:inline-block; padding:13px 28px; border-radius:12px; font-weight:700; font-size:16px;
-  transition:transform .15s ease, box-shadow .15s ease; font-family:"NafeesLocal","Noto Nastaliq Urdu",serif;
+  transition:transform .15s ease, box-shadow .15s ease; font-family:"JameelNooriNastaliq","NafeesLocal",serif;
 }
 .btn-gold{background:linear-gradient(135deg,var(--gold-500),var(--rose-500)); color:#fff; box-shadow:0 8px 20px rgba(224,70,110,.30);}
 .btn-gold:hover{transform:translateY(-3px) scale(1.02); box-shadow:0 12px 26px rgba(224,70,110,.4);}

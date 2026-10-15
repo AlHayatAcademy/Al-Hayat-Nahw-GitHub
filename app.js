@@ -89,12 +89,14 @@ function syncChrome(){
 }
 function renderOverview(){
  const term=C.clean($('#overview-search').value||'');
- const key=term+'|'+progressRevision;if(key===overviewKey)return;overviewKey=key;
- const list=chapters.filter(c=>catalogueIndex.get(c.id).includes(term));
- $('#catalogue-count').textContent=`${num(list.length)} اسباق دستیاب`;$('#topic-grid').innerHTML=list.length?list.map(c=>{
+ const key=view+'|'+term+'|'+progressRevision;if(key===overviewKey)return;overviewKey=key;
+ const matches=chapters.filter(c=>catalogueIndex.get(c.id).includes(term));
+ const list=view==='home'&&!term?matches.slice(0,6):matches;
+ $('#catalogue-more').hidden=view!=='home'||!!term;
+ $('#catalogue-count').textContent=list.length<matches.length?`ابتدائی ${num(list.length)} اسباق · مکمل فہرست میں ${num(matches.length)} ابواب`:`${num(list.length)} اسباق دستیاب`;$('#topic-grid').innerHTML=list.length?list.map(c=>{
   const done=c.qa.filter(q=>progress.mastered[q.id]).length;
   const summary=GUIDES[c.number]?.summary||c.qa[0].answer.split('۔')[0]+'۔';
-  return `<button class="topic-card acc-${(c.number-1)%6}" data-chapter="${c.id}" data-study="true"><span class="topic-num">${num(c.number)}</span><h3>${esc(c.title)}</h3><p>${rich(summary)}</p><div class="meta"><span>${num(c.qa.length)} مختصر سوالات</span><span>${num(c.mcqs.length)} کثیرالانتخابی</span><span>${num((REFS[c.number]||[]).length)} جدولیں</span><span>${num((VOCAB.chapters[c.number]||[]).length)} الفاظ و اصطلاحات</span></div><div class="tile-foot"><span>مطالعہ شروع کریں ←</span>${done?`<small>${num(done)} یاد کیے ✓</small>`:''}</div></button>`
+  return `<button class="topic-card acc-${(c.number-1)%6}" data-chapter="${c.id}" data-study="true"><div class="topic-card-top"><span class="topic-num">${num(c.number)}</span><span class="topic-icon" aria-hidden="true">${ICONS.svg(['book','letters','blocks','lamp','branch','target'][(c.number-1)%6])}</span></div><h3>${esc(c.title)}</h3><p>${rich(summary)}</p><div class="meta"><span>${num(c.qa.length)} مختصر سوالات</span><span>${num(c.mcqs.length)} کثیرالانتخابی</span><span>${num((REFS[c.number]||[]).length)} جدولیں</span><span>${num((VOCAB.chapters[c.number]||[]).length)} الفاظ و اصطلاحات</span></div><div class="tile-foot"><span>مطالعہ شروع کریں ←</span>${done?`<small>${num(done)} یاد کیے ✓</small>`:''}</div></button>`
  }).join(''):empty('کوئی سبق نہیں ملا۔','عنوان یا کوئی مختصر لفظ استعمال کریں۔');
 }
 function showView(next){
@@ -129,14 +131,14 @@ function readRoute(){
 if(window.addEventListener){window.addEventListener('popstate',readRoute);window.addEventListener('hashchange',readRoute)}
 
 
-function syncHeaderDimensions(){
- const height=$('.topbar').getBoundingClientRect?.().height;
- if(height&&document.documentElement?.style)document.documentElement.style.setProperty('--hdr',Math.ceil(height)+'px');
-}
-if(window.ResizeObserver){const observer=new window.ResizeObserver(syncHeaderDimensions);observer.observe($('.topbar'))}
-if(document.fonts?.ready)document.fonts.ready.then(syncHeaderDimensions);
-if(window.addEventListener)window.addEventListener('resize',syncHeaderDimensions,{passive:true});
-syncHeaderDimensions();
+function syncThemeButton(){const dark=document.documentElement.getAttribute('data-theme')==='dark';$('#theme-toggle').setAttribute('aria-pressed',String(dark));$('#theme-toggle').setAttribute('aria-label',dark?'دن کا انداز اختیار کریں':'رات کا انداز اختیار کریں');$('#theme-label').textContent=dark?'دن':'رات';$('#theme-icon').innerHTML=dark?ICONS.svg('sun'):'<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 15A9 9 0 0 1 9 4a9 9 0 1 0 11 11Z"/></svg>'}
+$('#theme-toggle').addEventListener('click',()=>{const next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);try{localStorage.setItem('al-hayat-nahw-theme',next)}catch{}syncThemeButton()});
+document.querySelectorAll('[data-icon]').forEach(e=>e.innerHTML=ICONS.svg(e.dataset.icon));
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.homeMode){mode=b.dataset.homeMode;setChapter(chapter.id);return}if(b.dataset.demoChoice){const ok=b.dataset.demoChoice==='subject';$('#demo-feedback').textContent=ok?'بالکل درست! طالب علم نے پڑھنے کا کام کیا، اس لیے الطَّالِبُ فاعل ہے۔':b.dataset.demoChoice==='verb'?'قَرَأَ پڑھنے کا کام بتاتا ہے؛ یہ فعل ہے۔ کام کرنے والے لفظ کو منتخب کریں۔':'الْكِتَابَ وہ چیز ہے جسے پڑھا گیا؛ یہ مفعول بہ ہے۔ کام کرنے والا کون ہے؟';$('#demo-feedback').innerHTML=rich($('#demo-feedback').textContent);$('#demo-feedback').setAttribute('data-result',ok?'correct':'retry');document.querySelectorAll('[data-demo-choice]').forEach(item=>item.setAttribute('aria-pressed',String(item===b)))}});
+syncThemeButton();
+
+// Header sizing belongs to CSS: never feed its measured outer height back
+// into the minimum height of its child (the 2px decoration creates a loop).
 
 save();if(!readRoute())render();
 })();

@@ -1,0 +1,10 @@
+/* Theme initialization, saved preference, and representative text contrast. */
+const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+const source=fs.readFileSync(__dirname+'/theme-init.js','utf8');
+function initial(saved,systemDark=false,blocked=false){let selected;vm.runInNewContext(source,{localStorage:{getItem(){if(blocked)throw Error('blocked');return saved}},window:{matchMedia:()=>({matches:systemDark})},document:{documentElement:{setAttribute(k,v){if(k==='data-theme')selected=v}}}});return selected}
+assert.equal(initial('dark'), 'dark');assert.equal(initial('light',true),'light');assert.equal(initial(null,true),'dark');assert.equal(initial(null,false),'light');assert.equal(initial('invalid',false),'light');assert.equal(initial(null,true,true),'light');
+const luminance=hex=>{const c=hex.replace('#','').match(/../g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return .2126*c[0]+.7152*c[1]+.0722*c[2]};
+const pairs=[['day text','#232438','#ffffff'],['day secondary','#505369','#ffffff'],['day heading','#641a30','#ffffff'],['night text','#f0f1fa','#20263b'],['night secondary','#c2c8df','#20263b'],['night heading','#ffccdd','#20263b'],['night correct','#c4f9df','#193f35'],['night incorrect','#ffd5e2','#4a2539'],['night Urdu meaning','#c1f3db','#203d35'],['night English meaning','#d0e3ff','#263651'],['night demo','#e7d8f2','#272b40'],['hero text','#ffffff','#b32b47']];
+for(const [label,fg,bg]of pairs){const a=luminance(fg),b=luminance(bg),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);assert.ok(ratio>=4.5,`${label}: ${ratio}`)}
+const html=fs.readFileSync(__dirname+'/index.html','utf8');assert.ok(html.indexOf('theme-init.js')<html.indexOf('rel="stylesheet"'));assert.equal((html.match(/data-home-mode=/g)||[]).length,5);assert.equal((html.match(/data-demo-choice=/g)||[]).length,3);
+console.log(JSON.stringify({themeInitialization:'PASS',blockedStorage:'PASS',representativeContrastPairs:pairs.length,minimumContrast:'4.5:1',browserLayout:'Not verified'}));

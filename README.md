@@ -106,7 +106,7 @@ Changing wording alone does not establish permission to reproduce a protected wo
 
 ## Typography and access
 
-The interface is right-to-left. Arabic examples use bundled Amiri with `lang="ar"` spans. Urdu uses bundled Nafees Nastaleeq (148 KB). No font installation or remote font request is needed. The compact Urdu font is preloaded; `font-display: swap` keeps text readable while it loads. The supplied font files are unmodified; font authors retain their rights.
+The interface is right-to-left. Arabic examples use bundled Amiri with `lang="ar"` spans. Urdu uses bundled Jameel Noori Nastaleeq, with Nafees Nastaleeq as a quick fallback. No font installation or remote font request is needed. The compact Urdu font is preloaded; `font-display: swap` keeps text readable while it loads. Jameel is optimized with all original Unicode mappings and their shaping closure retained; Nafees and Amiri remain unmodified. Font authors retain their rights.
 
 The home page shows all 23 lesson tiles in the original order. The navigation opens the lesson catalogue, short answers, MCQs, and recall cards. Lesson pages use a sticky desktop sidebar and a mobile drawer; primary navigation becomes a fixed bottom bar on phones. Chapter URLs such as `#ch05/reference` can be bookmarked.
 
@@ -163,8 +163,24 @@ No telemetry, analytics, external services, or uploaded student responses are us
 
 ### Faster loading release
 
-The 9.8 MB Jameel font download has been replaced with the bundled 148 KB Nafees Nastaleeq font. Amiri remains in use for Arabic examples. All fonts use `font-display: swap`; no remote fonts or icon services are required. All scripts defer execution until HTML parsing finishes and retain their dependency order.
+The earlier fast release used Nafees Nastaleeq alone; the current release restores Jameel Noori Nastaleeq as requested, optimized from 9.8 MB to 7.2 MB. Amiri remains in use for Arabic examples. All fonts use `font-display: swap`; no remote fonts or icon services are required. All scripts defer execution until HTML parsing finishes and retain their dependency order.
 
 The homepage no longer builds hidden lesson panels. Lesson navigation and search no longer regenerate the hidden homepage, and repeated searches reuse normalized indexes. Initial deep links render once. All lesson data, progress storage keys and existing chapter URLs are retained.
 
-Replace the repository files with this release, including the updated HTML/CSS/scripts. Remove the old unused `fonts/JameelNooriNastaleeq.woff2` if it remains in your repository. Asset URLs have a new version so returning visitors receive the fixes. This is a source ZIP; upload it to GitHub Pages to update the live site.
+Replace the repository files with this release, including the updated HTML/CSS/scripts. Include the current optimized `fonts/JameelNooriNastaleeq.woff2` supplied in this ZIP. Asset URLs have a new version so returning visitors receive the fixes. This is a source ZIP; upload it to GitHub Pages to update the live site.
+
+
+### Stable header fix
+
+Removed the ResizeObserver/font-ready/resize measurement feedback loop. It measured the outer header including its 2px decorative rule, then wrote that measurement into the inner header minimum height. Each observation therefore grew the header again. CSS now owns the complete header height (88px desktop, 84px mobile in the current theme), with the inner row reserving 2px for the decorative rule. Sticky tabs and sidebar offsets continue to share the same CSS variable. No header height is written by JavaScript.
+
+
+### Colorful homepage and day/night appearance
+
+The homepage shows six opening lessons with a button for the complete 23-lesson catalogue, and offers five direct learning shortcuts and a sentence exercise with immediate explanatory feedback. Six chapter colors, a burgundy/gold hero, and a simplified card hierarchy organize the page. `experience.css` holds the final appearance overrides, including the complete dark palette and responsive layouts.
+
+A day/night button appears next to the text-size control on every view. The saved theme uses `al-hayat-nahw-theme`, separate from learning progress. First visits follow the system preference. `theme-init.js` runs before styles to apply appearance without a light-mode flash. The app remains usable if storage is blocked. Reduced-motion preferences disable visual transitions.
+
+Jameel remains a larger font even after optimization, so a first visit must download it. Text stays readable with the compact Nafees fallback while it loads (`font-display: swap`); installed Jameel can be used immediately via `local()`. Subsequent visits can reuse the browser cache. No external font or icon service is used. Arabic examples use Amiri and English meanings use a system font. Performance checks confirm skipped hidden rendering and cached search indexes; no live speed or visual-browser claim is made.
+
+Validation: `node verify.cjs`, `node verify-typography.cjs`, `node verify-experience.cjs`.
